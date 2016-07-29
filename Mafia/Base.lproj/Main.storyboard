@@ -8,7 +8,7 @@
         <!--Name Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NameViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -45,15 +45,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Name Screen" id="7TU-HB-sxV"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="Q2p-Ih-bCi" id="dcj-zh-53Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1267" y="350"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="uCG-Tl-OCI">
             <objects>
-                <viewController id="Y3g-AC-ucG" sceneMemberID="viewController">
+                <viewController id="Y3g-AC-ucG" customClass="SecondViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4To-4J-ppg"/>
                         <viewControllerLayoutGuide type="bottom" id="J1X-0I-sAz"/>
@@ -61,8 +64,29 @@
                     <view key="view" contentMode="scaleToFill" id="L3p-16-6iC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Your Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-v6-Myx">
+                                <rect key="frame" x="164" y="96" width="273" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Your Role: ?????" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-ZW-CiU">
+                                <rect key="frame" x="164" y="163" width="273" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67435199280000002" green="0.82692758690000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Dt-v6-Myx" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="2Fo-7t-a06"/>
+                            <constraint firstItem="aDc-ZW-CiU" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Rzx-tr-zvg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="0Dt-v6-Myx" id="mYk-jQ-GND"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLr-Vf-rgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
