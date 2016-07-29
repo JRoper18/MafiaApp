@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NameViewController.swift
 //  Mafia
 //
 //  Created by Jack Roper on 7/29/16.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NameViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +22,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dvc = segue.destinationViewController as! SecondViewController
+        dvc.playersName = "\(nameTextField.text!)"
+    }
 }
 
