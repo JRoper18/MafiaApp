@@ -17,17 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pirate Mafia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t0-95-ddT">
-                                <rect key="frame" x="163" y="82" width="275" height="62"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2p-Ih-bCi">
-                                <rect key="frame" x="170" y="215" width="260" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHB-Bb-wKH">
                                 <rect key="frame" x="261" y="259" width="78" height="41"/>
                                 <state key="normal">
@@ -43,6 +32,17 @@
                                     <segue destination="Y3g-AC-ucG" kind="show" id="opD-cU-QVW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pirate Mafia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t0-95-ddT">
+                                <rect key="frame" x="163" y="82" width="275" height="62"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2p-Ih-bCi">
+                                <rect key="frame" x="170" y="215" width="260" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirateFlag" translatesAutoresizingMaskIntoConstraints="NO" id="6n9-AL-9cC">
                                 <rect key="frame" x="213" y="144" width="175" height="63"/>
                                 <constraints>
@@ -50,16 +50,20 @@
                                     <constraint firstAttribute="height" constant="63" id="YuX-fV-8OV"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ship2" translatesAutoresizingMaskIntoConstraints="NO" id="Cg5-Ur-KUm">
-                                <rect key="frame" x="182" y="323" width="237" height="179"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="blackShip2" translatesAutoresizingMaskIntoConstraints="NO" id="ee9-ny-gsn">
+                                <rect key="frame" x="165" y="308" width="271" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="KjN-Ng-VvO"/>
+                                    <constraint firstAttribute="height" constant="260" id="hVX-fR-idw"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6n9-AL-9cC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BVE-BB-GCF"/>
                             <constraint firstItem="EHB-Bb-wKH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GXd-Nj-pQD"/>
-                            <constraint firstItem="Cg5-Ur-KUm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fRg-0H-YmK"/>
                             <constraint firstItem="0t0-95-ddT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jPJ-wy-w8i"/>
+                            <constraint firstItem="ee9-ny-gsn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kgN-7K-C5H"/>
                             <constraint firstItem="Q2p-Ih-bCi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ncz-Dc-wxh"/>
                         </constraints>
                     </view>
@@ -70,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267" y="350"/>
+            <point key="canvasLocation" x="1267" y="305"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="uCG-Tl-OCI">
@@ -145,7 +149,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="blackShip2" width="512" height="512"/>
         <image name="pirateFlag" width="2000" height="1253"/>
-        <image name="ship2" width="400" height="306"/>
     </resources>
 </document>
