@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Name Screen-->
+        <!--Start Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NameViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,7 +67,7 @@
                             <constraint firstItem="Q2p-Ih-bCi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ncz-Dc-wxh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Name Screen" id="7TU-HB-sxV"/>
+                    <navigationItem key="navigationItem" title="Start Screen" id="7TU-HB-sxV"/>
                     <connections>
                         <outlet property="nameTextField" destination="Q2p-Ih-bCi" id="ely-vj-IGE"/>
                     </connections>
@@ -88,10 +88,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-v6-Myx">
-                                <rect key="frame" x="164" y="96" width="273" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-ZW-CiU">
+                                <rect key="frame" x="164" y="193" width="273" height="21"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Your Name:">
+                                    <fragment content="You Are A: ?????">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="20" name="Courier"/>
@@ -101,10 +101,10 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-ZW-CiU">
-                                <rect key="frame" x="164" y="193" width="273" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-v6-Myx">
+                                <rect key="frame" x="164" y="123" width="273" height="21"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="You Are A: ?????">
+                                    <fragment content="Your Name:">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="20" name="Courier"/>
