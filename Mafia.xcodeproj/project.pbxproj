@@ -12,6 +12,7 @@
 		DB7074EE1D4CE668001F11D1 /* GameConnectionBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074ED1D4CE668001F11D1 /* GameConnectionBrowser.swift */; };
 		DB7074F01D4CFD39001F11D1 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074EF1D4CFD39001F11D1 /* HostViewController.swift */; };
 		DB7074F21D4D01BF001F11D1 /* SearchForGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074F11D4D01BF001F11D1 /* SearchForGameViewController.swift */; };
+		DB7074F41D4D04E4001F11D1 /* HostOrJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074F31D4D04E4001F11D1 /* HostOrJoinViewController.swift */; };
 		DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABA4921D4BC09D00112D1F /* AppDelegate.swift */; };
 		DBABA4951D4BC09D00112D1F /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABA4941D4BC09D00112D1F /* NameViewController.swift */; };
 		DBABA4981D4BC09E00112D1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBABA4961D4BC09E00112D1F /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		DB7074ED1D4CE668001F11D1 /* GameConnectionBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConnectionBrowser.swift; sourceTree = "<group>"; };
 		DB7074EF1D4CFD39001F11D1 /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		DB7074F11D4D01BF001F11D1 /* SearchForGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchForGameViewController.swift; sourceTree = "<group>"; };
+		DB7074F31D4D04E4001F11D1 /* HostOrJoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostOrJoinViewController.swift; sourceTree = "<group>"; };
 		DBABA48F1D4BC09D00112D1F /* Mafia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mafia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBABA4921D4BC09D00112D1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBABA4941D4BC09D00112D1F /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				DB7074ED1D4CE668001F11D1 /* GameConnectionBrowser.swift */,
 				DB7074EF1D4CFD39001F11D1 /* HostViewController.swift */,
 				DB7074F11D4D01BF001F11D1 /* SearchForGameViewController.swift */,
+				DB7074F31D4D04E4001F11D1 /* HostOrJoinViewController.swift */,
 			);
 			path = Mafia;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				DBABA4951D4BC09D00112D1F /* NameViewController.swift in Sources */,
 				DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */,
 				DB7074F21D4D01BF001F11D1 /* SearchForGameViewController.swift in Sources */,
+				DB7074F41D4D04E4001F11D1 /* HostOrJoinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,10 +11,14 @@ import MultipeerConnectivity;
 
 class SearchForGameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tableView: UITableView!
+
     
     let advertiser = GameConnectionAdvertiser();
-    
+    @IBOutlet weak var tableView: UITableView!
+    @IBAction func refreshButtonPressed(sender: AnyObject) {
+        tableView.reloadData();
+        print(advertiser.nearbyHosts.count);
+    }
     override func viewDidLoad(){
         super.viewDidLoad();
         

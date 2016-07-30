@@ -16,7 +16,7 @@ class GameConnectionAdvertiser: NSObject, MCNearbyServiceAdvertiserDelegate {
     let gameServiceType = "mafia-host"
     
     //devicePeerID is what our device is shown as to other devices.
-    let devicePeerID = MCPeerID(displayName: "host");
+    let devicePeerID = MCPeerID(displayName: "search");
     
     //Holds the possible games you can join
     var nearbyHosts : [MCPeerID] = [];
