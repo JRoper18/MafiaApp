@@ -17,10 +17,10 @@ class SearchForGameViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var tableView: UITableView!
     @IBAction func refreshButtonPressed(sender: AnyObject) {
         tableView.reloadData();
-        print(advertiser.nearbyHosts.count);
     }
     override func viewDidLoad(){
         super.viewDidLoad();
+        tableView.reloadData();
         
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -32,7 +32,8 @@ class SearchForGameViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("HostCell", forIndexPath: indexPath)
-        cell.textLabel!.text = advertiser.nearbyHosts[indexPath.row].displayName;
+        cell.textLabel?.text = advertiser.nearbyHosts[indexPath.row].displayName;
+        print(advertiser.nearbyHosts[indexPath.row].displayName);
         return cell;
     }
 }
