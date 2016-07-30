@@ -96,8 +96,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ocean" translatesAutoresizingMaskIntoConstraints="NO" id="2mF-Gl-zeb">
+                                <rect key="frame" x="-7" y="415" width="615" height="266"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.67435199280000002" green="0.82692758690000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.23696988875153735" green="0.87471815218420501" blue="0.95218422774869105" alpha="0.39469747340425532" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Dt-v6-Myx" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="2Fo-7t-a06"/>
                             <constraint firstItem="aDc-ZW-CiU" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Rzx-tr-zvg"/>
@@ -131,6 +134,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ocean" width="500" height="328"/>
         <image name="pirateFlag" width="2000" height="1253"/>
         <image name="ship2" width="400" height="306"/>
     </resources>
