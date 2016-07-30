@@ -10,6 +10,8 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    let browser = GameConnectionBrowser();
+    
     @IBOutlet weak var nameLabel: UILabel!
     var playersName = ""
     var possibleRoles : [String] = []

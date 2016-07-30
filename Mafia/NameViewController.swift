@@ -11,7 +11,7 @@ import UIKit
 class NameViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
-    
+    let advertiser = GameConnectionAdvertiser();
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

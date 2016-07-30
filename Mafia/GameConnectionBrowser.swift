@@ -34,7 +34,7 @@ class GameConnectionBrowser: NSObject, MCNearbyServiceBrowserDelegate {
     //We found someone! Add them to the list of people wanting a game
     func browser(browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?){
         nearbyPeople.append(peerID);
-        print("Found searching player nearby");
+        print("Found searching player nearby: " + peerID.displayName);
         
     }
     
