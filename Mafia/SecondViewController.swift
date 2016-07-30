@@ -21,9 +21,5 @@ class SecondViewController: UIViewController {
         nameLabel.text = "Your name: \(playersName)"
         possibleRoles = ["Mafia", "Medic", "Detective"]
     }
-    
-    func generateRandomRole(){
-        
-    }
 
 }

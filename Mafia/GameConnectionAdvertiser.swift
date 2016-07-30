@@ -43,8 +43,9 @@ class GameConnectionAdvertiser: NSObject, MCNearbyServiceAdvertiserDelegate {
     //Delegate required function called when we get an invitation
     func advertiser(advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: NSData?, invitationHandler: (Bool, MCSession) -> Void){
         print("Got invitation to join game from " + peerID.displayName);
-        
+        nearbyHosts.append(peerID)
     }
+    
     
     
 }
