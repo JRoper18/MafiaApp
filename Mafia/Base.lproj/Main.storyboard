@@ -147,6 +147,9 @@
                                     <segue destination="y0m-eN-xSW" kind="show" identifier="Instruction" id="T3S-Yu-ybc"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLW-qa-72J">
+                                <rect key="frame" x="334" y="112" width="131" height="150"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
