@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="blackShip" translatesAutoresizingMaskIntoConstraints="NO" id="auH-CF-Xac">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="113" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8j-gn-X9K">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8j-gn-X9K">
                                 <rect key="frame" x="17" y="28" width="40" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Back "/>
@@ -29,39 +29,38 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="cPe-SS-k0c"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="black" editable="NO" text="Pirate Role: Your Job Is To Try And Kill As Much People As Possible Withour Getting Caught By The Pirate Hunter" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo1-t4-ktJ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="black" editable="NO" text="*Pirate Role: Your Job Is To Try And Kill As Much People As Possible Without Getting Caught By The Pirate Hunter" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo1-t4-ktJ">
                                 <rect key="frame" x="151" y="264" width="299" height="72"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Pirate Hunter Role: Your Job Is To Catch The Pirate Without Getting Killed" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9a9-Gw-1aU">
-                                <rect key="frame" x="151" y="353" width="299" height="58"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="*Pirate Hunter Role: Your Job Is To Catch The Pirate Without Getting Killed" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9a9-Gw-1aU">
+                                <rect key="frame" x="151" y="333" width="299" height="58"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Healer Role: Your Job Is To Try To Find And Heal Who The Pirate Might Kill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iUb-4s-ER3">
-                                <rect key="frame" x="151" y="433" width="299" height="57"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Roles Will Be Randomly Generated, And Have Various Goals/Jobs (see below). Tap On Peoples' Names To Select Them." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmM-EA-9es">
+                                <rect key="frame" x="151" y="89" width="299" height="69"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmM-EA-9es">
-                                <rect key="frame" x="151" y="37" width="299" height="96"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="*Healer Role: Your Job Is To Try To Find And Revive Who The Pirate Might Kill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iUb-4s-ER3">
+                                <rect key="frame" x="151" y="384" width="299" height="57"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <string key="text">Roles Will Be Randomly Generated, And Have Various Goals (see below). Tap On People's Names To Select Them. The Main Goal Is To Kill The Pirate</string>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qxh-Lp-hK5">
-                                <rect key="frame" x="151" y="149" width="299" height="91"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qxh-Lp-hK5">
+                                <rect key="frame" x="151" y="179" width="299" height="91"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <string key="text">Townsfolk Role: Your Job Is To Vote On Who Might Be The Pirate. Whoever Gets The Most Votes Will Be Killed Off And Is Removed From The Game</string>
+                                <string key="text">*Townsfolk Role: Your Job Is To Vote On Who Might Be The Pirate. Whoever Gets The Most Votes Will Be Killed Off And Is Removed From The Game</string>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -69,11 +68,17 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
+                            <constraint firstItem="auH-CF-Xac" firstAttribute="leading" secondItem="wLy-yc-tL2" secondAttribute="leadingMargin" constant="-20" id="04I-qj-ifY"/>
+                            <constraint firstItem="niB-Ih-C1n" firstAttribute="top" secondItem="auH-CF-Xac" secondAttribute="bottom" id="5jT-Ab-S0e"/>
                             <constraint firstItem="s8j-gn-X9K" firstAttribute="leading" secondItem="wLy-yc-tL2" secondAttribute="leadingMargin" id="ANP-kM-MK6"/>
                             <constraint firstItem="Uo1-t4-ktJ" firstAttribute="centerX" secondItem="wLy-yc-tL2" secondAttribute="centerX" id="IVi-Vh-eFR"/>
                             <constraint firstItem="s8j-gn-X9K" firstAttribute="top" secondItem="sMK-Yj-Ujz" secondAttribute="bottom" constant="8" id="Icy-2z-51q"/>
-                            <constraint firstItem="auH-CF-Xac" firstAttribute="centerX" secondItem="wLy-yc-tL2" secondAttribute="centerX" id="ZLJ-94-na3"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="auH-CF-Xac" secondAttribute="bottom" constant="-113" id="SLI-Wq-oKY"/>
+                            <constraint firstItem="qxh-Lp-hK5" firstAttribute="centerX" secondItem="wLy-yc-tL2" secondAttribute="centerX" id="bhJ-9H-NbL"/>
                             <constraint firstItem="iUb-4s-ER3" firstAttribute="centerX" secondItem="wLy-yc-tL2" secondAttribute="centerX" id="gO9-U7-2dH"/>
+                            <constraint firstItem="auH-CF-Xac" firstAttribute="top" secondItem="s8j-gn-X9K" secondAttribute="bottom" constant="55" id="gXW-XG-pcT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="auH-CF-Xac" secondAttribute="trailing" constant="-20" id="moq-wX-upG"/>
+                            <constraint firstItem="bmM-EA-9es" firstAttribute="centerX" secondItem="wLy-yc-tL2" secondAttribute="centerX" id="qEx-WD-tOQ"/>
                             <constraint firstItem="9a9-Gw-1aU" firstAttribute="centerX" secondItem="wLy-yc-tL2" secondAttribute="centerX" id="w4H-o1-Joh"/>
                         </constraints>
                     </view>
