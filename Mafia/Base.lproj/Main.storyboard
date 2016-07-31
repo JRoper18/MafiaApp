@@ -180,22 +180,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfv-Me-MsI">
-                                <rect key="frame" x="244" y="234" width="112" height="30"/>
+                                <rect key="frame" x="244" y="203" width="112" height="30"/>
                                 <state key="normal" title="Look For Games"/>
                                 <connections>
                                     <action selector="buttonAction:" destination="Yet-yg-rRD" eventType="touchUpInside" id="zDq-Mm-3aa"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="sword" translatesAutoresizingMaskIntoConstraints="NO" id="9Lt-sv-kc4">
+                                <rect key="frame" x="150" y="272" width="300" height="281"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9nt-0L-Xx1"/>
+                                    <constraint firstAttribute="height" constant="281" id="G5Z-VB-0L4"/>
+                                </constraints>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-G7-3Jy">
-                                <rect key="frame" x="220" y="74" width="160" height="30"/>
+                                <rect key="frame" x="220" y="120" width="160" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Establish a connection to start playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQY-e3-y2A">
+                                <rect key="frame" x="89" y="46" width="422" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
+                            <constraint firstItem="9Lt-sv-kc4" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="O1q-hK-cTR"/>
                             <constraint firstItem="pfv-Me-MsI" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="Uf9-3G-C5f"/>
                             <constraint firstItem="HIz-G7-3Jy" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="jmT-H6-JcY"/>
+                            <constraint firstItem="yQY-e3-y2A" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="vEw-8m-cl9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XPS-1W-Xz6"/>
@@ -302,6 +317,7 @@
         <image name="blackShip2" width="512" height="512"/>
         <image name="imperialFlag" width="2000" height="1000"/>
         <image name="pirateFlag" width="2000" height="1253"/>
+        <image name="sword" width="428" height="550"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Aku-DS-bcQ"/>
