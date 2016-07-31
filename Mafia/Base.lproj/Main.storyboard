@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="1267" y="305"/>
         </scene>
-        <!--Search For Game View Controller-->
+        <!--Lobby View Controller-->
         <scene sceneID="5kF-l9-tDG">
             <objects>
-                <viewController id="Yet-yg-rRD" customClass="SearchForGameViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Yet-yg-rRD" customClass="LobbyViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Oap-bx-9fY"/>
                         <viewControllerLayoutGuide type="bottom" id="NVL-Ob-s9w"/>
@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdK-3u-812" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="669" y="350"/>
+            <point key="canvasLocation" x="613" y="305"/>
         </scene>
         <!--Host Or Join View Controller-->
         <scene sceneID="XfO-7b-nTL">
@@ -145,13 +145,14 @@
                                 <state key="normal" title="Host"/>
                                 <connections>
                                     <action selector="onHostButtonTapped:" destination="c6W-Sv-HIt" eventType="touchUpInside" id="xxV-Tf-qS5"/>
+                                    <segue destination="Yet-yg-rRD" kind="show" id="Fnc-XM-shD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiS-RO-pzQ">
                                 <rect key="frame" x="285" y="169" width="30" height="30"/>
                                 <state key="normal" title="Join"/>
                                 <connections>
-                                    <segue destination="Yet-yg-rRD" kind="show" id="Tev-ZV-x1t"/>
+                                    <segue destination="Yet-yg-rRD" kind="show" id="AxA-io-089"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -239,4 +240,7 @@
         <image name="blackShip2" width="512" height="512"/>
         <image name="pirateFlag" width="2000" height="1253"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Fnc-XM-shD"/>
+    </inferredMetricsTieBreakers>
 </document>
