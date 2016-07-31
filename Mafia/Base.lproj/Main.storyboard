@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dq4-52-wWy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -76,6 +76,47 @@
             </objects>
             <point key="canvasLocation" x="1267" y="305"/>
         </scene>
+        <!--Lobby View Controller-->
+        <scene sceneID="5kF-l9-tDG">
+            <objects>
+                <viewController id="Yet-yg-rRD" customClass="LobbyViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oap-bx-9fY"/>
+                        <viewControllerLayoutGuide type="bottom" id="NVL-Ob-s9w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fm5-Qs-fP2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfv-Me-MsI">
+                                <rect key="frame" x="244" y="234" width="112" height="30"/>
+                                <state key="normal" title="Look For Games"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="Yet-yg-rRD" eventType="touchUpInside" id="zDq-Mm-3aa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-G7-3Jy">
+                                <rect key="frame" x="220" y="74" width="160" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pfv-Me-MsI" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="Uf9-3G-C5f"/>
+                            <constraint firstItem="HIz-G7-3Jy" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="jmT-H6-JcY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XPS-1W-Xz6"/>
+                    <connections>
+                        <outlet property="deviceNameTextField" destination="HIz-G7-3Jy" id="hTO-nc-DO1"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ToGame" id="lSm-f1-u1w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VdK-3u-812" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="305"/>
+        </scene>
         <!--Second View Controller-->
         <scene sceneID="uCG-Tl-OCI">
             <objects>
@@ -128,24 +169,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLr-Vf-rgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2047" y="305"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="94W-VA-tmv">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dq4-52-wWy" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oed-yA-dgA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oaa-7F-8GE"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C92-nz-NY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="459" y="305"/>
         </scene>
     </scenes>
     <resources>

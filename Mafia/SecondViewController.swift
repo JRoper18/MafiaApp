@@ -10,7 +10,6 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    let browser = GameConnectionBrowser();
     
     @IBOutlet weak var nameLabel: UILabel!
     var playersName = ""
@@ -20,10 +19,6 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = "Your name: \(playersName)"
         possibleRoles = ["Mafia", "Medic", "Detective"]
-    }
-    
-    func generateRandomRole(){
-        
     }
 
 }
