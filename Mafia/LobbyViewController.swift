@@ -11,7 +11,7 @@ import MultipeerConnectivity;
 
 class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessionDelegate {
     
-    let gameServiceType = "Pirate_Mafia - Game"
+    let gameServiceType = "mafia-game"
     
     //devicePeerID is what our device is shown as to other devices.
     var devicePeerID = MCPeerID(displayName: UIDevice.currentDevice().name)
@@ -33,18 +33,15 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MC
         self.session.delegate = self;
         self.serviceBrowser = MCBrowserViewController(serviceType: gameServiceType, session: self.session)
         self.serviceBrowser.delegate = self;
+        self.serviceBrowser.modalPresentationStyle = .OverFullScreen;
         
         
         advertiser = MCAdvertiserAssistant(serviceType: gameServiceType, discoveryInfo: nil, session: self.session);
         advertiser.start();
 
     }
-    func session(session: MCSession, didReceiveCertificate certificate: [AnyObject]?, fromPeer peerID: MCPeerID, certificateHandler: (Bool) -> Void) {
-        print(certificate);
-        certificateHandler(true);
-    }
     @IBAction func buttonAction(sender: AnyObject) {
-        if deviceNameTextField.text != nil{
+        if deviceNameTextField.hasText() == true{
             self.devicePeerID = MCPeerID(displayName: deviceNameTextField.text!);
         }
         lookForGames();
@@ -53,8 +50,9 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MC
     
     //Called when we finish the peer selection.
     func browserViewControllerDidFinish(browserViewController: MCBrowserViewController){
-        self.dismissViewControllerAnimated(true, completion: nil)
-        self.performSegueWithIdentifier("ToGame", sender: nil)
+        print("Done button pressed");
+        self.performSegueWithIdentifier("ToGame", sender: nil);
+         
     }
     //Called when we hit the cancel button
     func browserViewControllerWasCancelled(browserViewController: MCBrowserViewController){
@@ -65,7 +63,7 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MC
         var str = "";
         switch(state){
         case .NotConnected: str = "Not Connected";
-        case .Connecting: str = "ConnectING";
+        case .Connecting: str = "Connecting";
         case .Connected: str="Connected";
         }
         print("Count: " + String(session.connectedPeers.count) + " State: " + str);

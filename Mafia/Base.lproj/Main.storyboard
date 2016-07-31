@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -90,7 +90,7 @@
         <!--Start Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NameViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gameStartScreen" id="BYZ-38-t0r" customClass="NameViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -201,12 +201,12 @@
                     <navigationItem key="navigationItem" id="XPS-1W-Xz6"/>
                     <connections>
                         <outlet property="deviceNameTextField" destination="HIz-G7-3Jy" id="hTO-nc-DO1"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="ToGame" id="lSm-f1-u1w"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ToGame" id="Aku-DS-bcQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdK-3u-812" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="499" y="305"/>
+            <point key="canvasLocation" x="494" y="305"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="uCG-Tl-OCI">
@@ -304,6 +304,6 @@
         <image name="pirateFlag" width="2000" height="1253"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Yc-se-uqv"/>
+        <segue reference="Aku-DS-bcQ"/>
     </inferredMetricsTieBreakers>
 </document>
