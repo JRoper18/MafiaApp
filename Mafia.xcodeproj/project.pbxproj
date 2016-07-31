@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BDA6E0B1D4E79980000498D /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */; };
 		852D15FE1D4BE26500638ED6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D15FD1D4BE26500638ED6 /* SecondViewController.swift */; };
 		DB7074F21D4D01BF001F11D1 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074F11D4D01BF001F11D1 /* LobbyViewController.swift */; };
 		DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABA4921D4BC09D00112D1F /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstructionViewController.swift; path = ../InstructionViewController.swift; sourceTree = "<group>"; };
 		852D15FD1D4BE26500638ED6 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DB7074F11D4D01BF001F11D1 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		DBABA48F1D4BC09D00112D1F /* Mafia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mafia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,7 @@
 		DBABA4911D4BC09D00112D1F /* Mafia */ = {
 			isa = PBXGroup;
 			children = (
+				2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */,
 				DBABA4921D4BC09D00112D1F /* AppDelegate.swift */,
 				DBABA4941D4BC09D00112D1F /* NameViewController.swift */,
 				852D15FD1D4BE26500638ED6 /* SecondViewController.swift */,
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDA6E0B1D4E79980000498D /* InstructionViewController.swift in Sources */,
 				852D15FE1D4BE26500638ED6 /* SecondViewController.swift in Sources */,
 				DBABA4951D4BC09D00112D1F /* NameViewController.swift in Sources */,
 				DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */,

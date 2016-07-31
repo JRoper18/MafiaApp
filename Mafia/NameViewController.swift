@@ -17,8 +17,12 @@ class NameViewController: UIViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let dvc = segue.destinationViewController as! SecondViewController
-        dvc.playersName = "\(nameTextField.text!)"
+        if segue.identifier == "Instruction"{
+            let dvc = segue.destinationViewController as! InstructionViewController
+        }
+        else if segue.identifier == "Second"{
+            let dvc = segue.destinationViewController as! SecondViewController
+            dvc.playersName = "\(nameTextField.text!)"
+        }
     }
 }
-
