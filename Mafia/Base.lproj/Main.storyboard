@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -90,7 +90,7 @@
         <!--Start Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NameViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gameStartScreen" id="BYZ-38-t0r" customClass="NameViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -147,9 +147,6 @@
                                     <segue destination="y0m-eN-xSW" kind="show" identifier="Instruction" id="T3S-Yu-ybc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLW-qa-72J">
-                                <rect key="frame" x="334" y="112" width="131" height="150"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -204,7 +201,7 @@
                     <navigationItem key="navigationItem" id="XPS-1W-Xz6"/>
                     <connections>
                         <outlet property="deviceNameTextField" destination="HIz-G7-3Jy" id="hTO-nc-DO1"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="ToGame" action="showDetailViewController:sender:" id="lSm-f1-u1w"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ToGame" id="Aku-DS-bcQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdK-3u-812" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -268,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLr-Vf-rgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2047" y="305"/>
+            <point key="canvasLocation" x="2045" y="305"/>
         </scene>
     </scenes>
     <resources>
@@ -279,6 +276,6 @@
         <image name="pirateFlag" width="2000" height="1253"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cPe-SS-k0c"/>
+        <segue reference="Aku-DS-bcQ"/>
     </inferredMetricsTieBreakers>
 </document>

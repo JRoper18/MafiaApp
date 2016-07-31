@@ -11,7 +11,7 @@ import MultipeerConnectivity;
 
 class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessionDelegate {
     
-    let gameServiceType = "Pirate_Mafia - Game"
+    let gameServiceType = "mafia-game"
     
     //devicePeerID is what our device is shown as to other devices.
     var devicePeerID = MCPeerID(displayName: UIDevice.currentDevice().name)
@@ -33,6 +33,7 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MC
         self.session.delegate = self;
         self.serviceBrowser = MCBrowserViewController(serviceType: gameServiceType, session: self.session)
         self.serviceBrowser.delegate = self;
+        self.serviceBrowser.modalPresentationStyle = .OverFullScreen;
         
         
         advertiser = MCAdvertiserAssistant(serviceType: gameServiceType, discoveryInfo: nil, session: self.session);
@@ -50,10 +51,8 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MC
     //Called when we finish the peer selection.
     func browserViewControllerDidFinish(browserViewController: MCBrowserViewController){
         print("Done button pressed");
-        self.performSegueWithIdentifier("ToGame", sender: nil)
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("EEEY");
+        self.performSegueWithIdentifier("ToGame", sender: nil);
+         
     }
     //Called when we hit the cancel button
     func browserViewControllerWasCancelled(browserViewController: MCBrowserViewController){
