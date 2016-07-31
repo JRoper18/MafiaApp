@@ -11,7 +11,7 @@ import MultipeerConnectivity;
 
 class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessionDelegate {
     
-    let gameServiceType = "Pirate Mafia - Game"
+    let gameServiceType = "Pirate_Mafia - Game"
     
     //devicePeerID is what our device is shown as to other devices.
     var devicePeerID = MCPeerID(displayName: UIDevice.currentDevice().name)
