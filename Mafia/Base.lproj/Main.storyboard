@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -21,6 +21,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="blackShip" translatesAutoresizingMaskIntoConstraints="NO" id="auH-CF-Xac">
                                 <rect key="frame" x="0.0" y="113" width="600" height="600"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="*Pirate Hunter Role: Your Job Is To Catch The Pirate Without Getting Killed" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9a9-Gw-1aU">
+                                <rect key="frame" x="151" y="333" width="299" height="58"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8j-gn-X9K">
                                 <rect key="frame" x="17" y="28" width="40" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -29,29 +36,8 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="cPe-SS-k0c"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="black" editable="NO" text="*Pirate Role: Your Job Is To Try And Kill As Much People As Possible Without Getting Caught By The Pirate Hunter" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo1-t4-ktJ">
-                                <rect key="frame" x="151" y="264" width="299" height="72"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="*Pirate Hunter Role: Your Job Is To Catch The Pirate Without Getting Killed" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9a9-Gw-1aU">
-                                <rect key="frame" x="151" y="333" width="299" height="58"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Roles Will Be Randomly Generated, And Each Role Has A Goal/Job (see below). Tap On Peoples' Names To Select Them." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmM-EA-9es">
                                 <rect key="frame" x="151" y="89" width="299" height="70"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="*Healer Role: Your Job Is To Try To Find And Revive Who The Pirate Might Kill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iUb-4s-ER3">
-                                <rect key="frame" x="151" y="384" width="299" height="57"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -61,6 +47,20 @@
                                 <rect key="frame" x="151" y="179" width="299" height="91"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <string key="text">*Townsfolk Role: Your Job Is To Vote On Who Might Be The Pirate. Whoever Gets The Most Votes Will Be Killed Off And Is Removed From The Game</string>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="black" editable="NO" text="*Pirate Role: Your Job Is To Try And Kill As Much People As Possible Without Getting Caught By The Pirate Hunter" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo1-t4-ktJ">
+                                <rect key="frame" x="151" y="264" width="299" height="72"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="*Healer Role: Your Job Is To Try To Find And Revive Who The Pirate Might Kill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iUb-4s-ER3">
+                                <rect key="frame" x="151" y="384" width="299" height="57"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MA-Xh-sP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267" y="-456"/>
+            <point key="canvasLocation" x="1267" y="-523"/>
         </scene>
         <!--Start Screen-->
         <scene sceneID="tne-QT-ifu">
@@ -114,12 +114,6 @@
                                     <segue destination="Y3g-AC-ucG" kind="show" identifier="Second" id="opD-cU-QVW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pirate Mafia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t0-95-ddT">
-                                <rect key="frame" x="163" y="82" width="275" height="62"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2p-Ih-bCi">
                                 <rect key="frame" x="170" y="215" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -147,6 +141,12 @@
                                     <segue destination="y0m-eN-xSW" kind="show" identifier="Instruction" id="T3S-Yu-ybc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pirate Mafia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t0-95-ddT">
+                                <rect key="frame" x="163" y="82" width="275" height="62"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -179,13 +179,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfv-Me-MsI">
-                                <rect key="frame" x="244" y="203" width="112" height="30"/>
-                                <state key="normal" title="Look For Games"/>
-                                <connections>
-                                    <action selector="buttonAction:" destination="Yet-yg-rRD" eventType="touchUpInside" id="zDq-Mm-3aa"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="sword" translatesAutoresizingMaskIntoConstraints="NO" id="9Lt-sv-kc4">
                                 <rect key="frame" x="150" y="272" width="300" height="281"/>
                                 <constraints>
@@ -193,19 +186,26 @@
                                     <constraint firstAttribute="height" constant="281" id="G5Z-VB-0L4"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-G7-3Jy">
-                                <rect key="frame" x="220" y="120" width="160" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Establish a connection to start playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQY-e3-y2A">
                                 <rect key="frame" x="89" y="46" width="422" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-G7-3Jy">
+                                <rect key="frame" x="220" y="120" width="160" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfv-Me-MsI">
+                                <rect key="frame" x="244" y="190" width="112" height="30"/>
+                                <state key="normal" title="Look For Games"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="Yet-yg-rRD" eventType="touchUpInside" id="zDq-Mm-3aa"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="9Lt-sv-kc4" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="O1q-hK-cTR"/>
                             <constraint firstItem="pfv-Me-MsI" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="Uf9-3G-C5f"/>
@@ -256,7 +256,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="antiPirate" translatesAutoresizingMaskIntoConstraints="NO" id="upr-9s-mri">
-                                <rect key="frame" x="177" y="380" width="246" height="200"/>
+                                <rect key="frame" x="177" y="380" width="246" height="212"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="10b-lf-d0t"/>
                                     <constraint firstAttribute="height" constant="200" id="KJV-mZ-Qpl"/>
@@ -285,14 +285,14 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="0Yc-se-uqv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PENIS " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83r-vY-fJq">
-                                <rect key="frame" x="19" y="412" width="66" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sarauv &lt;3 PENIS " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83r-vY-fJq">
+                                <rect key="frame" x="214" y="198" width="172" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0038680077252391566" blue="0.78287026912820523" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0021801969782459557" blue="0.44126369861538473" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Dt-v6-Myx" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="2Fo-7t-a06"/>
                             <constraint firstItem="upr-9s-mri" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Oip-rI-NWR"/>
@@ -308,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLr-Vf-rgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2055" y="305"/>
+            <point key="canvasLocation" x="2059" y="305"/>
         </scene>
     </scenes>
     <resources>
@@ -320,6 +320,6 @@
         <image name="sword" width="428" height="550"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Aku-DS-bcQ"/>
+        <segue reference="0Yc-se-uqv"/>
     </inferredMetricsTieBreakers>
 </document>
