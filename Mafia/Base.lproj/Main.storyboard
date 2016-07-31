@@ -110,12 +110,12 @@
                     <navigationItem key="navigationItem" id="XPS-1W-Xz6"/>
                     <connections>
                         <outlet property="deviceNameTextField" destination="HIz-G7-3Jy" id="hTO-nc-DO1"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="ToGame" id="lSm-f1-u1w"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ToGame" action="showDetailViewController:sender:" id="lSm-f1-u1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdK-3u-812" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586" y="305"/>
+            <point key="canvasLocation" x="494" y="305"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="uCG-Tl-OCI">
