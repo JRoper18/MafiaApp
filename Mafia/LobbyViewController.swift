@@ -16,6 +16,7 @@ class LobbyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func refreshButtonPressed(sender: AnyObject) {
         tableView.reloadData();
+        print(manager.session.connectedPeers.count);
     }
     override func viewDidLoad(){
         super.viewDidLoad();
