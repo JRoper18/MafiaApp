@@ -11,8 +11,9 @@ import MultipeerConnectivity;
 
 class LobbyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let advertiser = GameConnectionAdvertiser();
+    let manager = GameConnectionManager();
     @IBOutlet weak var tableView: UITableView!
+    
     @IBAction func refreshButtonPressed(sender: AnyObject) {
         tableView.reloadData();
     }
@@ -21,18 +22,13 @@ class LobbyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.reloadData();
         
     }
-    func addConnectionButton(){
-        
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return advertiser.nearbyHosts.count;
+        return manager.session.connectedPeers.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("HostCell", forIndexPath: indexPath)
-        cell.textLabel?.text = advertiser.nearbyHosts[indexPath.row].displayName;
-        print(advertiser.nearbyHosts[indexPath.row].displayName);
+        cell.textLabel?.text = manager.session.connectedPeers[indexPath.row].displayName;
         return cell;
     }
 }

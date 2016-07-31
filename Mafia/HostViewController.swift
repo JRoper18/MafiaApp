@@ -11,7 +11,6 @@ import MultipeerConnectivity
 
 class HostViewController: UIViewController {
     let session = MCSession(peer: MCPeerID(displayName: "Mary"))
-    let hostBrowser = GameConnectionBrowser();
     override func viewDidLoad() {
         super.viewDidLoad();
         

@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		852D15FE1D4BE26500638ED6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D15FD1D4BE26500638ED6 /* SecondViewController.swift */; };
-		DB7074EC1D4CE644001F11D1 /* GameConnectionAdvertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074EB1D4CE644001F11D1 /* GameConnectionAdvertiser.swift */; };
-		DB7074EE1D4CE668001F11D1 /* GameConnectionBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074ED1D4CE668001F11D1 /* GameConnectionBrowser.swift */; };
+		DB7074EC1D4CE644001F11D1 /* GameConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074EB1D4CE644001F11D1 /* GameConnectionManager.swift */; };
 		DB7074F01D4CFD39001F11D1 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074EF1D4CFD39001F11D1 /* HostViewController.swift */; };
 		DB7074F21D4D01BF001F11D1 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074F11D4D01BF001F11D1 /* LobbyViewController.swift */; };
 		DB7074F41D4D04E4001F11D1 /* HostOrJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074F31D4D04E4001F11D1 /* HostOrJoinViewController.swift */; };
@@ -22,8 +21,7 @@
 
 /* Begin PBXFileReference section */
 		852D15FD1D4BE26500638ED6 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		DB7074EB1D4CE644001F11D1 /* GameConnectionAdvertiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConnectionAdvertiser.swift; sourceTree = "<group>"; };
-		DB7074ED1D4CE668001F11D1 /* GameConnectionBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConnectionBrowser.swift; sourceTree = "<group>"; };
+		DB7074EB1D4CE644001F11D1 /* GameConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConnectionManager.swift; sourceTree = "<group>"; };
 		DB7074EF1D4CFD39001F11D1 /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		DB7074F11D4D01BF001F11D1 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		DB7074F31D4D04E4001F11D1 /* HostOrJoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostOrJoinViewController.swift; sourceTree = "<group>"; };
@@ -73,8 +71,7 @@
 				DBABA4991D4BC09E00112D1F /* Assets.xcassets */,
 				DBABA49B1D4BC09E00112D1F /* LaunchScreen.storyboard */,
 				DBABA49E1D4BC09E00112D1F /* Info.plist */,
-				DB7074EB1D4CE644001F11D1 /* GameConnectionAdvertiser.swift */,
-				DB7074ED1D4CE668001F11D1 /* GameConnectionBrowser.swift */,
+				DB7074EB1D4CE644001F11D1 /* GameConnectionManager.swift */,
 				DB7074EF1D4CFD39001F11D1 /* HostViewController.swift */,
 				DB7074F11D4D01BF001F11D1 /* LobbyViewController.swift */,
 				DB7074F31D4D04E4001F11D1 /* HostOrJoinViewController.swift */,
@@ -153,10 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB7074EC1D4CE644001F11D1 /* GameConnectionAdvertiser.swift in Sources */,
+				DB7074EC1D4CE644001F11D1 /* GameConnectionManager.swift in Sources */,
 				852D15FE1D4BE26500638ED6 /* SecondViewController.swift in Sources */,
 				DB7074F01D4CFD39001F11D1 /* HostViewController.swift in Sources */,
-				DB7074EE1D4CE668001F11D1 /* GameConnectionBrowser.swift in Sources */,
 				DBABA4951D4BC09D00112D1F /* NameViewController.swift in Sources */,
 				DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */,
 				DB7074F21D4D01BF001F11D1 /* LobbyViewController.swift in Sources */,

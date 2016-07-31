@@ -10,10 +10,8 @@ import UIKit
 
 class HostOrJoinViewController: UIViewController {
     @IBAction func onHostButtonTapped(sender: AnyObject) {
-        browser = GameConnectionBrowser();
         
     }
-    var browser : GameConnectionBrowser!;
     override func viewDidLoad() {
         super.viewDidLoad();
 
