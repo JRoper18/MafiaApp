@@ -226,37 +226,57 @@
                                     <fragment content="You Role Is: ?????">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="25" name="Didot-Bold"/>
+                                            <font key="NSFont" size="28" name="Didot-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="imperialFlag" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-hZ-Qsq">
+                                <rect key="frame" x="164" y="227" width="273" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="8Bt-bu-GkS"/>
+                                    <constraint firstAttribute="width" constant="273" id="GyH-oT-GnP"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="antiPirate" translatesAutoresizingMaskIntoConstraints="NO" id="upr-9s-mri">
+                                <rect key="frame" x="177" y="380" width="246" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="10b-lf-d0t"/>
+                                    <constraint firstAttribute="height" constant="200" id="KJV-mZ-Qpl"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-v6-Myx">
-                                <rect key="frame" x="164" y="114" width="273" height="21"/>
+                                <rect key="frame" x="164" y="109" width="273" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Your Name:">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="25" name="Didot-Bold"/>
+                                            <font key="NSFont" size="30" name="Didot-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imperialFlag" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-hZ-Qsq">
-                                <rect key="frame" x="164" y="227" width="273" height="145"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="antiPirate" translatesAutoresizingMaskIntoConstraints="NO" id="upr-9s-mri">
-                                <rect key="frame" x="177" y="380" width="246" height="200"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsv-F9-NKw">
+                                <rect key="frame" x="20" y="28" width="50" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <state key="normal" title=" Back ">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="0Yc-se-uqv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0038680077252391566" blue="0.78287026912820523" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Dt-v6-Myx" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="2Fo-7t-a06"/>
+                            <constraint firstItem="upr-9s-mri" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Oip-rI-NWR"/>
                             <constraint firstItem="aDc-ZW-CiU" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Rzx-tr-zvg"/>
+                            <constraint firstItem="LoP-hZ-Qsq" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="e29-Ns-Oms"/>
                         </constraints>
                     </view>
                     <connections>
