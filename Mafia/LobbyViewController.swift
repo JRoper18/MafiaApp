@@ -9,27 +9,78 @@
 import UIKit
 import MultipeerConnectivity;
 
-class LobbyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessionDelegate {
     
-    let manager = GameConnectionManager();
-    @IBOutlet weak var tableView: UITableView!
+    let gameServiceType = "mafia-game"
     
-    @IBAction func refreshButtonPressed(sender: AnyObject) {
-        tableView.reloadData();
-        print(manager.session.connectedPeers.count);
-    }
+    //devicePeerID is what our device is shown as to other devices.
+    let devicePeerID = MCPeerID(displayName: UIDevice.currentDevice().name)
+    
+    //Finds people who are advertising.
+    var serviceBrowser : MCBrowserViewController!;
+    
+    //Local session
+    var session: MCSession!;
+    
+    var advertiser : MCAdvertiserAssistant!;
     override func viewDidLoad(){
         super.viewDidLoad();
-        tableView.reloadData();
+        self.session = MCSession(peer: devicePeerID)
+        self.session.delegate = self;
+        self.serviceBrowser = MCBrowserViewController(serviceType: gameServiceType, session: self.session)
+        self.serviceBrowser.delegate = self;
         
+        
+        advertiser = MCAdvertiserAssistant(serviceType: gameServiceType, discoveryInfo: nil, session: self.session);
+        advertiser.start();
+
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return manager.session.connectedPeers.count;
+    func session(session: MCSession, didReceiveCertificate certificate: [AnyObject]?, fromPeer peerID: MCPeerID, certificateHandler: (Bool) -> Void) {
+        print(certificate);
+        certificateHandler(true);
+    }
+    @IBAction func buttonAction(sender: AnyObject) {
+        self.presentViewController(self.serviceBrowser, animated: true, completion: nil)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCellWithIdentifier("HostCell", forIndexPath: indexPath)
-        cell.textLabel?.text = manager.session.connectedPeers[indexPath.row].displayName;
-        return cell;
+    //Called when we finish the peer selection.
+    func browserViewControllerDidFinish(browserViewController: MCBrowserViewController){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    //Called when we hit the cancel button
+    func browserViewControllerWasCancelled(browserViewController: MCBrowserViewController){
+        
+    }
+    func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState){
+        print("WE HAVE A PEER THATS CHANGING");
+        var str = "";
+        switch(state){
+        case .NotConnected: str = "Not Connected";
+        case .Connecting: str = "ConnectING";
+        case .Connected: str="Connected";
+        }
+        print("Count: " + String(session.connectedPeers.count) + " State: " + str);
+    }
+    
+    // Received data from remote peer.
+    func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID){
+        
+    }
+    
+    // Received a byte stream from remote peer.
+    func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID){
+        
+    }
+    
+    // Start receiving a resource from remote peer.
+    func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress){
+        
+    }
+    
+    // Finished receiving a resource from remote peer and saved the content
+    // in a temporary location - the app is responsible for moving the file
+    // to a permanent location within its sandbox.
+    func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?){
+        
     }
 }

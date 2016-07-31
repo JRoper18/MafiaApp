@@ -49,6 +49,7 @@ class GameConnectionManager: NSObject, MCNearbyServiceAdvertiserDelegate, MCSess
         
         session.delegate = self;
         
+        print("Session PeerID:" + String(self.session.myPeerID.displayName))
     }
     //Delegate required function called when we get an invitation
     func advertiser(advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: NSData?, invitationHandler: (Bool, MCSession) -> Void){
@@ -57,8 +58,6 @@ class GameConnectionManager: NSObject, MCNearbyServiceAdvertiserDelegate, MCSess
         
         print("Got invitation to join session from " + peerID.displayName);
         invitationHandler(true, self.session)
-        print("ASDA" + String(self.session.connectedPeers.count))
-        
         advertiser.stopAdvertisingPeer()
 
         
@@ -82,9 +81,9 @@ class GameConnectionManager: NSObject, MCNearbyServiceAdvertiserDelegate, MCSess
         print("WE HAVE A PEER THATS CHANGING");
         var str = "";
         switch(state){
-        case .NotConnected: str = "NC";
-        case .Connecting: str = "CING";
-        case .Connected: str="LKAJSD";
+        case .NotConnected: str = "Not Connected";
+        case .Connecting: str = "ConnectING";
+        case .Connected: str="Connected";
         }
         print("Count: " + String(session.connectedPeers.count) + " State: " + str);
     }
