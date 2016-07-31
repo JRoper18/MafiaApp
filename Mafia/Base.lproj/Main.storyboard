@@ -43,8 +43,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Roles Will Be Randomly Generated, And Have Various Goals/Jobs (see below). Tap On Peoples' Names To Select Them." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmM-EA-9es">
-                                <rect key="frame" x="151" y="89" width="299" height="69"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Roles Will Be Randomly Generated, And Each Role Has A Goal/Job (see below). Tap On Peoples' Names To Select Them." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmM-EA-9es">
+                                <rect key="frame" x="151" y="89" width="299" height="70"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -260,8 +260,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsv-F9-NKw">
-                                <rect key="frame" x="20" y="28" width="50" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsv-F9-NKw">
+                                <rect key="frame" x="13" y="28" width="50" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <state key="normal" title=" Back ">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -270,13 +270,21 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="0Yc-se-uqv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PENIS " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83r-vY-fJq">
+                                <rect key="frame" x="19" y="412" width="66" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0038680077252391566" blue="0.78287026912820523" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Dt-v6-Myx" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="2Fo-7t-a06"/>
                             <constraint firstItem="upr-9s-mri" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Oip-rI-NWR"/>
                             <constraint firstItem="aDc-ZW-CiU" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Rzx-tr-zvg"/>
+                            <constraint firstItem="dsv-F9-NKw" firstAttribute="leading" secondItem="L3p-16-6iC" secondAttribute="leadingMargin" constant="-7" id="TGd-nz-ldl"/>
                             <constraint firstItem="LoP-hZ-Qsq" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="e29-Ns-Oms"/>
+                            <constraint firstItem="dsv-F9-NKw" firstAttribute="top" secondItem="4To-4J-ppg" secondAttribute="bottom" constant="8" id="hwY-IU-1VL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -285,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLr-Vf-rgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2047" y="305"/>
+            <point key="canvasLocation" x="2055" y="305"/>
         </scene>
     </scenes>
     <resources>
