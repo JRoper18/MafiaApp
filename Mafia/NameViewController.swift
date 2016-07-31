@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import MultipeerConnectivity;
 
 class NameViewController: UIViewController {
 
+    var session = MCSession();
     @IBOutlet weak var nameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()

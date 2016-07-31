@@ -11,6 +11,7 @@ import MultipeerConnectivity;
 
 class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessionDelegate {
     
+    //The id that all people playing this game will be able to see each other.
     let gameServiceType = "mafia-game"
     
     //devicePeerID is what our device is shown as to other devices.
@@ -33,6 +34,8 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MC
         self.session.delegate = self;
         self.serviceBrowser = MCBrowserViewController(serviceType: gameServiceType, session: self.session)
         self.serviceBrowser.delegate = self;
+        //This LINE IS SUPER IMPORTANT
+        //It makes the style so that segues are remembered and still work.
         self.serviceBrowser.modalPresentationStyle = .OverFullScreen;
         
         
@@ -47,11 +50,14 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MC
         lookForGames();
         self.presentViewController(self.serviceBrowser, animated: true, completion: nil)
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dvc = segue.destinationViewController as! NameViewController;
+        dvc.session = self.session;
+    }
     
     //Called when we finish the peer selection.
     func browserViewControllerDidFinish(browserViewController: MCBrowserViewController){
-        print("Done button pressed");
-        self.performSegueWithIdentifier("ToGame", sender: nil);
+        self.performSegueWithIdentifier("ToGame", sender: self);
          
     }
     //Called when we hit the cancel button
@@ -59,7 +65,6 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MC
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState){
-        print("WE HAVE A PEER THATS CHANGING");
         var str = "";
         switch(state){
         case .NotConnected: str = "Not Connected";
