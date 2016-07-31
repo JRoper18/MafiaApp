@@ -14,7 +14,7 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MC
     let gameServiceType = "mafia-game"
     
     //devicePeerID is what our device is shown as to other devices.
-    let devicePeerID = MCPeerID(displayName: UIDevice.currentDevice().name)
+    var devicePeerID = MCPeerID(displayName: UIDevice.currentDevice().name)
     
     //Finds people who are advertising.
     var serviceBrowser : MCBrowserViewController!;
@@ -22,9 +22,13 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MC
     //Local session
     var session: MCSession!;
     
+    @IBOutlet weak var deviceNameTextField: UITextField!
     var advertiser : MCAdvertiserAssistant!;
     override func viewDidLoad(){
         super.viewDidLoad();
+        
+    }
+    func lookForGames(){
         self.session = MCSession(peer: devicePeerID)
         self.session.delegate = self;
         self.serviceBrowser = MCBrowserViewController(serviceType: gameServiceType, session: self.session)
@@ -40,16 +44,21 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate, MC
         certificateHandler(true);
     }
     @IBAction func buttonAction(sender: AnyObject) {
+        if deviceNameTextField.text != nil{
+            self.devicePeerID = MCPeerID(displayName: deviceNameTextField.text!);
+        }
+        lookForGames();
         self.presentViewController(self.serviceBrowser, animated: true, completion: nil)
     }
     
     //Called when we finish the peer selection.
     func browserViewControllerDidFinish(browserViewController: MCBrowserViewController){
         self.dismissViewControllerAnimated(true, completion: nil)
+        self.performSegueWithIdentifier("ToGame", sender: nil)
     }
     //Called when we hit the cancel button
     func browserViewControllerWasCancelled(browserViewController: MCBrowserViewController){
-        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState){
         print("WE HAVE A PEER THATS CHANGING");

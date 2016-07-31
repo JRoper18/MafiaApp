@@ -88,56 +88,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfv-Me-MsI">
-                                <rect key="frame" x="20" y="142" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfv-Me-MsI">
+                                <rect key="frame" x="244" y="234" width="112" height="30"/>
+                                <state key="normal" title="Look For Games"/>
                                 <connections>
                                     <action selector="buttonAction:" destination="Yet-yg-rRD" eventType="touchUpInside" id="zDq-Mm-3aa"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-G7-3Jy">
+                                <rect key="frame" x="220" y="74" width="160" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pfv-Me-MsI" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="Uf9-3G-C5f"/>
+                            <constraint firstItem="HIz-G7-3Jy" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="jmT-H6-JcY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XPS-1W-Xz6"/>
+                    <connections>
+                        <outlet property="deviceNameTextField" destination="HIz-G7-3Jy" id="hTO-nc-DO1"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ToGame" id="lSm-f1-u1w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdK-3u-812" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="587" y="350"/>
-        </scene>
-        <!--Host Or Join View Controller-->
-        <scene sceneID="XfO-7b-nTL">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DxK-le-qgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="c6W-Sv-HIt" customClass="HostOrJoinViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Qn-zM-46U"/>
-                        <viewControllerLayoutGuide type="bottom" id="Exf-on-guX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0KT-pC-0pU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7W-hh-7Vt">
-                                <rect key="frame" x="284" y="101" width="33" height="30"/>
-                                <state key="normal" title="Host"/>
-                                <connections>
-                                    <action selector="onHostButtonTapped:" destination="c6W-Sv-HIt" eventType="touchUpInside" id="xxV-Tf-qS5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiS-RO-pzQ">
-                                <rect key="frame" x="285" y="169" width="30" height="30"/>
-                                <state key="normal" title="Join"/>
-                                <connections>
-                                    <segue destination="Yet-yg-rRD" kind="show" id="AxA-io-089"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="oFx-pa-knp"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-76" y="350"/>
+            <point key="canvasLocation" x="586" y="305"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="uCG-Tl-OCI">
