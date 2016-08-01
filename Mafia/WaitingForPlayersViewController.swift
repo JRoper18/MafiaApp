@@ -13,31 +13,34 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
     var players : [String] = [];
     override func viewDidLoad(){
         super.viewDidLoad();
-        let playerJoinNameString = "PlayerJoin:" + deviceSession.myPeerID.displayName;
         deviceSession.delegate = self;
-        try! deviceSession.sendData(String("GameStart").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable);
-        print(deviceSession.connectedPeers.count)
+        try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable);
         
     }
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
+        //This works by when someone is ready they send the PlayerJoin message and the other devices add them to an array of players and then respond with their name, so that the new guy knows they're ready too.
+        
+        
         //Aparently the dispatch async thing makes this work.
-        print("Got data");
         dispatch_async(dispatch_get_main_queue()) {
             let command = String(data);
-            if command == "PlayerJoin:"{
+            if command == "PlayerJoin"{
+                try! deviceSession.sendData(String("PlayerJoinReply").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
                 self.players.append(peerID.displayName);
                 //If all the players are in the ready screen
                 if(self.players.count == session.connectedPeers.count){
                     self.performSegueWithIdentifier("StartGame", sender: nil);
-
                 }
             }
-            else if command == "GameStart"{
-                print("EEEY");
-                self.performSegueWithIdentifier("StartGame", sender: nil);
+            else if command == "PlayerJoinReply"{
+                //Add the new data to player array.
+                self.players.append(peerID.displayName);
+                if(self.players.count == session.connectedPeers.count){
+                    self.performSegueWithIdentifier("StartGame", sender: nil);
+                }
             }
             else{
-
+                print("Strange message");
             }
         }
     }
