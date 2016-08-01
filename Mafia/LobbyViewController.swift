@@ -10,7 +10,7 @@ import UIKit
 import MultipeerConnectivity;
 
 //Local session
-var session: MCSession!;
+var deviceSession: MCSession!;
 
 class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate {
     
@@ -30,15 +30,15 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate {
         
     }
     func lookForGames(){
-        session = MCSession(peer: devicePeerID)
-        self.serviceBrowser = MCBrowserViewController(serviceType: gameServiceType, session: session)
+        deviceSession = MCSession(peer: devicePeerID)
+        self.serviceBrowser = MCBrowserViewController(serviceType: gameServiceType, session: deviceSession)
         self.serviceBrowser.delegate = self;
         //This LINE IS SUPER IMPORTANT
         //It makes the style so that segues are remembered and still work.
         self.serviceBrowser.modalPresentationStyle = .OverFullScreen;
         
         
-        advertiser = MCAdvertiserAssistant(serviceType: gameServiceType, discoveryInfo: nil, session: session);
+        advertiser = MCAdvertiserAssistant(serviceType: gameServiceType, discoveryInfo: nil, session: deviceSession);
         advertiser.start();
 
     }

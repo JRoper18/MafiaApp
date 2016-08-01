@@ -22,7 +22,7 @@ class NameViewController: UIViewController {
         }
         else if segue.identifier == "Second"{
             let dvc = segue.destinationViewController as! SecondViewController
-            dvc.playersName = session.myPeerID.displayName
+            dvc.playersName = deviceSession.myPeerID.displayName
         }
     }
 }
