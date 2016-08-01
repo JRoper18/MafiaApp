@@ -79,7 +79,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         case 2:
             roles = [.Pirate, .Townsman]
         case 3:
-            roles = [.Pirate, .Townsman, .Healer]
+            roles = [.Pirate, .Townsman, .Townsman]
         case 4:
             roles = [.Pirate, .Townsman, .Healer, .Townsman]
         case 5:
