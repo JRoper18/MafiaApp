@@ -11,7 +11,11 @@ import MultipeerConnectivity;
 
 var thisPlayer : Player = Player(name: deviceSession.myPeerID.displayName, role: .Default)
 
-class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
+class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    @IBOutlet weak var displayPlayersTableView: UITableView!
+    
     var players : [Player] = [];
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -150,7 +154,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = players[indexPath.row]
+        cell.textLabel?.text = players[indexPath.row].name
         
         return cell
     }

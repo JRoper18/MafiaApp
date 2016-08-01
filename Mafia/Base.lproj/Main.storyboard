@@ -188,6 +188,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="displayPlayersTableView" destination="Nkn-gY-BpZ" id="Rj2-vp-kb1"/>
                         <segue destination="Y3g-AC-ucG" kind="show" identifier="StartGameHunter" id="aXZ-UP-w7x"/>
                         <segue destination="VSu-bJ-HhL" kind="show" identifier="StartGameTownsman" id="tZQ-0W-AgD"/>
                         <segue destination="p7q-gD-OAq" kind="show" identifier="StartGameHealer" id="RtD-re-Byb"/>
@@ -444,7 +445,6 @@
         <image name="blackShip2" width="512" height="512"/>
         <image name="healer2" width="236" height="268"/>
         <image name="imperialFlag" width="2000" height="1000"/>
-        <image name="pirate" width="800" height="845"/>
         <image name="pirateFlag" width="2000" height="1253"/>
         <image name="sword" width="428" height="550"/>
     </resources>
