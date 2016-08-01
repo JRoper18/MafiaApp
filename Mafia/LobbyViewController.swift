@@ -9,26 +9,55 @@
 import UIKit
 import MultipeerConnectivity;
 
-class LobbyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+//Local session
+var deviceSession: MCSession!;
+
+class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate {
     
-    let manager = GameConnectionManager();
-    @IBOutlet weak var tableView: UITableView!
+    //The id that all people playing this game will be able to see each other.
+    let gameServiceType = "mafia-game"
     
-    @IBAction func refreshButtonPressed(sender: AnyObject) {
-        tableView.reloadData();
-    }
+    //devicePeerID is what our device is shown as to other devices.
+    var devicePeerID = MCPeerID(displayName: UIDevice.currentDevice().name)
+    
+    //Finds people who are advertising.
+    var serviceBrowser : MCBrowserViewController!;
+    
+    @IBOutlet weak var deviceNameTextField: UITextField!
+    var advertiser : MCAdvertiserAssistant!;
     override func viewDidLoad(){
         super.viewDidLoad();
-        tableView.reloadData();
         
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return manager.session.connectedPeers.count;
+    func lookForGames(){
+        deviceSession = MCSession(peer: devicePeerID)
+        self.serviceBrowser = MCBrowserViewController(serviceType: gameServiceType, session: deviceSession)
+        self.serviceBrowser.delegate = self;
+        //This LINE IS SUPER IMPORTANT
+        //It makes the style so that segues are remembered and still work.
+        self.serviceBrowser.modalPresentationStyle = .OverFullScreen;
+        
+        
+        advertiser = MCAdvertiserAssistant(serviceType: gameServiceType, discoveryInfo: nil, session: deviceSession);
+        advertiser.start();
+
+    }
+    @IBAction func buttonAction(sender: AnyObject) {
+        if deviceNameTextField.hasText() == true{
+            self.devicePeerID = MCPeerID(displayName: deviceNameTextField.text!);
+        }
+        lookForGames();
+        self.presentViewController(self.serviceBrowser, animated: true, completion: nil)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCellWithIdentifier("HostCell", forIndexPath: indexPath)
-        cell.textLabel?.text = manager.session.connectedPeers[indexPath.row].displayName;
-        return cell;
+    
+    //Called when we finish the peer selection.
+    func browserViewControllerDidFinish(browserViewController: MCBrowserViewController){
+        self.performSegueWithIdentifier("ToGame", sender: self);
+         
+    }
+    //Called when we hit the cancel button
+    func browserViewControllerWasCancelled(browserViewController: MCBrowserViewController){
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

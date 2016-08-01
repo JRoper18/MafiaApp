@@ -49,16 +49,16 @@ class GameConnectionManager: NSObject, MCNearbyServiceAdvertiserDelegate, MCSess
         
         session.delegate = self;
         
+        print("Session PeerID:" + String(self.session.myPeerID.displayName))
     }
     //Delegate required function called when we get an invitation
     func advertiser(advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: NSData?, invitationHandler: (Bool, MCSession) -> Void){
         //Because we dont want a connection problem, we want to connect everyone to the same session.
-        //Just connect people to the newest one.
+        //Just connect people to the oldest one.
         
         print("Got invitation to join session from " + peerID.displayName);
         invitationHandler(true, self.session)
         advertiser.stopAdvertisingPeer()
-
 
         
         
@@ -78,7 +78,14 @@ class GameConnectionManager: NSObject, MCNearbyServiceAdvertiserDelegate, MCSess
     
     // Remote peer changed state.
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState){
-        
+        print("WE HAVE A PEER THATS CHANGING");
+        var str = "";
+        switch(state){
+        case .NotConnected: str = "Not Connected";
+        case .Connecting: str = "ConnectING";
+        case .Connected: str="Connected";
+        }
+        print("Count: " + String(session.connectedPeers.count) + " State: " + str);
     }
     
     // Received data from remote peer.

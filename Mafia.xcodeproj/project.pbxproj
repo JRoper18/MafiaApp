@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BDA6E0B1D4E79980000498D /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */; };
 		852D15FE1D4BE26500638ED6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D15FD1D4BE26500638ED6 /* SecondViewController.swift */; };
-		DB7074EC1D4CE644001F11D1 /* GameConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074EB1D4CE644001F11D1 /* GameConnectionManager.swift */; };
-		DB7074F01D4CFD39001F11D1 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074EF1D4CFD39001F11D1 /* HostViewController.swift */; };
+		DB3029FB1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3029FA1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift */; };
+		DB3029FD1D4EC0D00014A142 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3029FC1D4EC0D00014A142 /* Player.swift */; };
 		DB7074F21D4D01BF001F11D1 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074F11D4D01BF001F11D1 /* LobbyViewController.swift */; };
-		DB7074F41D4D04E4001F11D1 /* HostOrJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074F31D4D04E4001F11D1 /* HostOrJoinViewController.swift */; };
 		DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABA4921D4BC09D00112D1F /* AppDelegate.swift */; };
 		DBABA4951D4BC09D00112D1F /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABA4941D4BC09D00112D1F /* NameViewController.swift */; };
 		DBABA4981D4BC09E00112D1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBABA4961D4BC09E00112D1F /* Main.storyboard */; };
@@ -20,11 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstructionViewController.swift; path = ../InstructionViewController.swift; sourceTree = "<group>"; };
 		852D15FD1D4BE26500638ED6 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		DB7074EB1D4CE644001F11D1 /* GameConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConnectionManager.swift; sourceTree = "<group>"; };
-		DB7074EF1D4CFD39001F11D1 /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
+		DB3029FA1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingForPlayersViewController.swift; sourceTree = "<group>"; };
+		DB3029FC1D4EC0D00014A142 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		DB7074F11D4D01BF001F11D1 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
-		DB7074F31D4D04E4001F11D1 /* HostOrJoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostOrJoinViewController.swift; sourceTree = "<group>"; };
 		DBABA48F1D4BC09D00112D1F /* Mafia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mafia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBABA4921D4BC09D00112D1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBABA4941D4BC09D00112D1F /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +64,7 @@
 		DBABA4911D4BC09D00112D1F /* Mafia */ = {
 			isa = PBXGroup;
 			children = (
+				2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */,
 				DBABA4921D4BC09D00112D1F /* AppDelegate.swift */,
 				DBABA4941D4BC09D00112D1F /* NameViewController.swift */,
 				852D15FD1D4BE26500638ED6 /* SecondViewController.swift */,
@@ -71,10 +72,9 @@
 				DBABA4991D4BC09E00112D1F /* Assets.xcassets */,
 				DBABA49B1D4BC09E00112D1F /* LaunchScreen.storyboard */,
 				DBABA49E1D4BC09E00112D1F /* Info.plist */,
-				DB7074EB1D4CE644001F11D1 /* GameConnectionManager.swift */,
-				DB7074EF1D4CFD39001F11D1 /* HostViewController.swift */,
 				DB7074F11D4D01BF001F11D1 /* LobbyViewController.swift */,
-				DB7074F31D4D04E4001F11D1 /* HostOrJoinViewController.swift */,
+				DB3029FA1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift */,
+				DB3029FC1D4EC0D00014A142 /* Player.swift */,
 			);
 			path = Mafia;
 			sourceTree = "<group>";
@@ -111,6 +111,7 @@
 				TargetAttributes = {
 					DBABA48E1D4BC09D00112D1F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = C66S4U3X9U;
 					};
 				};
 			};
@@ -150,13 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB7074EC1D4CE644001F11D1 /* GameConnectionManager.swift in Sources */,
+				2BDA6E0B1D4E79980000498D /* InstructionViewController.swift in Sources */,
 				852D15FE1D4BE26500638ED6 /* SecondViewController.swift in Sources */,
-				DB7074F01D4CFD39001F11D1 /* HostViewController.swift in Sources */,
 				DBABA4951D4BC09D00112D1F /* NameViewController.swift in Sources */,
+				DB3029FB1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift in Sources */,
+				DB3029FD1D4EC0D00014A142 /* Player.swift in Sources */,
 				DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */,
 				DB7074F21D4D01BF001F11D1 /* LobbyViewController.swift in Sources */,
-				DB7074F41D4D04E4001F11D1 /* HostOrJoinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,10 +272,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Mafia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = roper.Mafia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -282,10 +286,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Mafia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = roper.Mafia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

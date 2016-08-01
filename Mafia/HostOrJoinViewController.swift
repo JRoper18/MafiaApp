@@ -8,12 +8,19 @@
 
 import UIKit
 
-class HostOrJoinViewController: UIViewController {
-    @IBAction func onHostButtonTapped(sender: AnyObject) {
-        
-    }
+class InitialViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad();
 
     }
+    @IBAction func OnJoinButtonPressed(sender: AnyObject) {
+        if(DeviceNameTextField.text == nil){
+            
+        }
+        else{
+            presentViewController(LobbyViewController(), animated: true, completion: nil)
+        }
+    }
+    @IBOutlet weak var DeviceNameTextField: UITextField!
 }
