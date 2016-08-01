@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -23,7 +23,7 @@
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9a9-Gw-1aU">
                                 <rect key="frame" x="151" y="344" width="299" height="88"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">*Pirate Hunter Role: Your Job Is To Catch The Pirate Without Getting Killed. Try And Convince The Townsfolk To Vote For Who You May Think Is The Pirate</string>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -31,14 +31,14 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Roles Will Be Randomly Generated, And Each Role Has A Goal/Job (see below). Tap On Peoples' Names To Select Them." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmM-EA-9es">
                                 <rect key="frame" x="151" y="89" width="299" height="70"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="black" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo1-t4-ktJ">
                                 <rect key="frame" x="151" y="264" width="290" height="88"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">*Pirate Role: Your Job Is To Try And Kill The Pirate Hunter Without Getting Caught. When It Is Daytime, Try To Avoid Getting The Most Votes!</string>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -46,7 +46,7 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qxh-Lp-hK5">
                                 <rect key="frame" x="151" y="167" width="299" height="106"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">*Townsfolk Role: Your Job Is To Vote (With Everyone Else) On Who Might Be The Pirate. Whoever Gets The Most Votes Will Be Killed Off And Is Removed From The Game</string>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -62,13 +62,13 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="*Healer Role: Your Job Is To Try To Find And Revive Who The Pirate Might Kill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iUb-4s-ER3">
                                 <rect key="frame" x="151" y="422" width="299" height="57"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="auH-CF-Xac" firstAttribute="leading" secondItem="wLy-yc-tL2" secondAttribute="leadingMargin" constant="-20" id="04I-qj-ifY"/>
                             <constraint firstItem="niB-Ih-C1n" firstAttribute="top" secondItem="auH-CF-Xac" secondAttribute="bottom" id="5jT-Ab-S0e"/>
@@ -180,7 +180,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B3B-0W-1hB" id="s4X-XO-ydE">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -269,36 +269,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="antiPirate" translatesAutoresizingMaskIntoConstraints="NO" id="upr-9s-mri">
-                                <rect key="frame" x="177" y="380" width="246" height="212"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="246" id="HLc-t4-KL2"/>
-                                    <constraint firstAttribute="height" constant="212" id="Iwf-5Z-pAu"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-v6-Myx">
-                                <rect key="frame" x="164" y="67" width="273" height="38"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Your Name: ">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="30" name="Helvetica-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83r-vY-fJq">
                                 <rect key="frame" x="386" y="198" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-ZW-CiU">
-                                <rect key="frame" x="104" y="126" width="393" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-ZW-CiU">
+                                <rect key="frame" x="104" y="28" width="393" height="36"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="You Role Is: Pirate Hunter">
+                                    <fragment content="Your Role Is: Pirate Hunter">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="28" name="Helvetica-Bold"/>
@@ -308,25 +288,45 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="imperialFlag" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-hZ-Qsq">
-                                <rect key="frame" x="164" y="227" width="273" height="145"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imperialFlag" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-hZ-Qsq">
+                                <rect key="frame" x="164" y="125" width="273" height="145"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="8Bt-bu-GkS"/>
                                     <constraint firstAttribute="width" constant="273" id="GyH-oT-GnP"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVe-Hu-BxZ">
+                                <rect key="frame" x="272" y="542" width="57" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="bqo-wl-6pm"/>
+                                    <constraint firstAttribute="height" constant="50" id="zuu-wj-djr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <segue destination="xR0-J2-sxM" kind="show" id="85j-SN-D2j"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="antiPirate" translatesAutoresizingMaskIntoConstraints="NO" id="upr-9s-mri">
+                                <rect key="frame" x="177" y="315" width="246" height="212"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="HLc-t4-KL2"/>
+                                    <constraint firstAttribute="height" constant="212" id="Iwf-5Z-pAu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0021801969782459557" blue="0.44126369861538473" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0Dt-v6-Myx" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="2Fo-7t-a06"/>
+                            <constraint firstItem="J1X-0I-sAz" firstAttribute="top" secondItem="IVe-Hu-BxZ" secondAttribute="bottom" constant="8" id="Iuw-9P-dbY"/>
                             <constraint firstItem="upr-9s-mri" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Oip-rI-NWR"/>
                             <constraint firstItem="aDc-ZW-CiU" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Rzx-tr-zvg"/>
+                            <constraint firstItem="IVe-Hu-BxZ" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="TON-8P-rql"/>
+                            <constraint firstItem="IVe-Hu-BxZ" firstAttribute="top" secondItem="upr-9s-mri" secondAttribute="bottom" constant="15" id="b74-zG-bWV"/>
+                            <constraint firstItem="aDc-ZW-CiU" firstAttribute="top" secondItem="4To-4J-ppg" secondAttribute="bottom" constant="8" id="bx7-xT-0dn"/>
                             <constraint firstItem="LoP-hZ-Qsq" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="e29-Ns-Oms"/>
+                            <constraint firstItem="upr-9s-mri" firstAttribute="top" secondItem="LoP-hZ-Qsq" secondAttribute="bottom" constant="45" id="kZX-qu-ENw"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="nameLabel" destination="0Dt-v6-Myx" id="mYk-jQ-GND"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLr-Vf-rgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -353,7 +353,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime. Vote for who you think is the Pirate." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIN-0M-8Ph">
                                 <rect key="frame" x="116" y="53" width="369" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -365,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47f-c9-N3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3526" y="305"/>
+            <point key="canvasLocation" x="3659" y="-12"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OYK-if-sbU">
@@ -379,30 +379,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirate" translatesAutoresizingMaskIntoConstraints="NO" id="s0J-Hd-i2h">
-                                <rect key="frame" x="179" y="236" width="243" height="293"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="293" id="C1Q-GM-3T3"/>
-                                    <constraint firstAttribute="width" constant="243" id="nkP-IH-vvY"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbo-p9-InO">
-                                <rect key="frame" x="164" y="84" width="273" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB0-qo-1xl">
+                                <rect key="frame" x="116" y="28" width="369" height="36"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Your Name:">
-                                        <attributes>
-                                            <color key="NSColor" red="0.28521792763157894" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="30" name="Helvetica-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB0-qo-1xl">
-                                <rect key="frame" x="116" y="138" width="369" height="36"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="You Role Is: Pirate">
+                                    <fragment content="Your Role Is: Pirate">
                                         <attributes>
                                             <color key="NSColor" red="0.29664884868421049" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="28" name="Helvetica-Bold"/>
@@ -412,11 +392,34 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qp-cu-rRr">
+                                <rect key="frame" x="272" y="542" width="57" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="43v-cx-fhY"/>
+                                    <constraint firstAttribute="width" constant="57" id="NIm-If-09A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <segue destination="xR0-J2-sxM" kind="show" id="o0I-K8-KPV"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pirate" translatesAutoresizingMaskIntoConstraints="NO" id="s0J-Hd-i2h">
+                                <rect key="frame" x="179" y="153" width="243" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="C1Q-GM-3T3"/>
+                                    <constraint firstAttribute="width" constant="243" id="nkP-IH-vvY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.66215945512820507" green="0.01239675855160367" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="E8r-bG-EuC" firstAttribute="top" secondItem="7Qp-cu-rRr" secondAttribute="bottom" constant="8" id="GjY-HY-TGv"/>
+                            <constraint firstItem="7Qp-cu-rRr" firstAttribute="top" secondItem="s0J-Hd-i2h" secondAttribute="bottom" constant="96" id="JM0-WW-d4P"/>
                             <constraint firstItem="s0J-Hd-i2h" firstAttribute="centerX" secondItem="TGJ-t6-Mb8" secondAttribute="centerX" id="QWv-4E-Ve7"/>
-                            <constraint firstItem="Qbo-p9-InO" firstAttribute="centerX" secondItem="TGJ-t6-Mb8" secondAttribute="centerX" id="biO-Uz-qHl"/>
+                            <constraint firstItem="UB0-qo-1xl" firstAttribute="top" secondItem="ved-5V-flc" secondAttribute="bottom" constant="8" id="kQI-un-isw"/>
+                            <constraint firstItem="7Qp-cu-rRr" firstAttribute="centerX" secondItem="TGJ-t6-Mb8" secondAttribute="centerX" id="nGS-LA-QbX"/>
+                            <constraint firstItem="s0J-Hd-i2h" firstAttribute="top" secondItem="UB0-qo-1xl" secondAttribute="bottom" constant="89" id="vV6-yJ-K3v"/>
                             <constraint firstItem="UB0-qo-1xl" firstAttribute="centerX" secondItem="TGJ-t6-Mb8" secondAttribute="centerX" id="xpD-BU-GjD"/>
                         </constraints>
                     </view>
@@ -437,23 +440,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m8-Nr-q9M">
-                                <rect key="frame" x="164" y="95" width="273" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-ai-eBJ">
+                                <rect key="frame" x="116" y="28" width="369" height="36"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Your Name:">
-                                        <attributes>
-                                            <color key="NSColor" red="0.28521792763157894" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="30" name="Helvetica-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-ai-eBJ">
-                                <rect key="frame" x="116" y="147" width="369" height="36"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="You Role Is: Townsperson">
+                                    <fragment content="Your Role Is: Townsperson">
                                         <attributes>
                                             <color key="NSColor" red="0.29664884868421049" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="28" name="Helvetica-Bold"/>
@@ -463,8 +453,20 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="No-pirates" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-04-UhG">
-                                <rect key="frame" x="172" y="238" width="256" height="248"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3r-9l-lek">
+                                <rect key="frame" x="272" y="542" width="57" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VaO-hi-yOM"/>
+                                    <constraint firstAttribute="width" constant="57" id="iLT-Pc-hpV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <segue destination="xR0-J2-sxM" kind="show" id="lGi-4i-JtP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No-pirates" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-04-UhG">
+                                <rect key="frame" x="172" y="176" width="256" height="248"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="248" id="NiF-uG-Msn"/>
                                     <constraint firstAttribute="width" constant="256" id="SbF-RP-eJm"/>
@@ -475,7 +477,11 @@
                         <constraints>
                             <constraint firstItem="tAu-04-UhG" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="7lm-mQ-P6v"/>
                             <constraint firstItem="bQA-ai-eBJ" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="FMc-kh-vi5"/>
-                            <constraint firstItem="2m8-Nr-q9M" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="NRk-Jc-8Wo"/>
+                            <constraint firstItem="nhF-FG-dcB" firstAttribute="top" secondItem="w3r-9l-lek" secondAttribute="bottom" constant="8" id="JSY-0f-J7F"/>
+                            <constraint firstItem="w3r-9l-lek" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="Mka-gA-t1K"/>
+                            <constraint firstItem="w3r-9l-lek" firstAttribute="top" secondItem="tAu-04-UhG" secondAttribute="bottom" constant="118" id="gRl-Ww-G7Q"/>
+                            <constraint firstItem="tAu-04-UhG" firstAttribute="top" secondItem="bQA-ai-eBJ" secondAttribute="bottom" constant="112" id="i5v-ua-zxE"/>
+                            <constraint firstItem="bQA-ai-eBJ" firstAttribute="top" secondItem="OW0-ga-x2j" secondAttribute="bottom" constant="8" id="j9m-c2-VyS"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -495,18 +501,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="healer2" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-OZ-Kcq">
-                                <rect key="frame" x="105" y="105" width="390" height="431"/>
-                                <color key="backgroundColor" red="0.019371893670000001" green="1" blue="0.034476737600000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="431" id="4RU-lq-PUr"/>
-                                    <constraint firstAttribute="width" constant="390" id="kb0-GN-aBj"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBW-oL-kUX">
-                                <rect key="frame" x="164" y="159" width="273" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBW-oL-kUX">
+                                <rect key="frame" x="159" y="28" width="283" height="36"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="You Role Is: Healer">
+                                    <fragment content="Your Role Is: Healer">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="30" name="Helvetica-Bold"/>
@@ -516,24 +514,33 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJz-Vi-hQl">
-                                <rect key="frame" x="164" y="84" width="273" height="45"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Your Name:">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="35" name="Helvetica-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHU-2B-pG2">
+                                <rect key="frame" x="272" y="542" width="57" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BZa-0z-nd7"/>
+                                    <constraint firstAttribute="width" constant="57" id="Ieh-tJ-vyH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <segue destination="xR0-J2-sxM" kind="show" id="Cve-1x-s6U"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="healer2" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-OZ-Kcq">
+                                <rect key="frame" x="105" y="84" width="390" height="431"/>
+                                <color key="backgroundColor" red="0.019371893670000001" green="1" blue="0.034476737600000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="431" id="4RU-lq-PUr"/>
+                                    <constraint firstAttribute="width" constant="390" id="kb0-GN-aBj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="yBW-oL-kUX" firstAttribute="top" secondItem="bmS-ZZ-Yr4" secondAttribute="bottom" constant="8" id="K71-So-STH"/>
+                            <constraint firstItem="rNh-Wi-lpX" firstAttribute="top" secondItem="aHU-2B-pG2" secondAttribute="bottom" constant="8" id="SCt-A1-OYs"/>
+                            <constraint firstItem="aHU-2B-pG2" firstAttribute="centerX" secondItem="Jlo-3d-Jla" secondAttribute="centerX" id="Twe-o2-Iqa"/>
                             <constraint firstItem="yBW-oL-kUX" firstAttribute="centerX" secondItem="Jlo-3d-Jla" secondAttribute="centerX" id="r31-rp-P9f"/>
-                            <constraint firstItem="eJz-Vi-hQl" firstAttribute="centerX" secondItem="Jlo-3d-Jla" secondAttribute="centerX" id="xl0-eG-zmB"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -556,6 +563,7 @@
         <image name="sword" width="428" height="550"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Cve-1x-s6U"/>
         <segue reference="cPe-SS-k0c"/>
     </inferredMetricsTieBreakers>
 </document>
