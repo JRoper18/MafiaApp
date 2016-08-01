@@ -14,17 +14,20 @@ var thisPlayer : Player = Player(name: deviceSession.myPeerID.displayName, role:
 class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
     var players : [Player] = [];
     override func viewDidLoad(){
-        super.viewDidLoad();
-        deviceSession.delegate = self;
-        try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable);
+        super.viewDidLoad()
+        displayPlayersTableView.delegate = self
+        displayPlayersTableView.dataSource = self
         
+        deviceSession.delegate = self
+        try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
     }
+    
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         //This works by when someone is ready they send the PlayerJoin message and the other devices add them to an array of players and then respond with their name, so that the new guy knows they're ready too.
         
         //Aparently the dispatch async thing makes this work.
         dispatch_async(dispatch_get_main_queue()) {
-            let command = String(data);
+            let command = String(data)
             if command == "PlayerJoin"{
                 try! deviceSession.sendData(String("PlayerJoinReply").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
                 self.players.append(Player(name: peerID.displayName, role: PlayerRole.Townsman));
@@ -124,13 +127,32 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
         
     }
+    
     func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
         
     }
+    
     func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress) {
         
     }
+    
     func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
-        
     }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return players.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as UITableViewCell
+        
+        cell.textLabel?.text = players[indexPath.row]
+        
+        return cell
+    }
+
 }
