@@ -428,6 +428,10 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="No-pirates" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-04-UhG">
                                 <rect key="frame" x="172" y="238" width="256" height="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="NiF-uG-Msn"/>
+                                    <constraint firstAttribute="width" constant="256" id="SbF-RP-eJm"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.6126028198944895" green="0.40929007649945159" blue="0.20504561900750742" alpha="1" colorSpace="calibratedRGB"/>
