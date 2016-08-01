@@ -23,19 +23,23 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         displayPlayersTableView.dataSource = self
         print(deviceSession.myPeerID.displayName)
         deviceSession.delegate = self
+        if(players.count == 0){
+            thisPlayer.role = .Townsman
+        }
         try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
     }
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         //This works by when someone is ready they send the PlayerJoin message and the other devices add them to an array of players and then respond with their name, so that the new guy knows they're ready too.
-        print("GOT DATA");
+        print("From: "  + peerID.displayName + " : " + String(data: data, encoding: NSUTF8StringEncoding)!);
         //Aparently the dispatch async thing makes this work.
         dispatch_async(dispatch_get_main_queue()) {
             self.displayPlayersTableView.reloadData();
             let command = String(data: data, encoding: NSUTF8StringEncoding)
             if command == "PlayerJoin"{
-                try! deviceSession.sendData(String("PlayerJoinReply:").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
-                players.append(Player(name: peerID.displayName, role: PlayerRole.Townsman));
+                let replyString = "PlayerJoinReply:" + self.roleToString(thisPlayer.role);
+                try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
+                players.append(Player(name: peerID.displayName, role: PlayerRole.Default));
                 //If all the players are in the ready screen
 
             }
@@ -56,9 +60,9 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
                     //Add the new data to player array.
                     let replyPlayer = Player(name: peerID.displayName, role:self.stringToRole(command!.substringFromIndex(command!.startIndex.advancedBy(16))))
                     players.append(replyPlayer)
-                    thisPlayer.role = (self.findRole())
+                    thisPlayer.role = self.findRole();
                     let replyString = String("PlayerRoleReply:" + self.roleToString(thisPlayer.role))
-                    try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
+                    try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable);
                     if(players.count == session.connectedPeers.count){
                         let segueString = "StartGame" + self.roleToString(thisPlayer.role);
                         self.performSegueWithIdentifier(segueString, sender: nil);
@@ -95,6 +99,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         }
         var takenRoles : [PlayerRole] = []
         for player in players{
+            print(player.role);
             takenRoles.append(player.role)
         }
         for role in takenRoles{
@@ -117,7 +122,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         case "Hunter":
             return .Hunter;
         default:
-            return .Townsman;
+            return .Default;
         }
     }
     func roleToString(role: PlayerRole) -> String{
@@ -131,7 +136,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         case .Hunter:
             return "Hunter";
         default:
-            return "Townsman";
+            return "Default";
         }
     }
     
