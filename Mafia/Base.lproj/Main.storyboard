@@ -250,7 +250,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-v6-Myx">
-                                <rect key="frame" x="164" y="109" width="273" height="21"/>
+                                <rect key="frame" x="164" y="87" width="273" height="43"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Your Name:">
                                         <attributes>
@@ -324,7 +324,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m8-Nr-q9M">
-                                <rect key="frame" x="164" y="112" width="273" height="21"/>
+                                <rect key="frame" x="164" y="95" width="273" height="38"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Your Name:">
                                         <attributes>
@@ -377,25 +377,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="healer2" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-OZ-Kcq">
+                                <rect key="frame" x="143" y="108" width="390" height="431"/>
+                                <color key="backgroundColor" red="0.019371893670000001" green="1" blue="0.034476737600000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBW-oL-kUX">
-                                <rect key="frame" x="164" y="145" width="273" height="36"/>
+                                <rect key="frame" x="164" y="159" width="273" height="36"/>
                                 <attributedString key="attributedText">
                                     <fragment content="You Role Is: Healer">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="Didot-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJz-Vi-hQl">
-                                <rect key="frame" x="164" y="116" width="273" height="21"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Your Name:">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="30" name="Didot-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -403,12 +394,21 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="healer" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-OZ-Kcq">
-                                <rect key="frame" x="180" y="217" width="240" height="246"/>
-                                <color key="backgroundColor" red="0.019371893670000001" green="1" blue="0.034476737600000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJz-Vi-hQl">
+                                <rect key="frame" x="164" y="84" width="273" height="45"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Your Name:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="35" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.15746625921281096" green="0.60100740131578945" blue="0.16061380310965845" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yBW-oL-kUX" firstAttribute="centerX" secondItem="Jlo-3d-Jla" secondAttribute="centerX" id="r31-rp-P9f"/>
                             <constraint firstItem="eJz-Vi-hQl" firstAttribute="centerX" secondItem="Jlo-3d-Jla" secondAttribute="centerX" id="xl0-eG-zmB"/>
@@ -425,7 +425,7 @@
         <image name="antiPirate" width="229" height="197"/>
         <image name="blackShip" width="1440" height="900"/>
         <image name="blackShip2" width="512" height="512"/>
-        <image name="healer" width="216" height="216"/>
+        <image name="healer2" width="236" height="268"/>
         <image name="imperialFlag" width="2000" height="1000"/>
         <image name="pirateFlag" width="2000" height="1253"/>
         <image name="sword" width="428" height="550"/>
