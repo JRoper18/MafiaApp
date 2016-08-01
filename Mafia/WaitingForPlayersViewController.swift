@@ -15,7 +15,6 @@ var players : [Player] = [];
 
 class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    
     @IBOutlet weak var displayPlayersTableView: UITableView!
     
     override func viewDidLoad(){
