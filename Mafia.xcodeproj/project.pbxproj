@@ -111,7 +111,7 @@
 				TargetAttributes = {
 					DBABA48E1D4BC09D00112D1F = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = LYJSRZED64;
+						DevelopmentTeam = C66S4U3X9U;
 					};
 				};
 			};

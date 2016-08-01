@@ -9,16 +9,14 @@
 import UIKit
 import MultipeerConnectivity;
 
-class WaitingForPlayersViewController: UIViewController, MCSessionDelegate,UITableViewDelegate, UITableViewDataSource{
+var thisPlayer : Player = Player(name: deviceSession.myPeerID.displayName, role: .Default)
+
+class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var displayPlayersTableView: UITableView!{
-        didSet {
-            displayPlayersTableView.dataSource = self
-        }
-    }
     
-    var players : [String] = []
+    @IBOutlet weak var displayPlayersTableView: UITableView!
     
+    var players : [Player] = [];
     override func viewDidLoad(){
         super.viewDidLoad()
         displayPlayersTableView.delegate = self
@@ -36,25 +34,100 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate,UITab
             let command = String(data)
             if command == "PlayerJoin"{
                 try! deviceSession.sendData(String("PlayerJoinReply").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
-                self.players.append(peerID.displayName);
+                self.players.append(Player(name: peerID.displayName, role: PlayerRole.Townsman));
                 //If all the players are in the ready screen
                 if(self.players.count == session.connectedPeers.count){
                     self.performSegueWithIdentifier("StartGame", sender: nil);
                 }
             }
-            else if command == "PlayerJoinReply"{
+            else if command.substringToIndex(command.startIndex.advancedBy(16)) == "PlayerRoleReply:"{
+                for index in 0..<self.players.count
+                {
+                    if self.players[index].name == peerID.displayName {
+                        self.players[index].role = self.stringToRole(command.substringFromIndex(command.startIndex.advancedBy(16)))
+                    }
+                }
+            }
+            else if command.substringToIndex(command.startIndex.advancedBy(16)) == "PlayerJoinReply:"{
                 //Add the new data to player array.
-                self.players.append(peerID.displayName);
+                let replyPlayer = Player(name: peerID.displayName, role:self.stringToRole(command.substringFromIndex(command.startIndex.advancedBy(16))))
+                self.players.append(replyPlayer)
+                thisPlayer.role = (self.findRole())
+                let replyString = String("PlayerRoleReply:" + self.roleToString(thisPlayer.role))
+                try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
                 if(self.players.count == session.connectedPeers.count){
-                    self.performSegueWithIdentifier("StartGame", sender: nil)
+                    let segueString = "StartGame" + self.roleToString(thisPlayer.role);
+                    self.performSegueWithIdentifier(segueString, sender: nil);
                 }
             }
             else{
-                print("Strange message")
+                print("Strange message " + command);
             }
         }
     }
+    func findRole() -> PlayerRole{
+        var roles : [PlayerRole] = []
+        switch(deviceSession.connectedPeers.count){
+        case 2:
+            roles = [.Pirate, .Townsman]
+        case 3:
+            roles = [.Pirate, .Townsman, .Healer]
+        case 4:
+            roles = [.Pirate, .Townsman, .Healer, .Townsman]
+        case 5:
+            roles = [.Pirate, .Townsman, .Healer, .Townsman, .Hunter]
+        case 6:
+            roles = [.Pirate, .Townsman, .Healer, .Townsman, .Hunter, .Townsman]
+        case 7:
+            roles = [.Pirate, .Townsman, .Healer, .Townsman, .Hunter, .Townsman, .Pirate]
+        case 8:
+            roles = [.Pirate, .Townsman, .Healer, .Townsman, .Hunter, .Townsman, .Pirate, .Townsman]
+        default:
+            print("Strange number of peers");
+        }
+        var takenRoles : [PlayerRole] = []
+        for player in players{
+            takenRoles.append(player.role)
+        }
+        for role in takenRoles{
+            //If the role is taken, remove ut from roles.
+            if roles.contains(role){
+                roles.removeAtIndex(roles.indexOf(role)!)
+            }
+        }
+        let roleNum = arc4random_uniform(UInt32(roles.count))
+        return roles[Int(roleNum)]
+    }
+    func stringToRole(roleString : String) -> PlayerRole{
+        switch roleString{
+        case "Townsman":
+            return .Townsman
+        case "Healer":
+            return .Healer;
+        case "Pirate":
+            return .Pirate;
+        case "Hunter":
+            return .Hunter;
+        default:
+            return .Townsman;
+        }
+    }
+    func roleToString(role: PlayerRole) -> String{
+        switch role{
+        case .Townsman:
+            return "Townsman"
+        case .Healer:
+            return "Healer";
+        case .Pirate:
+            return "Pirate";
+        case .Hunter:
+            return "Hunter";
+        default:
+            return "Townsman";
+        }
+    }
     
+    //Delegate required functions
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
         
     }
@@ -81,7 +154,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate,UITab
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = players[indexPath.row]
+        cell.textLabel?.text = players[indexPath.row].name
         
         return cell
     }

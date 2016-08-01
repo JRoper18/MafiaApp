@@ -10,9 +10,10 @@ import Foundation
 
 enum PlayerRole{
     case Pirate;
-    case Detective;
+    case Hunter;
     case Townsman;
-    case Medic;
+    case Healer;
+    case Default;
 }
 
 class Player {

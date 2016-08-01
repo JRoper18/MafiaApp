@@ -16,13 +16,4 @@ class NameViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "Instruction"{
-            let dvc = segue.destinationViewController as! InstructionViewController
-        }
-        else if segue.identifier == "Second"{
-            let dvc = segue.destinationViewController as! SecondViewController
-            dvc.playersName = deviceSession.myPeerID.displayName
-        }
-    }
 }
