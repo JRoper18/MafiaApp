@@ -28,14 +28,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8j-gn-X9K">
-                                <rect key="frame" x="17" y="28" width="40" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Back "/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="cPe-SS-k0c"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Roles Will Be Randomly Generated, And Each Role Has A Goal/Job (see below). Tap On Peoples' Names To Select Them." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmM-EA-9es">
                                 <rect key="frame" x="151" y="89" width="299" height="70"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -65,6 +57,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8j-gn-X9K">
+                                <rect key="frame" x="20" y="28" width="40" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Back "/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="cPe-SS-k0c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MA-Xh-sP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267" y="-523"/>
+            <point key="canvasLocation" x="1267" y="-379"/>
         </scene>
         <!--Start Screen-->
         <scene sceneID="tne-QT-ifu">
