@@ -51,15 +51,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="black" editable="NO" text="*Pirate Role: Your Job Is To Try And Kill As Much People As Possible Without Getting Caught By The Pirate Hunter" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo1-t4-ktJ">
-                                <rect key="frame" x="151" y="264" width="299" height="72"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="*Healer Role: Your Job Is To Try To Find And Revive Who The Pirate Might Kill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iUb-4s-ER3">
+                                <rect key="frame" x="151" y="384" width="299" height="57"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="*Healer Role: Your Job Is To Try To Find And Revive Who The Pirate Might Kill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iUb-4s-ER3">
-                                <rect key="frame" x="151" y="384" width="299" height="57"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="black" editable="NO" text="*Pirate Role: Your Job Is To Try And Kill As Much People As Possible Without Getting Caught By The Pirate Hunter" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo1-t4-ktJ">
+                                <rect key="frame" x="151" y="264" width="299" height="72"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -170,8 +170,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HEY EDWARD! There's a players array you can access that has players that are ready. Display that somehow. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTU-xx-8ae">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTU-xx-8ae">
                                 <rect key="frame" x="48" y="169" width="504" height="261"/>
+                                <color key="backgroundColor" red="0.019371893670000001" green="1" blue="0.034476737600000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -371,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sD0-A0-87Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2686" y="-379"/>
+            <point key="canvasLocation" x="3004" y="-523"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="evt-Y8-For">
@@ -425,7 +426,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8R-Bu-Q3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3661" y="305"/>
+            <point key="canvasLocation" x="3851" y="305"/>
         </scene>
     </scenes>
     <resources>

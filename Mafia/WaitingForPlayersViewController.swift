@@ -14,6 +14,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
     @IBOutlet weak var displayPlayersTableView: UILabel!
     
     var players : [String] = []
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         deviceSession.delegate = self
@@ -51,16 +52,36 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
             }
         }
     }
+    
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
         
     }
+    
     func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
         
     }
+    
     func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress) {
         
     }
+    
     func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
-        
     }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return players.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as UITableViewCell
+        
+        cell.textLabel?.text = players[indexPath.row]
+        
+        return cell
+    }
+
 }
