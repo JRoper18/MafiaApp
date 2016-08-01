@@ -21,5 +21,4 @@ class DaytimeViewController: UIViewController {
             self.view.addSubview(button)
         }
     }
-
 }
