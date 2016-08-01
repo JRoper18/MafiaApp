@@ -247,19 +247,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-ZW-CiU">
-                                <rect key="frame" x="164" y="167" width="273" height="32"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="You Role Is: ?????">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="Didot-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="imperialFlag" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-hZ-Qsq">
                                 <rect key="frame" x="164" y="227" width="273" height="145"/>
                                 <constraints>
@@ -275,7 +262,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-v6-Myx">
-                                <rect key="frame" x="164" y="109" width="273" height="21"/>
+                                <rect key="frame" x="164" y="92" width="273" height="38"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Your Name:">
                                         <attributes>
@@ -291,6 +278,19 @@
                                 <rect key="frame" x="214" y="198" width="172" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-ZW-CiU">
+                                <rect key="frame" x="129" y="154" width="342" height="36"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You Role Is: Pirate Hunter">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="28" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -310,11 +310,121 @@
             </objects>
             <point key="canvasLocation" x="2693" y="297"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jXU-w5-hHW">
+            <objects>
+                <viewController id="VSu-bJ-HhL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OW0-ga-x2j"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhF-FG-dcB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MPu-IQ-yVg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m8-Nr-q9M">
+                                <rect key="frame" x="164" y="95" width="273" height="38"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Your Name:">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="30" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-ai-eBJ">
+                                <rect key="frame" x="136" y="147" width="328" height="36"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You Role Is: Townsperson">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="28" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="No-pirates" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-04-UhG">
+                                <rect key="frame" x="172" y="238" width="256" height="248"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47380758963133163" green="0.3165586874700132" blue="0.15858916634295656" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tAu-04-UhG" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="7lm-mQ-P6v"/>
+                            <constraint firstItem="bQA-ai-eBJ" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="FMc-kh-vi5"/>
+                            <constraint firstItem="2m8-Nr-q9M" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="NRk-Jc-8Wo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sD0-A0-87Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2858" y="305"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="evt-Y8-For">
+            <objects>
+                <viewController id="p7q-gD-OAq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bmS-ZZ-Yr4"/>
+                        <viewControllerLayoutGuide type="bottom" id="rNh-Wi-lpX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jlo-3d-Jla">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="healer2" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-OZ-Kcq">
+                                <rect key="frame" x="143" y="108" width="390" height="431"/>
+                                <color key="backgroundColor" red="0.019371893670000001" green="1" blue="0.034476737600000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBW-oL-kUX">
+                                <rect key="frame" x="164" y="159" width="273" height="36"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You Role Is: Healer">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="30" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJz-Vi-hQl">
+                                <rect key="frame" x="164" y="84" width="273" height="45"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Your Name:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="35" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yBW-oL-kUX" firstAttribute="centerX" secondItem="Jlo-3d-Jla" secondAttribute="centerX" id="r31-rp-P9f"/>
+                            <constraint firstItem="eJz-Vi-hQl" firstAttribute="centerX" secondItem="Jlo-3d-Jla" secondAttribute="centerX" id="xl0-eG-zmB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8R-Bu-Q3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3661" y="305"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="No-pirates" width="1999" height="1999"/>
         <image name="antiPirate" width="229" height="197"/>
         <image name="blackShip" width="1440" height="900"/>
         <image name="blackShip2" width="512" height="512"/>
+        <image name="healer2" width="236" height="268"/>
         <image name="imperialFlag" width="2000" height="1000"/>
         <image name="pirateFlag" width="2000" height="1253"/>
         <image name="sword" width="428" height="550"/>

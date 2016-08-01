@@ -21,3 +21,4 @@ class SecondViewController: UIViewController {
         self.possibleRoles = ["Pirate", "Pirate Hunter", "Doctor", "Townsperson"]
     }
 }
+
