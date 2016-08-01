@@ -13,7 +13,6 @@ var thisPlayer : Player = Player(name: deviceSession.myPeerID.displayName, role:
 
 class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    
     @IBOutlet weak var displayPlayersTableView: UITableView!
     
     var players : [Player] = [];
