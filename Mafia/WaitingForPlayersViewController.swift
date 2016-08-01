@@ -21,35 +21,38 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         super.viewDidLoad()
         displayPlayersTableView.delegate = self
         displayPlayersTableView.dataSource = self
+        print(deviceSession.myPeerID.displayName)
         deviceSession.delegate = self
         try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
     }
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         //This works by when someone is ready they send the PlayerJoin message and the other devices add them to an array of players and then respond with their name, so that the new guy knows they're ready too.
-        displayPlayersTableView.reloadData();
+        print("GOT DATA");
         //Aparently the dispatch async thing makes this work.
         dispatch_async(dispatch_get_main_queue()) {
-            let command = String(data)
+            self.displayPlayersTableView.reloadData();
+            let command = String(data: data, encoding: NSUTF8StringEncoding)
             if command == "PlayerJoin"{
                 try! deviceSession.sendData(String("PlayerJoinReply").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
                 self.players.append(Player(name: peerID.displayName, role: PlayerRole.Townsman));
                 //If all the players are in the ready screen
                 if(self.players.count == session.connectedPeers.count){
-                    self.performSegueWithIdentifier("StartGame", sender: nil);
+                    let segueString = "StartGame" + self.roleToString(thisPlayer.role);
+                    self.performSegueWithIdentifier(segueString, sender: nil);
                 }
             }
-            else if command.substringToIndex(command.startIndex.advancedBy(16)) == "PlayerRoleReply:"{
+            else if command!.substringToIndex(command!.startIndex.advancedBy(16)) == "PlayerRoleReply:"{
                 for index in 0..<self.players.count
                 {
                     if self.players[index].name == peerID.displayName {
-                        self.players[index].role = self.stringToRole(command.substringFromIndex(command.startIndex.advancedBy(16)))
+                        self.players[index].role = self.stringToRole(command!.substringFromIndex(command!.startIndex.advancedBy(16)))
                     }
                 }
             }
-            else if command.substringToIndex(command.startIndex.advancedBy(16)) == "PlayerJoinReply:"{
+            else if command!.substringToIndex(command!.startIndex.advancedBy(16)) == "PlayerJoinReply:"{
                 //Add the new data to player array.
-                let replyPlayer = Player(name: peerID.displayName, role:self.stringToRole(command.substringFromIndex(command.startIndex.advancedBy(16))))
+                let replyPlayer = Player(name: peerID.displayName, role:self.stringToRole(command!.substringFromIndex(command!.startIndex.advancedBy(16))))
                 self.players.append(replyPlayer)
                 thisPlayer.role = (self.findRole())
                 let replyString = String("PlayerRoleReply:" + self.roleToString(thisPlayer.role))
@@ -60,7 +63,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
                 }
             }
             else{
-                print("Strange message " + command);
+                print("Strange message " + command!);
             }
         }
     }
