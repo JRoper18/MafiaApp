@@ -255,7 +255,7 @@
                                     <fragment content="Your Name:">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="30" name="Didot-Bold"/>
+                                            <font key="NSFont" size="30" name="Helvetica-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -279,12 +279,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-ZW-CiU">
-                                <rect key="frame" x="129" y="154" width="342" height="36"/>
+                                <rect key="frame" x="104" y="154" width="393" height="36"/>
                                 <attributedString key="attributedText">
                                     <fragment content="You Role Is: Pirate Hunter">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="Didot-Bold"/>
+                                            <font key="NSFont" size="28" name="Helvetica-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -328,21 +328,8 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Your Name:">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="30" name="Didot-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-ai-eBJ">
-                                <rect key="frame" x="136" y="147" width="328" height="36"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="You Role Is: Townsperson">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="Didot-Bold"/>
+                                            <color key="NSColor" red="0.28521792763157894" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="30" name="Helvetica-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -352,8 +339,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="No-pirates" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-04-UhG">
                                 <rect key="frame" x="172" y="238" width="256" height="248"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-ai-eBJ">
+                                <rect key="frame" x="116" y="147" width="369" height="36"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You Role Is: Townsperson">
+                                        <attributes>
+                                            <color key="NSColor" red="0.29664884868421049" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="28" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.47380758963133163" green="0.3165586874700132" blue="0.15858916634295656" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.6126028198944895" green="0.40929007649945159" blue="0.20504561900750742" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tAu-04-UhG" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="7lm-mQ-P6v"/>
                             <constraint firstItem="bQA-ai-eBJ" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="FMc-kh-vi5"/>
@@ -387,7 +387,7 @@
                                     <fragment content="You Role Is: Healer">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="30" name="Didot-Bold"/>
+                                            <font key="NSFont" size="30" name="Helvetica-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -400,7 +400,7 @@
                                     <fragment content="Your Name:">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="35" name="Didot-Bold"/>
+                                            <font key="NSFont" size="35" name="Helvetica-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -431,6 +431,6 @@
         <image name="sword" width="428" height="550"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Yc-se-uqv"/>
+        <segue reference="cPe-SS-k0c"/>
     </inferredMetricsTieBreakers>
 </document>
