@@ -174,7 +174,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="B3B-0W-1hB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="B3B-0W-1hB">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B3B-0W-1hB" id="s4X-XO-ydE">
@@ -209,7 +209,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="sword" translatesAutoresizingMaskIntoConstraints="NO" id="9Lt-sv-kc4">
-                                <rect key="frame" x="150" y="272" width="300" height="281"/>
+                                <rect key="frame" x="150" y="246" width="300" height="307"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="9nt-0L-Xx1"/>
                                     <constraint firstAttribute="height" constant="281" id="G5Z-VB-0L4"/>
@@ -502,6 +502,6 @@
         <image name="sword" width="428" height="550"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cPe-SS-k0c"/>
+        <segue reference="Aku-DS-bcQ"/>
     </inferredMetricsTieBreakers>
 </document>
