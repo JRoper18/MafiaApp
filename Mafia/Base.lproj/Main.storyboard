@@ -172,7 +172,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="Y3g-AC-ucG" kind="show" id="aXZ-UP-w7x"/>
+                        <segue destination="Y3g-AC-ucG" kind="show" identifier="StartGame" id="aXZ-UP-w7x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g01-37-rRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
