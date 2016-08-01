@@ -17,7 +17,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
     
     @IBOutlet weak var displayPlayersTableView: UITableView!
     
-    override func viewDidLoad(){
+    override func viewDidLoad() {
         super.viewDidLoad()
         displayPlayersTableView.delegate = self
         displayPlayersTableView.dataSource = self
@@ -41,7 +41,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
                 try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
                 players.append(Player(name: peerID.displayName, role: PlayerRole.Default));
                 //If all the players are in the ready screen
-
+                
             }
             else if(command?.characters.count > 15){
                 if command!.substringToIndex(command!.startIndex.advancedBy(16)) == "PlayerRoleReply:"{
@@ -69,21 +69,21 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
                     }
                 }
             }
-
+                
             else{
                 print("Strange message " + command!);
             }
         }
     }
-    func findRole() -> PlayerRole{
+    func findRole() -> PlayerRole {
         var roles : [PlayerRole] = []
-        switch(deviceSession.connectedPeers.count){
+        switch(deviceSession.connectedPeers.count) {
         case 1:
             roles = [.Pirate]
         case 2:
             roles = [.Pirate, .Townsman]
         case 3:
-            roles = [.Pirate, .Townsman, .Healer]
+            roles = [.Pirate, .Townsman, .Townsman]
         case 4:
             roles = [.Pirate, .Townsman, .Healer, .Townsman]
         case 5:
@@ -116,11 +116,11 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         case "Townsman":
             return .Townsman
         case "Healer":
-            return .Healer;
+            return .Healer
         case "Pirate":
-            return .Pirate;
+            return .Pirate
         case "Hunter":
-            return .Hunter;
+            return .Hunter
         default:
             return .Default;
         }
@@ -130,11 +130,11 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         case .Townsman:
             return "Townsman"
         case .Healer:
-            return "Healer";
+            return "Healer"
         case .Pirate:
-            return "Pirate";
+            return "Pirate"
         case .Hunter:
-            return "Hunter";
+            return "Hunter"
         default:
             return "Default";
         }
@@ -156,6 +156,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
     func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
     }
     
+    //Table view functions (displays players on text view
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -171,5 +172,5 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         
         return cell
     }
-
+    
 }
