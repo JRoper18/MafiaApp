@@ -40,7 +40,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
                 //If all the players are in the ready screen
 
             }
-            else if(command?.characters.count > 16){
+            else if(command?.characters.count > 15){
                 if command!.substringToIndex(command!.startIndex.advancedBy(16)) == "PlayerRoleReply:"{
                     for index in 0..<players.count
                     {
@@ -75,6 +75,8 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
     func findRole() -> PlayerRole{
         var roles : [PlayerRole] = []
         switch(deviceSession.connectedPeers.count){
+        case 1:
+            roles = [.Pirate]
         case 2:
             roles = [.Pirate, .Townsman]
         case 3:
