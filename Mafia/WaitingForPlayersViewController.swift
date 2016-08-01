@@ -9,25 +9,27 @@
 import UIKit
 import MultipeerConnectivity;
 
-class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
+class WaitingForPlayersViewController: UIViewController, MCSessionDelegate,UITableViewDelegate, UITableViewDataSource{
     
-    @IBOutlet weak var displayPlayersTableView: UILabel!
+    @IBOutlet var displayPlayersTableView: UITableView!{
+        didSet {
+            displayPlayersTableView.dataSource = self
+        }
+    }
     
     var players : [String] = []
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        displayPlayersTableView.delegate = self
+        displayPlayersTableView.dataSource = self
+        
         deviceSession.delegate = self
         try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
-        
-        for player in players {
-        displayPlayersTableView.text = player
-        }
     }
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         //This works by when someone is ready they send the PlayerJoin message and the other devices add them to an array of players and then respond with their name, so that the new guy knows they're ready too.
-        
         
         //Aparently the dispatch async thing makes this work.
         dispatch_async(dispatch_get_main_queue()) {
