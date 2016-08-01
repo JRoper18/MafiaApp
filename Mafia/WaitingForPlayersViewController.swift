@@ -9,7 +9,7 @@
 import UIKit
 import MultipeerConnectivity;
 
-var thisPlayer : Player = Player(name: deviceSession.myPeerID.displayName, role: .Default)
+var thisPlayer : Player = Player(name: deviceSession.myPeerID.displayName, role: .Townsman)
 
 var players : [Player] = [];
 
@@ -23,15 +23,11 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         displayPlayersTableView.dataSource = self
         print(deviceSession.myPeerID.displayName)
         deviceSession.delegate = self
-        if(players.count == 0){
-            thisPlayer.role = .Townsman
-        }
         try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
     }
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         //This works by when someone is ready they send the PlayerJoin message and the other devices add them to an array of players and then respond with their name, so that the new guy knows they're ready too.
-        print("From: "  + peerID.displayName + " : " + String(data: data, encoding: NSUTF8StringEncoding)!);
         //Aparently the dispatch async thing makes this work.
         dispatch_async(dispatch_get_main_queue()) {
             self.displayPlayersTableView.reloadData();
@@ -45,8 +41,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
             }
             else if(command?.characters.count > 15){
                 if command!.substringToIndex(command!.startIndex.advancedBy(16)) == "PlayerRoleReply:"{
-                    for index in 0..<players.count
-                    {
+                    for index in 0..<players.count {
                         if players[index].name == peerID.displayName {
                             players[index].role = self.stringToRole(command!.substringFromIndex(command!.startIndex.advancedBy(16)))
                         }
@@ -58,6 +53,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
                 }
                 else if command!.substringToIndex(command!.startIndex.advancedBy(16)) == "PlayerJoinReply:"{
                     //Add the new data to player array.
+                    print("From: "  + peerID.displayName + " : " + String(data: data, encoding: NSUTF8StringEncoding)!);
                     let replyPlayer = Player(name: peerID.displayName, role:self.stringToRole(command!.substringFromIndex(command!.startIndex.advancedBy(16))))
                     players.append(replyPlayer)
                     thisPlayer.role = self.findRole();
@@ -109,6 +105,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
             }
         }
         let roleNum = arc4random_uniform(UInt32(roles.count))
+        print(roles.count)
         return roles[Int(roleNum)]
     }
     func stringToRole(roleString : String) -> PlayerRole{
