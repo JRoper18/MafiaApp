@@ -11,11 +11,12 @@ import MultipeerConnectivity;
 
 var thisPlayer : Player = Player(name: deviceSession.myPeerID.displayName, role: .Default)
 
+var players : [Player] = [];
+
 class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var displayPlayersTableView: UITableView!
     
-    var players : [Player] = [];
     override func viewDidLoad(){
         super.viewDidLoad()
         displayPlayersTableView.delegate = self
@@ -34,30 +35,31 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
             let command = String(data: data, encoding: NSUTF8StringEncoding)
             if command == "PlayerJoin"{
                 try! deviceSession.sendData(String("PlayerJoinReply:").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
-                self.players.append(Player(name: peerID.displayName, role: PlayerRole.Townsman));
+                players.append(Player(name: peerID.displayName, role: PlayerRole.Townsman));
                 //If all the players are in the ready screen
-                if(self.players.count == session.connectedPeers.count){
-                    let segueString = "StartGame" + self.roleToString(thisPlayer.role);
-                    self.performSegueWithIdentifier(segueString, sender: nil);
-                }
+
             }
-            else if(command?.characters.count > 16){
+            else if(command?.characters.count > 15){
                 if command!.substringToIndex(command!.startIndex.advancedBy(16)) == "PlayerRoleReply:"{
-                    for index in 0..<self.players.count
+                    for index in 0..<players.count
                     {
-                        if self.players[index].name == peerID.displayName {
-                            self.players[index].role = self.stringToRole(command!.substringFromIndex(command!.startIndex.advancedBy(16)))
+                        if players[index].name == peerID.displayName {
+                            players[index].role = self.stringToRole(command!.substringFromIndex(command!.startIndex.advancedBy(16)))
                         }
+                    }
+                    if(players.count == session.connectedPeers.count){
+                        let segueString = "StartGame" + self.roleToString(thisPlayer.role);
+                        self.performSegueWithIdentifier(segueString, sender: nil);
                     }
                 }
                 else if command!.substringToIndex(command!.startIndex.advancedBy(16)) == "PlayerJoinReply:"{
                     //Add the new data to player array.
                     let replyPlayer = Player(name: peerID.displayName, role:self.stringToRole(command!.substringFromIndex(command!.startIndex.advancedBy(16))))
-                    self.players.append(replyPlayer)
+                    players.append(replyPlayer)
                     thisPlayer.role = (self.findRole())
                     let replyString = String("PlayerRoleReply:" + self.roleToString(thisPlayer.role))
                     try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
-                    if(self.players.count == session.connectedPeers.count){
+                    if(players.count == session.connectedPeers.count){
                         let segueString = "StartGame" + self.roleToString(thisPlayer.role);
                         self.performSegueWithIdentifier(segueString, sender: nil);
                     }
@@ -72,6 +74,8 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
     func findRole() -> PlayerRole{
         var roles : [PlayerRole] = []
         switch(deviceSession.connectedPeers.count){
+        case 1:
+            roles = [.Pirate]
         case 2:
             roles = [.Pirate, .Townsman]
         case 3:
