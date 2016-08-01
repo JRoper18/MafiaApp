@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -178,7 +178,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B3B-0W-1hB" id="s4X-XO-ydE">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -192,6 +192,7 @@
                         <segue destination="Y3g-AC-ucG" kind="show" identifier="StartGameHunter" id="aXZ-UP-w7x"/>
                         <segue destination="VSu-bJ-HhL" kind="show" identifier="StartGameTownsman" id="tZQ-0W-AgD"/>
                         <segue destination="p7q-gD-OAq" kind="show" identifier="StartGameHealer" id="RtD-re-Byb"/>
+                        <segue destination="q1Q-JF-wAs" kind="show" identifier="StartGamePirate" id="1vv-gN-N8s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g01-37-rRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,8 +277,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="antiPirate" translatesAutoresizingMaskIntoConstraints="NO" id="upr-9s-mri">
                                 <rect key="frame" x="177" y="380" width="246" height="212"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="246" id="10b-lf-d0t"/>
-                                    <constraint firstAttribute="height" constant="200" id="KJV-mZ-Qpl"/>
+                                    <constraint firstAttribute="width" constant="246" id="HLc-t4-KL2"/>
+                                    <constraint firstAttribute="height" constant="212" id="Iwf-5Z-pAu"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-v6-Myx">
@@ -330,6 +331,64 @@
             <point key="canvasLocation" x="2693" y="293"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="OYK-if-sbU">
+            <objects>
+                <viewController id="q1Q-JF-wAs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ved-5V-flc"/>
+                        <viewControllerLayoutGuide type="bottom" id="E8r-bG-EuC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TGJ-t6-Mb8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirate" translatesAutoresizingMaskIntoConstraints="NO" id="s0J-Hd-i2h">
+                                <rect key="frame" x="179" y="236" width="243" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="C1Q-GM-3T3"/>
+                                    <constraint firstAttribute="width" constant="243" id="nkP-IH-vvY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbo-p9-InO">
+                                <rect key="frame" x="164" y="84" width="273" height="38"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Your Name:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.28521792763157894" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="30" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB0-qo-1xl">
+                                <rect key="frame" x="116" y="138" width="369" height="36"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You Role Is: Pirate">
+                                        <attributes>
+                                            <color key="NSColor" red="0.29664884868421049" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="28" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66215945512820507" green="0.01239675855160367" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="s0J-Hd-i2h" firstAttribute="centerX" secondItem="TGJ-t6-Mb8" secondAttribute="centerX" id="QWv-4E-Ve7"/>
+                            <constraint firstItem="Qbo-p9-InO" firstAttribute="centerX" secondItem="TGJ-t6-Mb8" secondAttribute="centerX" id="biO-Uz-qHl"/>
+                            <constraint firstItem="UB0-qo-1xl" firstAttribute="centerX" secondItem="TGJ-t6-Mb8" secondAttribute="centerX" id="xpD-BU-GjD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WOU-e9-P1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2693" y="-1108"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="jXU-w5-hHW">
             <objects>
                 <viewController id="VSu-bJ-HhL" sceneMemberID="viewController">
@@ -356,6 +415,10 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="No-pirates" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-04-UhG">
                                 <rect key="frame" x="172" y="238" width="256" height="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="NiF-uG-Msn"/>
+                                    <constraint firstAttribute="width" constant="256" id="SbF-RP-eJm"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-ai-eBJ">
                                 <rect key="frame" x="116" y="147" width="369" height="36"/>
@@ -395,10 +458,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="healer2" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-OZ-Kcq">
-                                <rect key="frame" x="143" y="108" width="390" height="431"/>
-                                <color key="backgroundColor" red="0.019371893670000001" green="1" blue="0.034476737600000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBW-oL-kUX">
                                 <rect key="frame" x="164" y="159" width="273" height="36"/>
                                 <attributedString key="attributedText">
@@ -425,6 +484,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="healer2" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-OZ-Kcq">
+                                <rect key="frame" x="105" y="105" width="390" height="431"/>
+                                <color key="backgroundColor" red="0.019371893670000001" green="1" blue="0.034476737600000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="431" id="4RU-lq-PUr"/>
+                                    <constraint firstAttribute="width" constant="390" id="kb0-GN-aBj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -445,6 +512,7 @@
         <image name="blackShip2" width="512" height="512"/>
         <image name="healer2" width="236" height="268"/>
         <image name="imperialFlag" width="2000" height="1000"/>
+        <image name="pirate" width="800" height="845"/>
         <image name="pirateFlag" width="2000" height="1253"/>
         <image name="sword" width="428" height="550"/>
     </resources>
