@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHB-Bb-wKH">
-                                <rect key="frame" x="261" y="253" width="78" height="41"/>
+                                <rect key="frame" x="261" y="210" width="78" height="41"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="PLAY">
@@ -111,14 +111,9 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="Y3g-AC-ucG" kind="show" identifier="Second" id="opD-cU-QVW"/>
+                                    <segue destination="CkF-Qm-d0E" kind="show" id="I3c-pV-ucm"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2p-Ih-bCi">
-                                <rect key="frame" x="170" y="215" width="260" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirateFlag" translatesAutoresizingMaskIntoConstraints="NO" id="6n9-AL-9cC">
                                 <rect key="frame" x="213" y="144" width="175" height="63"/>
                                 <constraints>
@@ -133,20 +128,20 @@
                                     <constraint firstAttribute="height" constant="260" id="hVX-fR-idw"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYU-pM-54j">
-                                <rect key="frame" x="228" y="285" width="144" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="How To Play?"/>
-                                <connections>
-                                    <segue destination="y0m-eN-xSW" kind="show" identifier="Instruction" id="T3S-Yu-ybc"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pirate Mafia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t0-95-ddT">
                                 <rect key="frame" x="163" y="82" width="275" height="62"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYU-pM-54j">
+                                <rect key="frame" x="228" y="259" width="144" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="How To Play?"/>
+                                <connections>
+                                    <segue destination="y0m-eN-xSW" kind="show" identifier="Instruction" id="T3S-Yu-ybc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -155,17 +150,42 @@
                             <constraint firstItem="LYU-pM-54j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YWP-eH-Tlq"/>
                             <constraint firstItem="0t0-95-ddT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jPJ-wy-w8i"/>
                             <constraint firstItem="ee9-ny-gsn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kgN-7K-C5H"/>
-                            <constraint firstItem="Q2p-Ih-bCi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ncz-Dc-wxh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Start Screen" id="7TU-HB-sxV"/>
-                    <connections>
-                        <outlet property="nameTextField" destination="Q2p-Ih-bCi" id="ely-vj-IGE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267" y="305"/>
+            <point key="canvasLocation" x="1267" y="297"/>
+        </scene>
+        <!--Waiting For Players View Controller-->
+        <scene sceneID="HtE-36-Bm5">
+            <objects>
+                <viewController id="CkF-Qm-d0E" customClass="WaitingForPlayersViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d9H-8d-Rce"/>
+                        <viewControllerLayoutGuide type="bottom" id="jH0-U2-Jir"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2e1-h1-dX7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HEY EDWARD! There's a players array you can access that has players that are ready. Display that somehow. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTU-xx-8ae">
+                                <rect key="frame" x="0.0" y="89" width="504" height="261"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="Y3g-AC-ucG" kind="show" identifier="StartGame" id="aXZ-UP-w7x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g01-37-rRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="297"/>
         </scene>
         <!--Lobby View Controller-->
         <scene sceneID="5kF-l9-tDG">
@@ -262,17 +282,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsv-F9-NKw">
-                                <rect key="frame" x="13" y="28" width="50" height="33"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
-                                <state key="normal" title=" Back ">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="0Yc-se-uqv"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sarauv &lt;3 PENIS " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83r-vY-fJq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sarauv &lt;3 PENIS " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83r-vY-fJq">
                                 <rect key="frame" x="214" y="198" width="172" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -297,10 +307,7 @@
                             <constraint firstItem="0Dt-v6-Myx" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="2Fo-7t-a06"/>
                             <constraint firstItem="upr-9s-mri" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Oip-rI-NWR"/>
                             <constraint firstItem="aDc-ZW-CiU" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Rzx-tr-zvg"/>
-                            <constraint firstItem="dsv-F9-NKw" firstAttribute="leading" secondItem="L3p-16-6iC" secondAttribute="leadingMargin" constant="-7" id="TGd-nz-ldl"/>
-                            <constraint firstItem="83r-vY-fJq" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Uf8-bK-cuu"/>
                             <constraint firstItem="LoP-hZ-Qsq" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="e29-Ns-Oms"/>
-                            <constraint firstItem="dsv-F9-NKw" firstAttribute="top" secondItem="4To-4J-ppg" secondAttribute="bottom" constant="8" id="hwY-IU-1VL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -309,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLr-Vf-rgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2059" y="305"/>
+            <point key="canvasLocation" x="2693" y="297"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jXU-w5-hHW">
@@ -363,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sD0-A0-87Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2858" y="305"/>
+            <point key="canvasLocation" x="2686" y="-379"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="evt-Y8-For">

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2BDA6E0B1D4E79980000498D /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */; };
 		852D15FE1D4BE26500638ED6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D15FD1D4BE26500638ED6 /* SecondViewController.swift */; };
+		DB3029FB1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3029FA1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift */; };
+		DB3029FD1D4EC0D00014A142 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3029FC1D4EC0D00014A142 /* Player.swift */; };
 		DB7074F21D4D01BF001F11D1 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7074F11D4D01BF001F11D1 /* LobbyViewController.swift */; };
 		DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABA4921D4BC09D00112D1F /* AppDelegate.swift */; };
 		DBABA4951D4BC09D00112D1F /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABA4941D4BC09D00112D1F /* NameViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstructionViewController.swift; path = ../InstructionViewController.swift; sourceTree = "<group>"; };
 		852D15FD1D4BE26500638ED6 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DB3029FA1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingForPlayersViewController.swift; sourceTree = "<group>"; };
+		DB3029FC1D4EC0D00014A142 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		DB7074F11D4D01BF001F11D1 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		DBABA48F1D4BC09D00112D1F /* Mafia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mafia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBABA4921D4BC09D00112D1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				DBABA49B1D4BC09E00112D1F /* LaunchScreen.storyboard */,
 				DBABA49E1D4BC09E00112D1F /* Info.plist */,
 				DB7074F11D4D01BF001F11D1 /* LobbyViewController.swift */,
+				DB3029FA1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift */,
+				DB3029FC1D4EC0D00014A142 /* Player.swift */,
 			);
 			path = Mafia;
 			sourceTree = "<group>";
@@ -148,6 +154,8 @@
 				2BDA6E0B1D4E79980000498D /* InstructionViewController.swift in Sources */,
 				852D15FE1D4BE26500638ED6 /* SecondViewController.swift in Sources */,
 				DBABA4951D4BC09D00112D1F /* NameViewController.swift in Sources */,
+				DB3029FB1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift in Sources */,
+				DB3029FD1D4EC0D00014A142 /* Player.swift in Sources */,
 				DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */,
 				DB7074F21D4D01BF001F11D1 /* LobbyViewController.swift in Sources */,
 			);

@@ -7,22 +7,22 @@
 //
 
 import UIKit
+import MultipeerConnectivity;
 
 class NameViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Instruction"{
             let dvc = segue.destinationViewController as! InstructionViewController
         }
         else if segue.identifier == "Second"{
             let dvc = segue.destinationViewController as! SecondViewController
-            dvc.playersName = "\(nameTextField.text!)"
+            dvc.playersName = deviceSession.myPeerID.displayName
         }
     }
 }

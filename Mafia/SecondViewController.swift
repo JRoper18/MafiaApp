@@ -18,7 +18,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = "Your Name: \(playersName)"
-        possibleRoles = ["Pirate", "Pirate Hunter", "Healer", "Townsperson"]
+        self.possibleRoles = ["Pirate", "Pirate Hunter", "Doctor", "Townsperson"]
     }
 }
 
