@@ -267,13 +267,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="imperialFlag" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-hZ-Qsq">
-                                <rect key="frame" x="164" y="227" width="273" height="145"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="8Bt-bu-GkS"/>
-                                    <constraint firstAttribute="width" constant="273" id="GyH-oT-GnP"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="antiPirate" translatesAutoresizingMaskIntoConstraints="NO" id="upr-9s-mri">
                                 <rect key="frame" x="177" y="380" width="246" height="212"/>
                                 <constraints>
@@ -313,6 +306,13 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="imperialFlag" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-hZ-Qsq">
+                                <rect key="frame" x="164" y="227" width="273" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="8Bt-bu-GkS"/>
+                                    <constraint firstAttribute="width" constant="273" id="GyH-oT-GnP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0021801969782459557" blue="0.44126369861538473" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -328,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLr-Vf-rgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2693" y="293"/>
+            <point key="canvasLocation" x="2693" y="305"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OYK-if-sbU">
@@ -498,7 +498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8R-Bu-Q3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2693" y="1013"/>
+            <point key="canvasLocation" x="2693" y="1047"/>
         </scene>
     </scenes>
     <resources>
