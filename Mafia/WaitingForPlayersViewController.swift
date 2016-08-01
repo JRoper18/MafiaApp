@@ -21,14 +21,13 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         super.viewDidLoad()
         displayPlayersTableView.delegate = self
         displayPlayersTableView.dataSource = self
-        
         deviceSession.delegate = self
         try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
     }
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         //This works by when someone is ready they send the PlayerJoin message and the other devices add them to an array of players and then respond with their name, so that the new guy knows they're ready too.
-        
+        displayPlayersTableView.reloadData();
         //Aparently the dispatch async thing makes this work.
         dispatch_async(dispatch_get_main_queue()) {
             let command = String(data)
