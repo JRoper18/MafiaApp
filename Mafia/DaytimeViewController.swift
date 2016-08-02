@@ -41,7 +41,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     func tallyVotes(){
-        //This needs to return the person who died. 
+        //This needs to return the person who died OR their index. 
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         return 1;
