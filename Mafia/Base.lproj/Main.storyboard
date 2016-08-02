@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="574" y="305"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Role View Controller-->
         <scene sceneID="uCG-Tl-OCI">
             <objects>
-                <viewController id="Y3g-AC-ucG" customClass="SecondViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y3g-AC-ucG" customClass="RoleViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4To-4J-ppg"/>
                         <viewControllerLayoutGuide type="bottom" id="J1X-0I-sAz"/>
@@ -289,26 +289,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imperialFlag" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-hZ-Qsq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="imperialFlag" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-hZ-Qsq">
                                 <rect key="frame" x="164" y="125" width="273" height="145"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="8Bt-bu-GkS"/>
                                     <constraint firstAttribute="width" constant="273" id="GyH-oT-GnP"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVe-Hu-BxZ">
-                                <rect key="frame" x="272" y="542" width="57" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="bqo-wl-6pm"/>
-                                    <constraint firstAttribute="height" constant="50" id="zuu-wj-djr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <state key="normal" title="OK"/>
-                                <connections>
-                                    <segue destination="xR0-J2-sxM" kind="show" id="85j-SN-D2j"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="antiPirate" translatesAutoresizingMaskIntoConstraints="NO" id="upr-9s-mri">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="antiPirate" translatesAutoresizingMaskIntoConstraints="NO" id="upr-9s-mri">
                                 <rect key="frame" x="177" y="315" width="246" height="212"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="HLc-t4-KL2"/>
@@ -318,20 +306,53 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0021801969782459557" blue="0.44126369861538473" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="J1X-0I-sAz" firstAttribute="top" secondItem="IVe-Hu-BxZ" secondAttribute="bottom" constant="8" id="Iuw-9P-dbY"/>
                             <constraint firstItem="upr-9s-mri" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Oip-rI-NWR"/>
                             <constraint firstItem="aDc-ZW-CiU" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="Rzx-tr-zvg"/>
-                            <constraint firstItem="IVe-Hu-BxZ" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="TON-8P-rql"/>
-                            <constraint firstItem="IVe-Hu-BxZ" firstAttribute="top" secondItem="upr-9s-mri" secondAttribute="bottom" constant="15" id="b74-zG-bWV"/>
                             <constraint firstItem="aDc-ZW-CiU" firstAttribute="top" secondItem="4To-4J-ppg" secondAttribute="bottom" constant="8" id="bx7-xT-0dn"/>
                             <constraint firstItem="LoP-hZ-Qsq" firstAttribute="centerX" secondItem="L3p-16-6iC" secondAttribute="centerX" id="e29-Ns-Oms"/>
                             <constraint firstItem="upr-9s-mri" firstAttribute="top" secondItem="LoP-hZ-Qsq" secondAttribute="bottom" constant="45" id="kZX-qu-ENw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="xR0-J2-sxM" kind="show" identifier="RoleToDaytime" id="jup-V4-2k7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLr-Vf-rgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2693" y="305"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5wn-BP-pZR">
+            <objects>
+                <viewController id="9Mi-x8-GXX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VhE-Fz-hdx"/>
+                        <viewControllerLayoutGuide type="bottom" id="TDQ-7c-RGP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J5y-oa-Xse">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moon" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-Tk-0lf">
+                                <rect key="frame" x="443" y="57" width="109" height="94"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's nighttime. The Pirates will choose who to kill now." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khR-ZA-x1o">
+                                <rect key="frame" x="98" y="63" width="405" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.053698878220000003" green="0.0001771040275" blue="0.36842948720000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="khR-ZA-x1o" firstAttribute="centerX" secondItem="J5y-oa-Xse" secondAttribute="centerX" id="kp8-AQ-oYs"/>
+                            <constraint firstItem="khR-ZA-x1o" firstAttribute="top" secondItem="VhE-Fz-hdx" secondAttribute="bottom" constant="43" id="vJr-52-ov5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SgQ-eI-8di" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4346" y="305"/>
         </scene>
         <!--Daytime View Controller-->
         <scene sceneID="mlo-xN-bmv">
@@ -393,10 +414,10 @@
             </objects>
             <point key="canvasLocation" x="3463" y="305"/>
         </scene>
-        <!--View Controller-->
+        <!--Role View Controller-->
         <scene sceneID="OYK-if-sbU">
             <objects>
-                <viewController id="q1Q-JF-wAs" sceneMemberID="viewController">
+                <viewController id="q1Q-JF-wAs" customClass="RoleViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ved-5V-flc"/>
                         <viewControllerLayoutGuide type="bottom" id="E8r-bG-EuC"/>
@@ -418,19 +439,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qp-cu-rRr">
-                                <rect key="frame" x="272" y="542" width="57" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="43v-cx-fhY"/>
-                                    <constraint firstAttribute="width" constant="57" id="NIm-If-09A"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <state key="normal" title="OK"/>
-                                <connections>
-                                    <segue destination="xR0-J2-sxM" kind="show" id="o0I-K8-KPV"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pirate" translatesAutoresizingMaskIntoConstraints="NO" id="s0J-Hd-i2h">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pirate" translatesAutoresizingMaskIntoConstraints="NO" id="s0J-Hd-i2h">
                                 <rect key="frame" x="179" y="153" width="243" height="293"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="293" id="C1Q-GM-3T3"/>
@@ -440,24 +449,24 @@
                         </subviews>
                         <color key="backgroundColor" red="0.66215945512820507" green="0.01239675855160367" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="E8r-bG-EuC" firstAttribute="top" secondItem="7Qp-cu-rRr" secondAttribute="bottom" constant="8" id="GjY-HY-TGv"/>
-                            <constraint firstItem="7Qp-cu-rRr" firstAttribute="top" secondItem="s0J-Hd-i2h" secondAttribute="bottom" constant="96" id="JM0-WW-d4P"/>
                             <constraint firstItem="s0J-Hd-i2h" firstAttribute="centerX" secondItem="TGJ-t6-Mb8" secondAttribute="centerX" id="QWv-4E-Ve7"/>
                             <constraint firstItem="UB0-qo-1xl" firstAttribute="top" secondItem="ved-5V-flc" secondAttribute="bottom" constant="8" id="kQI-un-isw"/>
-                            <constraint firstItem="7Qp-cu-rRr" firstAttribute="centerX" secondItem="TGJ-t6-Mb8" secondAttribute="centerX" id="nGS-LA-QbX"/>
                             <constraint firstItem="s0J-Hd-i2h" firstAttribute="top" secondItem="UB0-qo-1xl" secondAttribute="bottom" constant="89" id="vV6-yJ-K3v"/>
                             <constraint firstItem="UB0-qo-1xl" firstAttribute="centerX" secondItem="TGJ-t6-Mb8" secondAttribute="centerX" id="xpD-BU-GjD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="xR0-J2-sxM" kind="show" identifier="RoleToDaytime" id="R26-l7-vcF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOU-e9-P1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2693" y="-1108"/>
         </scene>
-        <!--View Controller-->
+        <!--Role View Controller-->
         <scene sceneID="jXU-w5-hHW">
             <objects>
-                <viewController id="VSu-bJ-HhL" sceneMemberID="viewController">
+                <viewController id="VSu-bJ-HhL" customClass="RoleViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OW0-ga-x2j"/>
                         <viewControllerLayoutGuide type="bottom" id="nhF-FG-dcB"/>
@@ -479,19 +488,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3r-9l-lek">
-                                <rect key="frame" x="272" y="542" width="57" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="VaO-hi-yOM"/>
-                                    <constraint firstAttribute="width" constant="57" id="iLT-Pc-hpV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <state key="normal" title="OK"/>
-                                <connections>
-                                    <segue destination="xR0-J2-sxM" kind="show" id="lGi-4i-JtP"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No-pirates" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-04-UhG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="No-pirates" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-04-UhG">
                                 <rect key="frame" x="172" y="176" width="256" height="248"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="248" id="NiF-uG-Msn"/>
@@ -503,22 +500,22 @@
                         <constraints>
                             <constraint firstItem="tAu-04-UhG" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="7lm-mQ-P6v"/>
                             <constraint firstItem="bQA-ai-eBJ" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="FMc-kh-vi5"/>
-                            <constraint firstItem="nhF-FG-dcB" firstAttribute="top" secondItem="w3r-9l-lek" secondAttribute="bottom" constant="8" id="JSY-0f-J7F"/>
-                            <constraint firstItem="w3r-9l-lek" firstAttribute="centerX" secondItem="MPu-IQ-yVg" secondAttribute="centerX" id="Mka-gA-t1K"/>
-                            <constraint firstItem="w3r-9l-lek" firstAttribute="top" secondItem="tAu-04-UhG" secondAttribute="bottom" constant="118" id="gRl-Ww-G7Q"/>
                             <constraint firstItem="tAu-04-UhG" firstAttribute="top" secondItem="bQA-ai-eBJ" secondAttribute="bottom" constant="112" id="i5v-ua-zxE"/>
                             <constraint firstItem="bQA-ai-eBJ" firstAttribute="top" secondItem="OW0-ga-x2j" secondAttribute="bottom" constant="8" id="j9m-c2-VyS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="xR0-J2-sxM" kind="show" identifier="RoleToDaytime" id="nu5-hA-hMg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sD0-A0-87Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2693" y="-401"/>
         </scene>
-        <!--View Controller-->
+        <!--Role View Controller-->
         <scene sceneID="evt-Y8-For">
             <objects>
-                <viewController id="p7q-gD-OAq" sceneMemberID="viewController">
+                <viewController id="p7q-gD-OAq" customClass="RoleViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bmS-ZZ-Yr4"/>
                         <viewControllerLayoutGuide type="bottom" id="rNh-Wi-lpX"/>
@@ -540,18 +537,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHU-2B-pG2">
-                                <rect key="frame" x="272" y="542" width="57" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="BZa-0z-nd7"/>
-                                    <constraint firstAttribute="width" constant="57" id="Ieh-tJ-vyH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <state key="normal" title="OK"/>
-                                <connections>
-                                    <segue destination="xR0-J2-sxM" kind="show" id="Cve-1x-s6U"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="healer2" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-OZ-Kcq">
                                 <rect key="frame" x="105" y="84" width="390" height="431"/>
                                 <color key="backgroundColor" red="0.019371893670000001" green="1" blue="0.034476737600000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -564,11 +549,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yBW-oL-kUX" firstAttribute="top" secondItem="bmS-ZZ-Yr4" secondAttribute="bottom" constant="8" id="K71-So-STH"/>
-                            <constraint firstItem="rNh-Wi-lpX" firstAttribute="top" secondItem="aHU-2B-pG2" secondAttribute="bottom" constant="8" id="SCt-A1-OYs"/>
-                            <constraint firstItem="aHU-2B-pG2" firstAttribute="centerX" secondItem="Jlo-3d-Jla" secondAttribute="centerX" id="Twe-o2-Iqa"/>
                             <constraint firstItem="yBW-oL-kUX" firstAttribute="centerX" secondItem="Jlo-3d-Jla" secondAttribute="centerX" id="r31-rp-P9f"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="xR0-J2-sxM" kind="show" identifier="RoleToDaytime" id="kBQ-wr-3ed"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8R-Bu-Q3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -582,6 +568,7 @@
         <image name="blackShip2" width="512" height="512"/>
         <image name="healer2" width="236" height="268"/>
         <image name="imperialFlag" width="2000" height="1000"/>
+        <image name="moon" width="300" height="300"/>
         <image name="pirate" width="800" height="845"/>
         <image name="pirateFlag" width="2000" height="1253"/>
         <image name="sun" width="626" height="500"/>
@@ -589,6 +576,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Aku-DS-bcQ"/>
-        <segue reference="Cve-1x-s6U"/>
+        <segue reference="kBQ-wr-3ed"/>
     </inferredMetricsTieBreakers>
 </document>
