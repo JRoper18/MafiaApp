@@ -345,25 +345,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="zqC-qX-lh4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="zqC-qX-lh4">
                                 <rect key="frame" x="371" y="0.0" width="222" height="175"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime. Vote for who you think is the Pirate." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIN-0M-8Ph">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="It's Daytime. Vote for who you think is the Pirate." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIN-0M-8Ph">
                                 <rect key="frame" x="116" y="53" width="369" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pirate2" translatesAutoresizingMaskIntoConstraints="NO" id="1ml-Me-ZwO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirate2" translatesAutoresizingMaskIntoConstraints="NO" id="1ml-Me-ZwO">
                                 <rect key="frame" x="238" y="82" width="125" height="111"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zqC-qX-lh4" firstAttribute="leading" secondItem="1ml-Me-ZwO" secondAttribute="trailing" constant="8" id="AeJ-95-zwI"/>
+                            <constraint firstItem="1ml-Me-ZwO" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" constant="218" id="Ibi-7f-gcK"/>
                             <constraint firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="JV0-5w-Lb7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zqC-qX-lh4" secondAttribute="trailing" constant="-13" id="KZs-V8-TL2"/>
+                            <constraint firstItem="1ml-Me-ZwO" firstAttribute="top" secondItem="lIN-0M-8Ph" secondAttribute="bottom" constant="8" id="QVU-75-hyv"/>
+                            <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="1ml-Me-ZwO" secondAttribute="bottom" constant="407" id="h3h-X0-xdt"/>
+                            <constraint firstItem="zqC-qX-lh4" firstAttribute="top" secondItem="1dM-5W-pkb" secondAttribute="topMargin" id="kiX-Te-DrS"/>
                             <constraint firstItem="lIN-0M-8Ph" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="l7c-Pp-Rxz"/>
                             <constraint firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="oF1-oe-R2t"/>
                             <constraint firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="sIP-HX-Mpj"/>
+                            <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="zqC-qX-lh4" secondAttribute="bottom" constant="425" id="vYa-Y5-7Is"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -568,6 +575,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Aku-DS-bcQ"/>
-        <segue reference="Cve-1x-s6U"/>
+        <segue reference="o0I-K8-KPV"/>
     </inferredMetricsTieBreakers>
 </document>
