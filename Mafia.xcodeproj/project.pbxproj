@@ -117,7 +117,7 @@
 				TargetAttributes = {
 					DBABA48E1D4BC09D00112D1F = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = C66S4U3X9U;
+						DevelopmentTeam = LYJSRZED64;
 					};
 				};
 			};
@@ -284,7 +284,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Mafia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = roper.Mafia;
+				PRODUCT_BUNDLE_IDENTIFIER = shen.Mafia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -298,7 +298,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Mafia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = roper.Mafia;
+				PRODUCT_BUNDLE_IDENTIFIER = shen.Mafia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
