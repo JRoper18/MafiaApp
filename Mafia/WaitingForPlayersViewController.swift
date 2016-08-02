@@ -125,7 +125,13 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
 
     //Delegate required functions
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
-        
+        if state == MCSessionState.NotConnected {
+            for index in 0..<players.count{
+                if players[index].name == peerID.displayName {
+                    players.removeAtIndex(index)
+                }
+            }
+        }
     }
     
     func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {

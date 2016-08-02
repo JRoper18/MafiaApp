@@ -26,7 +26,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             players = [Player(name: "A pirate", role: .Pirate), Player(name: "A townsman", role: .Townsman)]
         }
         super.viewDidLoad()
-        
+        deviceSession.delegate = self;
         pickerView.dataSource = self;
         pickerView.delegate = self;
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(DaytimeViewController.timerSecond), userInfo: nil, repeats: true)
@@ -104,7 +104,13 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
-        
+        if state == MCSessionState.NotConnected {
+            for index in 0..<players.count{
+                if players[index].name == peerID.displayName {
+                    players.removeAtIndex(index)
+                }
+            }
+        }
     }
     
     func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
