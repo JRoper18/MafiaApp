@@ -333,15 +333,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzh-AI-FEi">
-                                <rect key="frame" x="276" y="43" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="shack" translatesAutoresizingMaskIntoConstraints="NO" id="ZPA-uM-LNb">
+                                <rect key="frame" x="151" y="229" width="294" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="235" id="OIZ-ch-wnR"/>
+                                    <constraint firstAttribute="width" constant="300" id="myH-4Z-IZg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzh-AI-FEi">
+                                <rect key="frame" x="251" y="77" width="94" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZPA-uM-LNb" firstAttribute="centerX" secondItem="l5L-Nb-aJt" secondAttribute="centerX" id="Axb-rs-eAj"/>
                             <constraint firstItem="Rzh-AI-FEi" firstAttribute="centerX" secondItem="l5L-Nb-aJt" secondAttribute="centerX" id="Ym7-Hs-zvR"/>
                         </constraints>
                     </view>
@@ -405,7 +413,7 @@
                                     <constraint firstAttribute="width" constant="222" id="TJd-mK-nDa"/>
                                 </constraints>
                             </imageView>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0F-vJ-fAu">
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0F-vJ-fAu">
                                 <rect key="frame" x="0.0" y="241" width="600" height="216"/>
                             </pickerView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ep0-Rg-hIP">
@@ -454,7 +462,7 @@
                             <constraint firstItem="5Ar-iW-zoC" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" constant="-10" id="gZt-ia-Jnt"/>
                             <constraint firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="ggv-CC-tiQ"/>
                             <constraint firstItem="st7-z5-mBr" firstAttribute="top" secondItem="fxq-6q-q8b" secondAttribute="bottom" constant="50" id="hWe-uC-Gg3"/>
-                            <constraint firstItem="lIN-0M-8Ph" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="l7c-Pp-Rxz"/>
+                            <constraint firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="l7c-Pp-Rxz"/>
                             <constraint firstItem="ep0-Rg-hIP" firstAttribute="leading" secondItem="CaX-Gx-DGp" secondAttribute="trailing" constant="8" id="lEb-x3-BhI"/>
                             <constraint firstItem="WHv-P2-XcY" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="mdQ-pK-N5R"/>
                             <constraint firstItem="WHv-P2-XcY" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="oF1-oe-R2t"/>
@@ -631,6 +639,7 @@
         <image name="pirate" width="800" height="845"/>
         <image name="pirate2" width="800" height="703"/>
         <image name="pirateFlag" width="2000" height="1253"/>
+        <image name="shack" width="405" height="299"/>
         <image name="sun" width="626" height="500"/>
         <image name="sword" width="428" height="550"/>
     </resources>
