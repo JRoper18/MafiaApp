@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2BDA6E0B1D4E79980000498D /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */; };
-		852D15FE1D4BE26500638ED6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D15FD1D4BE26500638ED6 /* SecondViewController.swift */; };
 		852D16001D4FC92F00638ED6 /* DaytimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D15FF1D4FC92F00638ED6 /* DaytimeViewController.swift */; };
 		852D16041D51224E00638ED6 /* RoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D16031D51224E00638ED6 /* RoleViewController.swift */; };
 		DB3029FB1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3029FA1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift */; };
@@ -24,7 +23,6 @@
 
 /* Begin PBXFileReference section */
 		2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstructionViewController.swift; path = ../InstructionViewController.swift; sourceTree = "<group>"; };
-		852D15FD1D4BE26500638ED6 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		852D15FF1D4FC92F00638ED6 /* DaytimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaytimeViewController.swift; sourceTree = "<group>"; };
 		852D16031D51224E00638ED6 /* RoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleViewController.swift; sourceTree = "<group>"; };
 		DB3029FA1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingForPlayersViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 				2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */,
 				DBABA4921D4BC09D00112D1F /* AppDelegate.swift */,
 				DBABA4941D4BC09D00112D1F /* NameViewController.swift */,
-				852D15FD1D4BE26500638ED6 /* SecondViewController.swift */,
 				DBABA4961D4BC09E00112D1F /* Main.storyboard */,
 				852D16031D51224E00638ED6 /* RoleViewController.swift */,
 				DBABA4991D4BC09E00112D1F /* Assets.xcassets */,
@@ -162,7 +159,6 @@
 			files = (
 				852D16041D51224E00638ED6 /* RoleViewController.swift in Sources */,
 				2BDA6E0B1D4E79980000498D /* InstructionViewController.swift in Sources */,
-				852D15FE1D4BE26500638ED6 /* SecondViewController.swift in Sources */,
 				852D16001D4FC92F00638ED6 /* DaytimeViewController.swift in Sources */,
 				DBABA4951D4BC09D00112D1F /* NameViewController.swift in Sources */,
 				DB3029FB1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift in Sources */,
