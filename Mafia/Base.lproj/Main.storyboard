@@ -332,10 +332,10 @@
             </objects>
             <point key="canvasLocation" x="2693" y="305"/>
         </scene>
-        <!--View Controller-->
+        <!--Daytime View Controller-->
         <scene sceneID="mlo-xN-bmv">
             <objects>
-                <viewController id="xR0-J2-sxM" sceneMemberID="viewController">
+                <viewController id="xR0-J2-sxM" customClass="DaytimeViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fxq-6q-q8b"/>
                         <viewControllerLayoutGuide type="bottom" id="qAA-93-QS0"/>
@@ -359,13 +359,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y0F-vJ-fAu" secondAttribute="trailing" id="3L3-HT-IWe"/>
+                            <constraint firstItem="Y0F-vJ-fAu" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="JV0-5w-Lb7"/>
                             <constraint firstItem="lIN-0M-8Ph" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="l7c-Pp-Rxz"/>
+                            <constraint firstItem="ep0-Rg-hIP" firstAttribute="leading" secondItem="CaX-Gx-DGp" secondAttribute="trailing" constant="8" id="lEb-x3-BhI"/>
+                            <constraint firstItem="WHv-P2-XcY" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="oF1-oe-R2t"/>
+                            <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="WHv-P2-XcY" secondAttribute="bottom" id="roG-Wm-3iF"/>
+                            <constraint firstItem="ep0-Rg-hIP" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="sIP-HX-Mpj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="Y0F-vJ-fAu" id="5x4-iq-1Z2"/>
+                        <outlet property="timerLabel" destination="WHv-P2-XcY" id="miU-Kb-JkH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47f-c9-N3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3659" y="-12"/>
+            <point key="canvasLocation" x="3463" y="329"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OYK-if-sbU">
@@ -563,7 +573,7 @@
         <image name="sword" width="428" height="550"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Aku-DS-bcQ"/>
         <segue reference="Cve-1x-s6U"/>
-        <segue reference="cPe-SS-k0c"/>
     </inferredMetricsTieBreakers>
 </document>
