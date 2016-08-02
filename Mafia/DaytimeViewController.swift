@@ -46,9 +46,12 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     func tallyVotes(){
-        let voteData = String()
-        deviceSession.sendData(<#T##data: NSData##NSData#>, toPeers: <#T##[MCPeerID]#>, withMode: <#T##MCSessionSendDataMode#>)
-        //This needs to return the person who died.
+        if !devMode{
+            let voteData = String(pickerView.selectedRowInComponent(0)).dataUsingEncoding(NSUTF8StringEncoding)
+            try! deviceSession.sendData(voteData!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
+        }
+        
+
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         return 1;
