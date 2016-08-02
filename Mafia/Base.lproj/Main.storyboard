@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Instruction View Controller-->
@@ -180,7 +181,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B3B-0W-1hB" id="s4X-XO-ydE">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -347,9 +348,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="zqC-qX-lh4">
                                 <rect key="frame" x="371" y="0.0" width="222" height="175"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pirate2" translatesAutoresizingMaskIntoConstraints="NO" id="1ml-Me-ZwO">
-                                <rect key="frame" x="238" y="82" width="125" height="111"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime. Vote for who you think is the Pirate." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIN-0M-8Ph">
                                 <rect key="frame" x="116" y="53" width="369" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -380,8 +378,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y0F-vJ-fAu" secondAttribute="trailing" id="3L3-HT-IWe"/>
-                            <constraint firstItem="Y0F-vJ-fAu" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="JV0-5w-Lb7"/>
+                            <constraint firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="JV0-5w-Lb7"/>
+                            <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="2zf-eH-ocg" secondAttribute="bottom" constant="8" id="gOL-wv-Vmx"/>
+                            <constraint firstItem="2zf-eH-ocg" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="ggv-CC-tiQ"/>
                             <constraint firstItem="lIN-0M-8Ph" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="l7c-Pp-Rxz"/>
                             <constraint firstItem="ep0-Rg-hIP" firstAttribute="leading" secondItem="CaX-Gx-DGp" secondAttribute="trailing" constant="8" id="lEb-x3-BhI"/>
                             <constraint firstItem="WHv-P2-XcY" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="mdQ-pK-N5R"/>
@@ -391,13 +390,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pickerView" destination="Y0F-vJ-fAu" id="5x4-iq-1Z2"/>
-                        <outlet property="timerLabel" destination="WHv-P2-XcY" id="miU-Kb-JkH"/>
+                        <outlet property="pickerView" destination="3d0-7Z-SoY" id="5Yc-o9-Y9u"/>
+                        <outlet property="timerLabel" destination="2zf-eH-ocg" id="G9N-gx-8QJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47f-c9-N3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3463" y="329"/>
+            <point key="canvasLocation" x="3463" y="305"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OYK-if-sbU">

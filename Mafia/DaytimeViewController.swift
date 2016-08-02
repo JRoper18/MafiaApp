@@ -10,7 +10,7 @@ import UIKit
 
 //Set this to true the starting arrow here and move to remove the need to test on multiple devices with bluetooth (maybe)
 let devMode = true
-
+import MultipeerConnectivity
 
 class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -18,6 +18,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var timerLabel: UILabel!
+    var timer: NSTimer!;
     override func viewDidLoad() {
         if devMode == true{
             players = [Player(name: "A pirate", role: .Pirate), Player(name: "A townsman", role: .Townsman)]
@@ -27,7 +28,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         pickerView.dataSource = self;
         pickerView.delegate = self;
         
-        let timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(DaytimeViewController.timerSecond), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(DaytimeViewController.timerSecond), userInfo: nil, repeats: true)
     }
     func timerSecond(){
         timeElapsed += 1;
@@ -36,12 +37,21 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let timeRemaining = 30 - timeElapsed;
         timerLabel.text! = String(timeRemaining)
         if(timeRemaining == 0){
+            //Stop timer
+            timer.invalidate();
+            
             //Kill whoever and goto nighttime.
             tallyVotes()
+            
         }
     }
     func tallyVotes(){
-        //This needs to return the person who died OR their index. 
+        if !devMode{
+            let voteData = String(pickerView.selectedRowInComponent(0)).dataUsingEncoding(NSUTF8StringEncoding)
+            try! deviceSession.sendData(voteData!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
+        }
+        
+
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         return 1;
@@ -59,3 +69,4 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
 
 }
+
