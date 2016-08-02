@@ -23,5 +23,20 @@ class Player {
         self.name = name;
         self.role = role;
     }
+    func roleToString() -> String{
+        switch self.role{
+        case .Townsman:
+            return "Townsman"
+        case .Healer:
+            return "Healer"
+        case .Pirate:
+            return "Pirate"
+        case .Hunter:
+            return "Hunter"
+        default:
+            return "Default";
+        }
+    }
+    
 }
 

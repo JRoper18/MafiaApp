@@ -357,6 +357,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirate2" translatesAutoresizingMaskIntoConstraints="NO" id="1ml-Me-ZwO">
                                 <rect key="frame" x="238" y="82" width="125" height="111"/>
                             </imageView>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3d0-7Z-SoY">
+                                <rect key="frame" x="0.0" y="207" width="600" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zf-eH-ocg">
+                                <rect key="frame" x="20" y="536" width="60" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="odd-rs-RSe"/>
+                                    <constraint firstAttribute="width" constant="60" id="xPk-oZ-mAy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -373,6 +386,10 @@
                             <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="zqC-qX-lh4" secondAttribute="bottom" constant="425" id="vYa-Y5-7Is"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="3d0-7Z-SoY" id="5Yc-o9-Y9u"/>
+                        <outlet property="timerLabel" destination="2zf-eH-ocg" id="G9N-gx-8QJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47f-c9-N3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

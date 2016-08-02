@@ -33,13 +33,12 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
             self.displayPlayersTableView.reloadData();
             let command = String(data: data, encoding: NSUTF8StringEncoding)
             if command == "PlayerJoin"{
-                let replyString = "PlayerJoinReply:" + self.roleToString(thisPlayer.role);
+                let replyString = "PlayerJoinReply:" + (thisPlayer.roleToString());
                 try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
                 players.append(Player(name: peerID.displayName, role: PlayerRole.Default));
-                //If all the players are in the ready screen
                 
             }
-            else if(command?.characters.count > 15){
+            else if(command!.characters.count > 15){
                 if command!.substringToIndex(command!.startIndex.advancedBy(16)) == "PlayerRoleReply:"{
                     for index in 0..<players.count {
                         if players[index].name == peerID.displayName {
@@ -47,7 +46,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
                         }
                     }
                     if(players.count == session.connectedPeers.count){
-                        let segueString = "StartGame" + self.roleToString(thisPlayer.role);
+                        let segueString = "StartGame" + (thisPlayer.roleToString());
                         self.performSegueWithIdentifier(segueString, sender: nil);
                     }
                 }
@@ -57,10 +56,10 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
                     let replyPlayer = Player(name: peerID.displayName, role:self.stringToRole(command!.substringFromIndex(command!.startIndex.advancedBy(16))))
                     players.append(replyPlayer)
                     thisPlayer.role = self.findRole();
-                    let replyString = String("PlayerRoleReply:" + self.roleToString(thisPlayer.role))
+                    let replyString = String("PlayerRoleReply:" + thisPlayer.roleToString())
                     try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable);
                     if(players.count == session.connectedPeers.count){
-                        let segueString = "StartGame" + self.roleToString(thisPlayer.role);
+                        let segueString = "StartGame" + (thisPlayer.roleToString());
                         self.performSegueWithIdentifier(segueString, sender: nil);
                     }
                 }
@@ -75,7 +74,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         var roles : [PlayerRole] = []
         switch(deviceSession.connectedPeers.count) {
         case 1:
-            roles = [.Pirate]
+            roles = [.Townsman]
         case 2:
             roles = [.Pirate, .Townsman]
         case 3:
@@ -122,21 +121,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
             return .Default;
         }
     }
-    func roleToString(role: PlayerRole) -> String{
-        switch role{
-        case .Townsman:
-            return "Townsman"
-        case .Healer:
-            return "Healer"
-        case .Pirate:
-            return "Pirate"
-        case .Hunter:
-            return "Hunter"
-        default:
-            return "Default";
-        }
-    }
-    
+
     //Delegate required functions
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
         
