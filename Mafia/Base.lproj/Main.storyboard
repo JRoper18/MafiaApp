@@ -366,8 +366,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="zqC-qX-lh4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="zqC-qX-lh4">
                                 <rect key="frame" x="371" y="0.0" width="222" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="BnN-kP-hUf"/>
+                                    <constraint firstAttribute="width" constant="222" id="TJd-mK-nDa"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime. Vote for who you think is the Pirate." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIN-0M-8Ph">
                                 <rect key="frame" x="116" y="53" width="369" height="21"/>
@@ -380,11 +384,15 @@
                             </pickerView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ep0-Rg-hIP">
                                 <rect key="frame" x="276" y="202" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="XW0-iU-DWi"/>
+                                    <constraint firstAttribute="width" constant="49" id="n20-HV-rVl"/>
+                                </constraints>
                                 <connections>
                                     <action selector="abstainButtonPressed:" destination="xR0-J2-sxM" eventType="valueChanged" id="UMT-Sk-bgf"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="I'm Not Voting:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaX-Gx-DGp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I'm Not Voting:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaX-Gx-DGp">
                                 <rect key="frame" x="155" y="207" width="113" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -396,7 +404,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirate2" translatesAutoresizingMaskIntoConstraints="NO" id="st7-z5-mBr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pirate2" translatesAutoresizingMaskIntoConstraints="NO" id="st7-z5-mBr">
                                 <rect key="frame" x="223" y="70" width="154" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="HRj-LX-bap"/>
@@ -412,17 +420,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="st7-z5-mBr" secondAttribute="trailing" constant="203" id="CLk-lG-u8p"/>
                             <constraint firstItem="st7-z5-mBr" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="FDm-gm-4Wu"/>
                             <constraint firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="JV0-5w-Lb7"/>
                             <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="5Ar-iW-zoC" secondAttribute="bottom" constant="53" id="URD-on-b4s"/>
+                            <constraint firstItem="CaX-Gx-DGp" firstAttribute="top" secondItem="st7-z5-mBr" secondAttribute="bottom" constant="3" id="duP-v6-hDx"/>
                             <constraint firstItem="5Ar-iW-zoC" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" constant="-10" id="gZt-ia-Jnt"/>
                             <constraint firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="ggv-CC-tiQ"/>
+                            <constraint firstItem="st7-z5-mBr" firstAttribute="top" secondItem="fxq-6q-q8b" secondAttribute="bottom" constant="50" id="hWe-uC-Gg3"/>
                             <constraint firstItem="lIN-0M-8Ph" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="l7c-Pp-Rxz"/>
                             <constraint firstItem="ep0-Rg-hIP" firstAttribute="leading" secondItem="CaX-Gx-DGp" secondAttribute="trailing" constant="8" id="lEb-x3-BhI"/>
                             <constraint firstItem="WHv-P2-XcY" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="mdQ-pK-N5R"/>
                             <constraint firstItem="WHv-P2-XcY" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="oF1-oe-R2t"/>
                             <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="WHv-P2-XcY" secondAttribute="bottom" id="roG-Wm-3iF"/>
                             <constraint firstItem="ep0-Rg-hIP" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="sIP-HX-Mpj"/>
+                            <constraint firstItem="st7-z5-mBr" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" constant="203" id="zR6-S1-o1O"/>
                         </constraints>
                     </view>
                 </viewController>
