@@ -370,10 +370,24 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWj-de-3dC">
+                                <rect key="frame" x="276" y="201" width="51" height="31"/>
+                                <connections>
+                                    <action selector="abstainButtonPressed:" destination="xR0-J2-sxM" eventType="valueChanged" id="DNE-3W-T2E"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ABSTAIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zo-Tk-hsq">
+                                <rect key="frame" x="199" y="206" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="JV0-5w-Lb7"/>
+                            <constraint firstItem="AWj-de-3dC" firstAttribute="leading" secondItem="6Zo-Tk-hsq" secondAttribute="trailing" constant="8" id="LhX-VL-Mlg"/>
+                            <constraint firstItem="AWj-de-3dC" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="SHl-eC-SkP"/>
                             <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="2zf-eH-ocg" secondAttribute="bottom" constant="8" id="gOL-wv-Vmx"/>
                             <constraint firstItem="2zf-eH-ocg" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="ggv-CC-tiQ"/>
                             <constraint firstItem="lIN-0M-8Ph" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="l7c-Pp-Rxz"/>

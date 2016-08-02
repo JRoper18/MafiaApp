@@ -18,6 +18,7 @@
 		DBABA4981D4BC09E00112D1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBABA4961D4BC09E00112D1F /* Main.storyboard */; };
 		DBABA49A1D4BC09E00112D1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBABA4991D4BC09E00112D1F /* Assets.xcassets */; };
 		DBABA49D1D4BC09E00112D1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBABA49B1D4BC09E00112D1F /* LaunchScreen.storyboard */; };
+		DBACE4E31D5115D900F03961 /* VoteKillMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBACE4E21D5115D900F03961 /* VoteKillMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		DBABA4991D4BC09E00112D1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBABA49C1D4BC09E00112D1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBABA49E1D4BC09E00112D1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBACE4E21D5115D900F03961 /* VoteKillMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteKillMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				DB3029FA1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift */,
 				852D15FF1D4FC92F00638ED6 /* DaytimeViewController.swift */,
 				DB3029FC1D4EC0D00014A142 /* Player.swift */,
+				DBACE4E21D5115D900F03961 /* VoteKillMenu.swift */,
 			);
 			path = Mafia;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				DB3029FD1D4EC0D00014A142 /* Player.swift in Sources */,
 				DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */,
 				DB7074F21D4D01BF001F11D1 /* LobbyViewController.swift in Sources */,
+				DBACE4E31D5115D900F03961 /* VoteKillMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
