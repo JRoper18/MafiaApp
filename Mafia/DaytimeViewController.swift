@@ -9,7 +9,7 @@
 import UIKit
 
 //Set this to true the starting arrow here and move to remove the need to test on multiple devices with bluetooth (maybe)
-let devMode = true
+let devMode = false
 import MultipeerConnectivity
 
 class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, MCSessionDelegate {
@@ -98,8 +98,9 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "VoteToKill" {
-            let dvc = segue.destinationViewController as VoteKillMenu!
-            dvc.killed = sender.highestVote;
+            let dvc = segue.destinationViewController as! VoteKillMenu
+            dvc.killed = self.highestVote.0;
+            dvc.votes = self.highestVote.1
         }
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {

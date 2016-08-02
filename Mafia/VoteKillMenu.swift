@@ -9,5 +9,9 @@
 import UIKit
 
 class VoteKillMenu: UIViewController {
-
+    var votes : Int = 0;
+    var killed : String = "URSELF";
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }

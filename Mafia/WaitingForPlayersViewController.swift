@@ -72,7 +72,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
     }
     func findRole() -> PlayerRole {
         var roles : [PlayerRole] = []
-        switch(deviceSession.connectedPeers.count) {
+        switch(deviceSession.connectedPeers.count + 1) {
         case 1:
             roles = [.Townsman]
         case 2:
@@ -104,6 +104,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
             }
         }
         let roleNum = arc4random_uniform(UInt32(roles.count))
+        print(roles[0])
         print(roles.count)
         return roles[Int(roleNum)]
     }
