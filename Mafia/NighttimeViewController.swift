@@ -1,0 +1,83 @@
+//
+//  NighttimeViewController.swift
+//  Mafia
+//
+//  Created by Jack Roper on 8/2/16.
+//  Copyright © 2016 Jack Roper. All rights reserved.
+//
+
+import UIKit
+import MultipeerConnectivity
+
+class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, MCSessionDelegate {
+    
+    
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    var targetPlayers : [Player] = []
+    var selectedPlayer : String = "";
+    override func viewDidLoad() {
+        deviceSession.delegate = self;
+
+        super.viewDidLoad();
+        
+        getTargetPlayers();
+        
+        pickerView.delegate = self;
+        pickerView.dataSource = self;
+        
+        
+    }
+    func getTargetPlayers(){
+        if thisPlayer.role == .Pirate {
+            for player in players{
+                if player.role != .Pirate{
+                    targetPlayers.append(player)
+                }
+            }
+        }
+        else if thisPlayer.role == .Healer || thisPlayer.role == .Hunter{
+            targetPlayers = players
+        }
+        else{ //Townsman
+            targetPlayers = [];
+        }
+    }
+    func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
+        dispatch_async(dispatch_get_main_queue()) {
+        }
+    }
+    func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
+        if state == MCSessionState.NotConnected {
+            for index in 0..<players.count{
+                if players[index].name == peerID.displayName {
+                    players.removeAtIndex(index)
+                }
+            }
+        }
+    }
+    func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
+        
+    }
+    
+    func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress) {
+        
+    }
+    
+    func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
+    }
+
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+        return targetPlayers.count
+    }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedPlayer = targetPlayers[row].name;
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
+        return targetPlayers[row].name;
+    }
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
+        return 1;
+    }
+    
+}

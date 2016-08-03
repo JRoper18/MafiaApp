@@ -24,6 +24,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
         print(deviceSession.myPeerID.displayName)
         deviceSession.delegate = self
         try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
+        advertiser.stop();
     }
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {

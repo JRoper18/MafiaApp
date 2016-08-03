@@ -12,6 +12,9 @@ import MultipeerConnectivity;
 //Local session
 var deviceSession: MCSession!;
 
+var advertiser : MCAdvertiserAssistant!;
+
+
 class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate {
     
     //The id that all people playing this game will be able to see each other.
@@ -24,7 +27,6 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate {
     var serviceBrowser : MCBrowserViewController!;
     
     @IBOutlet weak var deviceNameTextField: UITextField!
-    var advertiser : MCAdvertiserAssistant!;
     override func viewDidLoad(){
         super.viewDidLoad();
         

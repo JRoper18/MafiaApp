@@ -44,6 +44,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             //Kill whoever and goto nighttime.
             tallyVotes()
             
+            
         }
     }
     func tallyVotes(){
@@ -64,7 +65,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let dataString = String(data: data, encoding: NSUTF8StringEncoding)
             self.votes.append(dataString!)
             var voteCount : [(String, Int)] = []
-            if(self.votes.count == deviceSession.connectedPeers.count){
+            if(self.votes.count == players.count){
                 self.votes.append(self.selectedVote)
                 //Great, all votes are in! Find the most common one.
                 for vote in self.votes{
@@ -85,13 +86,21 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 self.highestVote = ("ABSTAIN", 0)
                 for vote in voteCount{
                     if vote.1 == self.highestVote.1{
-                        //Tie! Don't accuse anybody.
+                        //Tie means no one dies.
                         self.highestVote = ("ABSTAIN", vote.1)
                     }
                     else if vote.1 > self.highestVote.1{
                         self.highestVote = vote
                     }
                 }
+                //Send the "YOU DIED" message to dead guy.
+                let dataToSend = "Death".dataUsingEncoding(NSUTF8StringEncoding)
+                do{
+                    try deviceSession.sendData(dataToSend!, toPeers: [MCPeerID(displayName: self.highestVote.0)], withMode: .Unreliable)
+                } catch{
+                    print("Error transfer");
+                }
+
                 self.performSegueWithIdentifier("VoteToKill", sender: self)
             }
         }
@@ -101,6 +110,11 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let dvc = segue.destinationViewController as! VoteKillMenu
             dvc.killed = self.highestVote.0;
             dvc.votes = self.highestVote.1
+            for player in players{
+                if player.name == self.highestVote.0{
+                    dvc.role = player.roleToString()
+                }
+            }
         }
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
@@ -130,7 +144,9 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func abstainButtonPressed(sender: AnyObject) {
         pickerView.hidden = !pickerView.hidden
-        selectedVote = "ABSTAIN"
+        if pickerView.hidden{
+            selectedVote = "ABSTAIN"
+        }
     }
     // returns the # of rows in each component..
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
