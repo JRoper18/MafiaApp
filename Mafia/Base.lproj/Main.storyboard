@@ -331,9 +331,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMH-2o-eY5">
-                                <rect key="frame" x="217" y="72" width="167" height="30"/>
+                                <rect key="frame" x="200" y="72" width="200" height="30"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Hunt the pirate">
+                                    <fragment content="(Hunt the PIRATE)">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="25" name="HelveticaNeue"/>
@@ -808,6 +808,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cPe-SS-k0c"/>
-        <segue reference="jup-V4-2k7"/>
+        <segue reference="nu5-hA-hMg"/>
     </inferredMetricsTieBreakers>
 </document>
