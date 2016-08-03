@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -375,8 +375,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="deadSailor" translatesAutoresizingMaskIntoConstraints="NO" id="MU5-mK-o32">
+                                <rect key="frame" x="152" y="221" width="297" height="253"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="253" id="2uu-hy-LAX"/>
+                                    <constraint firstAttribute="width" constant="300" id="sjO-R1-oTo"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compass" translatesAutoresizingMaskIntoConstraints="NO" id="TYA-br-Fbc">
+                                <rect key="frame" x="398" y="0.0" width="202" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="Eha-zR-xvW"/>
+                                    <constraint firstAttribute="width" constant="202" id="rVg-no-Ikb"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZo-MC-Fmo">
-                                <rect key="frame" x="223" y="52" width="154" height="57"/>
+                                <rect key="frame" x="223" y="90" width="154" height="57"/>
                                 <attributedString key="attributedText">
                                     <fragment content="YOU DIED!">
                                         <attributes>
@@ -388,16 +402,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="deadSailor" translatesAutoresizingMaskIntoConstraints="NO" id="MU5-mK-o32">
-                                <rect key="frame" x="152" y="173" width="297" height="253"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="253" id="2uu-hy-LAX"/>
-                                    <constraint firstAttribute="width" constant="300" id="sjO-R1-oTo"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="compass" translatesAutoresizingMaskIntoConstraints="NO" id="TYA-br-Fbc">
-                                <rect key="frame" x="398" y="0.0" width="202" height="114"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
