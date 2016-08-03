@@ -187,19 +187,19 @@
                                     <constraint firstAttribute="height" constant="110" id="Wyk-yL-wW9"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="fort" translatesAutoresizingMaskIntoConstraints="NO" id="Uep-sd-keI">
-                                <rect key="frame" x="273" y="145" width="54" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="77B-9t-F2j"/>
-                                    <constraint firstAttribute="width" constant="54" id="KdN-5G-U1T"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Waiting For Players . . ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypu-PK-0Xx">
                                 <rect key="frame" x="139" y="234" width="322" height="81"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="fort" translatesAutoresizingMaskIntoConstraints="NO" id="Uep-sd-keI">
+                                <rect key="frame" x="273" y="98" width="54" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="77B-9t-F2j"/>
+                                    <constraint firstAttribute="width" constant="54" id="KdN-5G-U1T"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -780,9 +780,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBk-Rj-jZD">
-                                <rect key="frame" x="198" y="72" width="204" height="30"/>
+                                <rect key="frame" x="135" y="72" width="331" height="30"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="(Revive the DEAD)">
+                                    <fragment content="(Revive them before they DIE)">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="25" name="HelveticaNeue"/>
@@ -832,7 +832,7 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="kBQ-wr-3ed"/>
         <segue reference="Aku-DS-bcQ"/>
-        <segue reference="R26-l7-vcF"/>
     </inferredMetricsTieBreakers>
 </document>
