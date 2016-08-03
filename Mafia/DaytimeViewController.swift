@@ -50,7 +50,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func tallyVotes(){
         if !devMode{
             var voteData = String(pickerView.selectedRowInComponent(0)).dataUsingEncoding(NSUTF8StringEncoding)
-
+            
             if pickerView.hidden{
                 voteData = "ABSTAIN".dataUsingEncoding(NSUTF8StringEncoding)
             }
@@ -58,50 +58,56 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             
         }
         
-
+        
     }
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         dispatch_async(dispatch_get_main_queue()) {
+            
             let dataString = String(data: data, encoding: NSUTF8StringEncoding)
-            self.votes.append(dataString!)
-            var voteCount : [(String, Int)] = []
-            if(self.votes.count == players.count){
-                self.votes.append(self.selectedVote)
-                //Great, all votes are in! Find the most common one.
-                for vote in self.votes{
-                    var alreadyExists = false
-                    for index in 0..<voteCount.count{
-                        if vote == voteCount[index].0{
-                            voteCount[index].1 += 1;
-                            alreadyExists = true;
-                            
+            if dataString == "Death"{
+                print("DEAD GUY!");
+            }
+            else{
+                self.votes.append(dataString!)
+                var voteCount : [(String, Int)] = []
+                if(self.votes.count == players.count){
+                    self.votes.append(self.selectedVote)
+                    //Great, all votes are in! Find the most common one.
+                    for vote in self.votes{
+                        var alreadyExists = false
+                        for index in 0..<voteCount.count{
+                            if vote == voteCount[index].0{
+                                voteCount[index].1 += 1;
+                                alreadyExists = true;
+                                
+                            }
+                        }
+                        //If this is the first vote for that person, add them to the voted for array.
+                        if !alreadyExists{
+                            voteCount.append((vote, 1))
                         }
                     }
-                    //If this is the first vote for that person, add them to the voted for array.
-                    if !alreadyExists{
-                        voteCount.append((vote, 1))
+                    //Now that we have all the guilty people, find the guy with the most votes.
+                    self.highestVote = ("ABSTAIN", 0)
+                    for vote in voteCount{
+                        if vote.1 == self.highestVote.1{
+                            //Tie means no one dies.
+                            self.highestVote = ("ABSTAIN", vote.1)
+                        }
+                        else if vote.1 > self.highestVote.1{
+                            self.highestVote = vote
+                        }
                     }
-                }
-                //Now that we have all the guilty people, find the guy with the most votes. 
-                self.highestVote = ("ABSTAIN", 0)
-                for vote in voteCount{
-                    if vote.1 == self.highestVote.1{
-                        //Tie means no one dies.
-                        self.highestVote = ("ABSTAIN", vote.1)
+                    //Send the "YOU DIED" message to dead guy.
+                    let dataToSend = "Death".dataUsingEncoding(NSUTF8StringEncoding)
+                    do{
+                        try deviceSession.sendData(dataToSend!, toPeers: [MCPeerID(displayName: self.highestVote.0)], withMode: .Unreliable)
+                    } catch{
+                        print("Error transfer");
                     }
-                    else if vote.1 > self.highestVote.1{
-                        self.highestVote = vote
-                    }
+                    
+                    self.performSegueWithIdentifier("VoteToKill", sender: self)
                 }
-                //Send the "YOU DIED" message to dead guy.
-                let dataToSend = "Death".dataUsingEncoding(NSUTF8StringEncoding)
-                do{
-                    try deviceSession.sendData(dataToSend!, toPeers: [MCPeerID(displayName: self.highestVote.0)], withMode: .Unreliable)
-                } catch{
-                    print("Error transfer");
-                }
-
-                self.performSegueWithIdentifier("VoteToKill", sender: self)
             }
         }
     }
@@ -137,7 +143,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
     }
-
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         return 1;
     }
@@ -158,6 +164,6 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
         return players[row].name;
     }
-
+    
 }
 

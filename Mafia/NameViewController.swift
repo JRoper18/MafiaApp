@@ -14,6 +14,8 @@ class NameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        advertiser.stop();
+
     }
     
 }

@@ -44,10 +44,6 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate {
         advertiser.start();
 
     }
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(true);
-        advertiser.stop();
-    }
     @IBAction func buttonAction(sender: AnyObject) {
         if deviceNameTextField.hasText() == true{
             self.devicePeerID = MCPeerID(displayName: deviceNameTextField.text!);
