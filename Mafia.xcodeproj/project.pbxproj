@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BDA6E0B1D4E79980000498D /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */; };
+		85066D7A1D526AE000594C3E /* DeathScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85066D791D526AE000594C3E /* DeathScreen.swift */; };
 		852D16001D4FC92F00638ED6 /* DaytimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D15FF1D4FC92F00638ED6 /* DaytimeViewController.swift */; };
 		852D16041D51224E00638ED6 /* RoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D16031D51224E00638ED6 /* RoleViewController.swift */; };
 		DB3029FB1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3029FA1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		2BDA6E0A1D4E79980000498D /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstructionViewController.swift; path = ../InstructionViewController.swift; sourceTree = "<group>"; };
+		85066D791D526AE000594C3E /* DeathScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathScreen.swift; sourceTree = "<group>"; };
 		852D15FF1D4FC92F00638ED6 /* DaytimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaytimeViewController.swift; sourceTree = "<group>"; };
 		852D16031D51224E00638ED6 /* RoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleViewController.swift; sourceTree = "<group>"; };
 		DB3029FA1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingForPlayersViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				DB3029FC1D4EC0D00014A142 /* Player.swift */,
 				DBACE4E21D5115D900F03961 /* VoteKillMenu.swift */,
 				DBCDD6951D51657F00AF1699 /* NighttimeViewController.swift */,
+				85066D791D526AE000594C3E /* DeathScreen.swift */,
 			);
 			path = Mafia;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				DB3029FD1D4EC0D00014A142 /* Player.swift in Sources */,
 				DBCDD6961D51657F00AF1699 /* NighttimeViewController.swift in Sources */,
 				DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */,
+				85066D7A1D526AE000594C3E /* DeathScreen.swift in Sources */,
 				DB7074F21D4D01BF001F11D1 /* LobbyViewController.swift in Sources */,
 				DBACE4E31D5115D900F03961 /* VoteKillMenu.swift in Sources */,
 			);

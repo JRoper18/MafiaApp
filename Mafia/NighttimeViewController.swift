@@ -89,7 +89,6 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         dispatch_async(dispatch_get_main_queue()) {
             self.performSegueWithIdentifier("PlayerDied", sender: self)
-            deviceSession.disconnect()
         }
     }
     
