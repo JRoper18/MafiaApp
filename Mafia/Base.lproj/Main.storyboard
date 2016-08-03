@@ -258,7 +258,7 @@
                                     <constraint firstAttribute="height" constant="281" id="G5Z-VB-0L4"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-G7-3Jy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-G7-3Jy">
                                 <rect key="frame" x="220" y="120" width="160" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -505,12 +505,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="It's Nighttime. You can use your abilities now. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khR-ZA-x1o">
-                                <rect key="frame" x="126" y="57" width="348" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Selected Player: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-MI-IpR">
                                 <rect key="frame" x="236" y="550" width="128" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -521,6 +515,12 @@
                                 <rect key="frame" x="0.0" y="153" width="600" height="216"/>
                                 <color key="backgroundColor" red="0.0" green="0.18511694717099786" blue="0.58195744776315794" alpha="1" colorSpace="calibratedRGB"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Nighttime. You can use your abilities now. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khR-ZA-x1o">
+                                <rect key="frame" x="194" y="57" width="212" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.080359758579610321" green="0.0" blue="0.54550596746315794" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -535,7 +535,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ZPS-Te-Can" secondAttribute="trailing" constant="-20" id="fi9-gM-t80"/>
                             <constraint firstItem="di8-th-y9z" firstAttribute="top" secondItem="S0N-ss-H7O" secondAttribute="bottom" constant="8" id="n5n-VU-5fF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KN4-Tk-0lf" secondAttribute="trailing" constant="28" id="oCG-OI-77U"/>
-                            <constraint firstItem="khR-ZA-x1o" firstAttribute="top" secondItem="VhE-Fz-hdx" secondAttribute="bottom" constant="43" id="vJr-52-ov5"/>
                         </constraints>
                     </view>
                     <connections>
@@ -561,6 +560,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="zqC-qX-lh4">
+                                <rect key="frame" x="367" y="28" width="115" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="O79-1P-ECM"/>
+                                    <constraint firstAttribute="height" constant="95" id="Pmw-tZ-oiq"/>
+                                </constraints>
+                            </imageView>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0F-vJ-fAu">
                                 <rect key="frame" x="0.0" y="241" width="600" height="216"/>
                             </pickerView>
@@ -593,25 +599,18 @@
                                     <constraint firstAttribute="height" constant="134" id="Gnd-3E-MIZ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime.Vote for who you think is the pirate. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-1W-eiZ">
-                                <rect key="frame" x="118" y="5" width="364" height="58"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHv-P2-XcY">
                                 <rect key="frame" x="20" y="538" width="57" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="zqC-qX-lh4">
-                                <rect key="frame" x="367" y="28" width="115" height="95"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="115" id="O79-1P-ECM"/>
-                                    <constraint firstAttribute="height" constant="95" id="Pmw-tZ-oiq"/>
-                                </constraints>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime.Vote for who you think is the pirate. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-1W-eiZ">
+                                <rect key="frame" x="199" y="15" width="202" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
