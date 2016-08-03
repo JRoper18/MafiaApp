@@ -52,14 +52,15 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         hasSent = true;
 
         if !devMode{
-            
+            self.timer.invalidate()
+            self.votes.append(self.selectedVote);
             var voteData = selectedVote.dataUsingEncoding(NSUTF8StringEncoding)
             
             if pickerView.hidden{
                 voteData = "ABSTAIN".dataUsingEncoding(NSUTF8StringEncoding)
             }
             try! deviceSession.sendData(voteData!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
-            
+
         }
         
         
@@ -75,12 +76,14 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 self.presentViewController(vc, animated: true, completion: nil)
             }
             else{ // A vote signal
+                
                 print("Got vote for ", dataString)
                 if !self.hasSent{
                     //We didn't reach 0 yet, but they're done, so we have to move on whether we want to or not. Get our data and send it back before its too late.
-                    self.timer.invalidate()
-                    self.votes.append(self.selectedVote);
+                    print("Shit! Send everyone else my vote before its too late!")
                     self.tallyVotes();
+                    
+                    
                 }
                 self.votes.append(dataString!)
                 var voteCount : [(String, Int)] = []
