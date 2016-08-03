@@ -587,12 +587,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHv-P2-XcY">
-                                <rect key="frame" x="20" y="538" width="57" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Timer (secs):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ar-iW-zoC">
                                 <rect key="frame" x="10" y="523" width="122" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -612,10 +606,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHv-P2-XcY">
+                                <rect key="frame" x="20" y="538" width="57" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WHv-P2-XcY" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="D5q-Fr-gtP"/>
+                            <constraint firstItem="WHv-P2-XcY" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="Aqh-EY-5de"/>
                             <constraint firstItem="Y0F-vJ-fAu" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="EkE-LP-xJo"/>
                             <constraint firstItem="ep0-Rg-hIP" firstAttribute="leading" secondItem="CaX-Gx-DGp" secondAttribute="trailing" constant="15" id="IpV-yi-e2X"/>
                             <constraint firstItem="5Ar-iW-zoC" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" constant="-10" id="Uta-JW-ZQw"/>
@@ -849,8 +849,8 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Aku-DS-bcQ"/>
+        <segue reference="wfG-jd-9tS"/>
         <segue reference="R26-l7-vcF"/>
-        <segue reference="nE2-yi-Gkd"/>
+        <segue reference="Aku-DS-bcQ"/>
     </inferredMetricsTieBreakers>
 </document>
