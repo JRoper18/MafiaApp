@@ -24,7 +24,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     var gotHealed = false;
     
     override func viewDidLoad() {
-        if thisPlayer.roleToString() != "Pirate" || thisPlayer.roleToString() != "Hunter"{
+        if thisPlayer.roleToString() != "Pirate" && thisPlayer.roleToString() != "Hunter" && thisPlayer.roleToString() != "Healer"{
             pickerView.hidden = true
         }
         
@@ -58,7 +58,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
             hunterHasChecked = true
         }
         if timeLeft <= 0 {
-            let dataToSend = selectedPlayer.dataUsingEncoding(NSUTF8StringEncoding)
+            let dataToSend = "HERE IS ACTION".dataUsingEncoding(NSUTF8StringEncoding)
             try! deviceSession.sendData(dataToSend!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
             if thisPlayer.roleToString() == "Pirate" {
                 for player in players{
@@ -98,7 +98,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         dispatch_async(dispatch_get_main_queue()) {
             let dataString = String(data: data, encoding:  NSUTF8StringEncoding)
             if(dataString == "DidHeal"){
-                self.healDone == true
+                self.healDone = true
             }
             else{
                 var peerRole: PlayerRole = .Default
