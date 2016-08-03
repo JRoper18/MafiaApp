@@ -18,8 +18,9 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var votes : [String] = []
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var timerLabel: UILabel!
+    var hasSent = false;
     var timer: NSTimer!;
-    var selectedVote : String = "";
+    var selectedVote : String = players[0].name;
     var highestVote : (String, Int) = ("ABSTAIN", 0);
     override func viewDidLoad() {
         if devMode == true{
@@ -35,7 +36,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         timeElapsed += 1;
         
         //30 seconds to decide
-        let timeRemaining = 30 - timeElapsed;
+        let timeRemaining = 5 - timeElapsed;
         timerLabel.text! = String(timeRemaining)
         if(timeRemaining == 0){
             //Stop timer
@@ -49,7 +50,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     func tallyVotes(){
         if !devMode{
-            var voteData = String(pickerView.selectedRowInComponent(0)).dataUsingEncoding(NSUTF8StringEncoding)
+            var voteData = selectedVote.dataUsingEncoding(NSUTF8StringEncoding)
             
             if pickerView.hidden{
                 voteData = "ABSTAIN".dataUsingEncoding(NSUTF8StringEncoding)
@@ -57,6 +58,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             try! deviceSession.sendData(voteData!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
             
         }
+        hasSent = true;
         
         
     }
@@ -71,14 +73,14 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 self.presentViewController(vc, animated: true, completion: nil)
             }
             else{
-                if self.timeElapsed < 30{
+                if !self.hasSent{
                     //We didn't reach 0 yet, but they're done, so we have to move on whether we want to or not. Get our data and send it back before its too late.
                     self.votes.append(self.selectedVote);
                     self.tallyVotes();
                 }
                 self.votes.append(dataString!)
                 var voteCount : [(String, Int)] = []
-                if(self.votes.count == players.count){
+                if(self.votes.count == players.count + 1){
                     self.votes.append(self.selectedVote)
                     //Great, all votes are in! Find the most common one.
                     for vote in self.votes{
