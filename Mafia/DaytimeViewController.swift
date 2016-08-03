@@ -125,7 +125,8 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                     else{
                         let personToSendTo = MCPeerID(displayName: self.highestVote.0)
                         if deviceSession.myPeerID.displayName == personToSendTo.displayName{
-                            
+                            //O shit im dead
+                            self.performSegueWithIdentifier("ToDeath", sender: self)
                         }
                         else{
                             print("Sending death message to " + personToSendTo.displayName);
