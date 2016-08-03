@@ -10,12 +10,12 @@ import UIKit
 
 class VoteKillMenu: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
-    var votes : Int = 0;
-    var killed : String = "URSELF";
+    var votes : Int = 0
+    var killed : String = "URSELF"
     var role : String!
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = "You voted to kill " + killed + " with " + String(votes) + "votes. They were a " + role;
+        nameLabel.text = "You voted to kill " + killed + " with " + String(votes) + "votes. They were a " + role
         let timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(VoteKillMenu.segue), userInfo: nil, repeats: false)
     }
     
