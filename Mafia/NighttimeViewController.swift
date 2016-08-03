@@ -25,6 +25,8 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     var sentDecision = false;
     
+    var timer : NSTimer!;
+    
     override func viewDidLoad() {
         if thisPlayer.roleToString() != "Pirate" && thisPlayer.roleToString() != "Hunter" && thisPlayer.roleToString() != "Healer"{
             pickerView.hidden = true
@@ -40,7 +42,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         pickerView.delegate = self
         pickerView.dataSource = self
         
-        let timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(NighttimeViewController.secondTime), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(NighttimeViewController.secondTime), userInfo: nil, repeats: true)
         
     }
     
@@ -61,11 +63,12 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         }
         if timeLeft <= 0 {
             print("OUT OF TIME");
-            
+            sendDecision();
         }
     }
     func sendDecision(){
         self.sentDecision = true;
+        self.timer.invalidate();
         let dataToSend = "HERE IS ACTION".dataUsingEncoding(NSUTF8StringEncoding)
         for player in players{
             if thisPlayer.roleToString() == "Pirate" {
@@ -115,15 +118,12 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
             else{ //Townsman
                 targetPlayers = [];
             }
-            //Make sure the medic is still alive or nah so we can tell whether or not to wait for their signal.
-            if player.role == .Healer{
-                self.healDone = true;
-            }
         }
     }
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         dispatch_async(dispatch_get_main_queue()) {
+            print("Got action from " + peerID.displayName)
             if !self.sentDecision{
                 self.sendDecision()
             }
@@ -137,6 +137,10 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
                 for player in players{
                     if peerID.displayName == player.name{
                         peerRole = player.role
+                    }
+                    //Make sure the medic is still alive or nah so we can tell whether or not to wait for their signal.
+                    if player.role == .Healer{
+                        self.healDone = true;
                     }
                 }
                 if peerRole == .Healer{
@@ -155,6 +159,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
     }
     func recheckHealDone(){
+        print("Waiting on healer signal...");
         if self.healDone != true{
             
         }
