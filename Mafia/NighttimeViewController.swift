@@ -39,6 +39,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         let timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(NighttimeViewController.secondTime), userInfo: nil, repeats: false)
 
     }
+    
     func secondTime(){
         time += 1;
         let timeLeft = 15-time;
@@ -68,6 +69,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
             }
         }
     }
+    
     func getTargetPlayers(){
         if thisPlayer.role == .Pirate {
             for player in players{
@@ -83,11 +85,13 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
             targetPlayers = [];
         }
     }
+    
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         dispatch_async(dispatch_get_main_queue()) {
-            
+            self.performSegueWithIdentifier("PlayerDied", sender: self)
         }
     }
+    
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
         if state == MCSessionState.NotConnected {
             for index in 0..<players.count{
@@ -97,6 +101,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
             }
         }
     }
+    
     func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
         
     }
@@ -111,12 +116,15 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         return targetPlayers.count
     }
+    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedPlayer = targetPlayers[row].name;
     }
+    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
         return targetPlayers[row].name
     }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         return 1;
     }
