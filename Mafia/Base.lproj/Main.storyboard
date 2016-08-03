@@ -716,9 +716,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUu-Pc-XKn">
-                                <rect key="frame" x="155" y="77" width="291" height="30"/>
+                                <rect key="frame" x="155" y="77" width="310" height="30"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="(Vote on who is the Pirate)">
+                                    <fragment content="(Vote on who is the PIRATE)">
                                         <attributes>
                                             <color key="NSColor" red="0.28521792759999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="25" name="HelveticaNeue"/>
@@ -780,9 +780,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBk-Rj-jZD">
-                                <rect key="frame" x="135" y="72" width="331" height="30"/>
+                                <rect key="frame" x="130" y="72" width="340" height="30"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="(Revive them before they DIE)">
+                                    <fragment content="(Revive players before DEATH)">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="25" name="HelveticaNeue"/>
@@ -833,6 +833,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kBQ-wr-3ed"/>
-        <segue reference="Aku-DS-bcQ"/>
+        <segue reference="cPe-SS-k0c"/>
     </inferredMetricsTieBreakers>
 </document>
