@@ -14,34 +14,34 @@ import MultipeerConnectivity
 
 class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, MCSessionDelegate {
     
-    var timeElapsed : Int = 0;
+    var timeElapsed : Int = 0
     var votes : [String] = []
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var timerLabel: UILabel!
-    var hasSent = false;
-    var timer: NSTimer!;
-    var selectedVote : String = players[0].name;
-    var highestVote : (String, Int) = ("ABSTAIN", 0);
+    var hasSent = false
+    var timer: NSTimer!
+    var selectedVote : String = players[0].name
+    var highestVote : (String, Int) = ("ABSTAIN", 0)
     override func viewDidLoad() {
         if devMode == true{
             players = [Player(name: "A pirate", role: .Pirate), Player(name: "A townsman", role: .Townsman)]
         }
         super.viewDidLoad()
-        deviceSession.delegate = self;
-        pickerView.dataSource = self;
-        pickerView.delegate = self;
+        deviceSession.delegate = self
+        pickerView.dataSource = self
+        pickerView.delegate = self
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(DaytimeViewController.timerSecond), userInfo: nil, repeats: true)
     }
     func timerSecond(){
-        timeElapsed += 1;
+        timeElapsed += 1
         
         //30 seconds to decide
-        let timeRemaining = 5 - timeElapsed;
+        let timeRemaining = 5 - timeElapsed
         timerLabel.text! = String(timeRemaining)
         if(timeRemaining == 0){
             //Stop timer
             print("Out of time!")
-            timer.invalidate();
+            timer.invalidate()
             //Kill whoever and goto nighttime.
             tallyVotes()
             
@@ -49,11 +49,11 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     func tallyVotes(){
-        hasSent = true;
+        hasSent = true
 
         if !devMode{
             self.timer.invalidate()
-            self.votes.append(self.selectedVote);
+            self.votes.append(self.selectedVote)
             var voteData = selectedVote.dataUsingEncoding(NSUTF8StringEncoding)
             
             if pickerView.hidden{
@@ -70,7 +70,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             
             let dataString = String(data: data, encoding: NSUTF8StringEncoding)
             if dataString == "Death"{
-                print("DEAD GUY!");
+                print("DEAD GUY!")
                 
                 self.performSegueWithIdentifier("ToDeath", sender: self)
 
@@ -82,22 +82,22 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 if !self.hasSent{
                     //We didn't reach 0 yet, but they're done, so we have to move on whether we want to or not. Get our data and send it back before its too late.
                     print("Shit! Send everyone else my vote before its too late!")
-                    self.tallyVotes();
+                    self.tallyVotes()
                     
                 }
                 self.votes.append(dataString!)
                 var voteCount : [(String, Int)] = []
                 print("We have " , self.votes.count , "Out of ", String(players.count + 1))
                 if(self.votes.count == players.count + 1){
-                    print("All votes are in! Lets gooooo");
+                    print("All votes are in! Lets gooooo")
                     //Great, all votes are in! Find the most common one.
                     for vote in self.votes{
                         print("Vote for " + vote)
                         var alreadyExists = false
                         for index in 0..<voteCount.count{
                             if vote == voteCount[index].0{
-                                voteCount[index].1 += 1;
-                                alreadyExists = true;
+                                voteCount[index].1 += 1
+                                alreadyExists = true
                                 
                             }
                         }
@@ -129,11 +129,11 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                             self.performSegueWithIdentifier("ToDeath", sender: self)
                         }
                         else{
-                            print("Sending death message to " + personToSendTo.displayName);
+                            print("Sending death message to " + personToSendTo.displayName)
                             do{
                                 try deviceSession.sendData(dataToSend!, toPeers: [personToSendTo], withMode: .Unreliable)
                             } catch {
-                                print("Error transfer to " + personToSendTo.displayName);
+                                print("Error transfer to " + personToSendTo.displayName)
                             }
                         }
                     }
@@ -146,14 +146,14 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "VoteToKill" {
             let dvc = segue.destinationViewController as! VoteKillMenu
-            dvc.killed = self.highestVote.0;
+            dvc.killed = self.highestVote.0
             dvc.votes = self.highestVote.1
-            var foundPlayer = false;
+            var foundPlayer = false
             for player in players{
                 if player.name == self.highestVote.0{
                     dvc.role = player.roleToString()
-                    foundPlayer = true;
-                    break;
+                    foundPlayer = true
+                    break
                 }
             }
             if !foundPlayer{ //We must've abstained
@@ -183,7 +183,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
-        return 1;
+        return 1
     }
     
     @IBAction func abstainButtonPressed(sender: AnyObject) {
@@ -197,10 +197,10 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return players.count
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedVote = players[row].name;
+        selectedVote = players[row].name
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-        return players[row].name;
+        return players[row].name
     }
     
 }

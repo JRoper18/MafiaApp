@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import MultipeerConnectivity;
+import MultipeerConnectivity
 
 var thisPlayer : Player = Player(name: deviceSession.myPeerID.displayName, role: .Townsman)
 
-var players : [Player] = [];
+var players : [Player] = []
 
 class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
         
@@ -29,9 +29,9 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
         dispatch_async(dispatch_get_main_queue()) {
             let command = String(data: data, encoding: NSUTF8StringEncoding)
             if command == "PlayerJoin"{
-                let replyString = "PlayerJoinReply:" + (thisPlayer.roleToString());
-                try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable);
-                players.append(Player(name: peerID.displayName, role: PlayerRole.Default));
+                let replyString = "PlayerJoinReply:" + (thisPlayer.roleToString())
+                try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable)
+                players.append(Player(name: peerID.displayName, role: PlayerRole.Default))
                 
             }
             else if(command!.characters.count > 15){
@@ -42,27 +42,27 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
                         }
                     }
                     if(players.count == session.connectedPeers.count){
-                        let segueString = "StartGame" + (thisPlayer.roleToString());
-                        self.performSegueWithIdentifier(segueString, sender: nil);
+                        let segueString = "StartGame" + (thisPlayer.roleToString())
+                        self.performSegueWithIdentifier(segueString, sender: nil)
                     }
                 }
                 else if command!.substringToIndex(command!.startIndex.advancedBy(16)) == "PlayerJoinReply:"{
                     //Add the new data to player array.
-                    print("From: "  + peerID.displayName + " : " + String(data: data, encoding: NSUTF8StringEncoding)!);
+                    print("From: "  + peerID.displayName + " : " + String(data: data, encoding: NSUTF8StringEncoding)!)
                     let replyPlayer = Player(name: peerID.displayName, role:self.stringToRole(command!.substringFromIndex(command!.startIndex.advancedBy(16))))
                     players.append(replyPlayer)
-                    thisPlayer.role = self.findRole();
+                    thisPlayer.role = self.findRole()
                     let replyString = String("PlayerRoleReply:" + thisPlayer.roleToString())
-                    try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable);
+                    try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
                     if(players.count == session.connectedPeers.count){
-                        let segueString = "StartGame" + (thisPlayer.roleToString());
-                        self.performSegueWithIdentifier(segueString, sender: nil);
+                        let segueString = "StartGame" + (thisPlayer.roleToString())
+                        self.performSegueWithIdentifier(segueString, sender: nil)
                     }
                 }
             }
                 
             else{
-                print("Strange message " + command!);
+                print("Strange message " + command!)
             }
         }
     }
@@ -86,11 +86,11 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
         case 8:
             roles = [.Pirate, .Townsman, .Healer, .Townsman, .Hunter, .Townsman, .Pirate, .Townsman]
         default:
-            print("Strange number of peers");
+            print("Strange number of peers")
         }
         var takenRoles : [PlayerRole] = []
         for player in players{
-            print(player.role);
+            print(player.role)
             takenRoles.append(player.role)
         }
         for role in takenRoles{
@@ -115,7 +115,7 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
         case "Hunter":
             return .Hunter
         default:
-            return .Default;
+            return .Default
         }
     }
 

@@ -16,7 +16,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var playerRevealLabel: UILabel!
     
     var targetPlayers : [Player] = []
-    var selectedPlayer : String = "";
+    var selectedPlayer : String = ""
     var time : Int = 0
     var hunterHasChecked : Bool = false
     
@@ -28,23 +28,23 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
             pickerView.hidden = true
         }
         
-        deviceSession.delegate = self;
+        deviceSession.delegate = self
         playerRevealLabel.text = ""
         playerRevealLabel.hidden = true
-        super.viewDidLoad();
+        super.viewDidLoad()
         
-        getTargetPlayers();
+        getTargetPlayers()
         
-        pickerView.delegate = self;
-        pickerView.dataSource = self;
+        pickerView.delegate = self
+        pickerView.dataSource = self
         
         let timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(NighttimeViewController.secondTime), userInfo: nil, repeats: true)
         
     }
     
     func secondTime(){
-        time += 1;
-        let timeLeft = 15-time;
+        time += 1
+        let timeLeft = 15 - time
         timerLabel.text = String(timeLeft)
         if timeLeft == 2 && thisPlayer.roleToString() == "Hunter" && hunterHasChecked == false{
             playerRevealLabel.hidden = false
@@ -160,7 +160,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedPlayer = targetPlayers[row].name;
+        selectedPlayer = targetPlayers[row].name
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
@@ -168,7 +168,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
-        return 1;
+        return 1
     }
     
 }

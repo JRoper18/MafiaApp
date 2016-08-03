@@ -9,19 +9,19 @@
 import Foundation
 
 enum PlayerRole{
-    case Pirate;
-    case Hunter;
-    case Townsman;
-    case Healer;
-    case Default;
+    case Pirate
+    case Hunter
+    case Townsman
+    case Healer
+    case Default
 }
 
 class Player {
-    var name : String;
-    var role : PlayerRole;
+    var name : String
+    var role : PlayerRole
     init(name : String, role : PlayerRole){
-        self.name = name;
-        self.role = role;
+        self.name = name
+        self.role = role
     }
     func roleToString() -> String{
         switch self.role{
@@ -34,7 +34,7 @@ class Player {
         case .Hunter:
             return "Hunter"
         default:
-            return "Default";
+            return "Default"
         }
     }
     
