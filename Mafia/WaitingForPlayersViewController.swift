@@ -15,8 +15,11 @@ var players : [Player] = []
 
 class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
         
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
         print(deviceSession.myPeerID.displayName)
         deviceSession.delegate = self
         try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
