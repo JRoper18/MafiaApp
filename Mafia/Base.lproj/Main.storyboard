@@ -173,35 +173,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nkn-gY-BpZ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="B3B-0W-1hB">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B3B-0W-1hB" id="s4X-XO-ydE">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Waiting for players . . ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrD-dV-tim">
-                                                    <rect key="frame" x="215" y="14" width="170" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scaredPirate" translatesAutoresizingMaskIntoConstraints="NO" id="4W7-Pi-Zih">
+                                <rect key="frame" x="71" y="376" width="158" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="eae-lu-WtF"/>
+                                    <constraint firstAttribute="width" constant="158" id="o7k-jk-fLN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Waiting For Players . . ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypu-PK-0Xx">
+                                <rect key="frame" x="139" y="176" width="322" height="81"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chest" translatesAutoresizingMaskIntoConstraints="NO" id="l87-nT-Wj7">
+                                <rect key="frame" x="429" y="428" width="120" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="EbE-Fd-CM9"/>
+                                    <constraint firstAttribute="height" constant="110" id="Wyk-yL-wW9"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="fort" translatesAutoresizingMaskIntoConstraints="NO" id="Uep-sd-keI">
+                                <rect key="frame" x="273" y="145" width="54" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="77B-9t-F2j"/>
+                                    <constraint firstAttribute="width" constant="54" id="KdN-5G-U1T"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jH0-U2-Jir" firstAttribute="top" secondItem="l87-nT-Wj7" secondAttribute="bottom" constant="62" id="1CZ-oF-I3A"/>
+                            <constraint firstItem="jH0-U2-Jir" firstAttribute="top" secondItem="4W7-Pi-Zih" secondAttribute="bottom" constant="62" id="57w-gU-rZk"/>
                             <constraint firstAttribute="trailing" secondItem="2e1-h1-dX7" secondAttribute="trailingMargin" id="8IX-Xa-0DV"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="KKX-LI-ytR"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="Mfh-e2-XLl"/>
                             <constraint firstAttribute="leading" secondItem="2e1-h1-dX7" secondAttribute="leadingMargin" id="QD3-BG-cXh"/>
+                            <constraint firstItem="Uep-sd-keI" firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="el6-dF-SYR"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="gL2-HV-ZBX"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="h2F-c6-rY3"/>
                             <constraint firstAttribute="trailing" secondItem="2e1-h1-dX7" secondAttribute="trailingMargin" id="qS2-Eo-ZLG"/>
@@ -321,9 +329,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMH-2o-eY5">
-                                <rect key="frame" x="217" y="72" width="167" height="30"/>
+                                <rect key="frame" x="137" y="72" width="326" height="30"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Hunt the pirate">
+                                    <fragment content="(Find Out Who the PIRATE Is)">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="25" name="HelveticaNeue"/>
@@ -747,7 +755,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBk-Rj-jZD">
-                                <rect key="frame" x="198" y="64" width="204" height="30"/>
+                                <rect key="frame" x="198" y="72" width="204" height="30"/>
                                 <attributedString key="attributedText">
                                     <fragment content="(Revive the DEAD)">
                                         <attributes>
@@ -794,7 +802,7 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jup-V4-2k7"/>
-        <segue reference="Aku-DS-bcQ"/>
+        <segue reference="cPe-SS-k0c"/>
+        <segue reference="nu5-hA-hMg"/>
     </inferredMetricsTieBreakers>
 </document>
