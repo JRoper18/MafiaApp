@@ -23,7 +23,8 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
     }
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
-        //This works by when someone is ready they send the PlayerJoin message and the other devices add them to an array of players and then respond with their name, so that the new guy knows they're ready too.
+        //This works by when someone is ready they send the PlayerJoin message and the other devices add them to an array of players and then respond with their name, so that 
+        //the new guy knows they're ready too.
         //Aparently the dispatch async thing makes this work.
         dispatch_async(dispatch_get_main_queue()) {
             let command = String(data: data, encoding: NSUTF8StringEncoding)
