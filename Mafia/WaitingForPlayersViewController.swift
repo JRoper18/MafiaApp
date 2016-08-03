@@ -33,7 +33,12 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
             let command = String(data: data, encoding: NSUTF8StringEncoding)
             if command == "PlayerJoin"{
                 let replyString = "PlayerJoinReply:" + (thisPlayer.roleToString())
-                try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable)
+                do{
+                    try deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable)
+
+                } catch {
+                    print("Error in data sending");
+                }
                 players.append(Player(name: peerID.displayName, role: PlayerRole.Default))
                 
             }
