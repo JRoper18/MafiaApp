@@ -18,11 +18,16 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     var targetPlayers : [Player] = []
     var selectedPlayer : String = "";
     var time : Int = 0
-    var hunterNumOfChecks : Int = 0
+    var hunterHasChecked : Bool = false
     
     
     override func viewDidLoad() {
+        if thisPlayer.roleToString() != "Pirate" || thisPlayer.roleToString() != "Hunter"{
+            pickerView.hidden = true
+        }
+        
         deviceSession.delegate = self;
+        playerRevealLabel.text = ""
         playerRevealLabel.hidden = true
         super.viewDidLoad();
         
@@ -38,14 +43,29 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         time += 1;
         let timeLeft = 15-time;
         timerLabel.text = String(timeLeft)
-        if timeLeft == 2 && thisPlayer.roleToString() == "Hunter"{
+        if timeLeft == 2 && thisPlayer.roleToString() == "Hunter" && hunterHasChecked == false{
             playerRevealLabel.hidden = false
-            
+            var selectedPlayerRole : String = ""
+            for player in players{
+                if player.name == selectedPlayer{
+                    selectedPlayerRole = player.roleToString()
+                    break
+                }
+            }
+            playerRevealLabel.text = "Selected Player: \(selectedPlayerRole)"
+            hunterHasChecked = true
         }
         if timeLeft <= 0 {
             let dataToSend = selectedPlayer.dataUsingEncoding(NSUTF8StringEncoding)
             try! deviceSession.sendData(dataToSend!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
-            
+            if thisPlayer.roleToString() == "Pirate" {
+                for player in players{
+                    if player.name == selectedPlayer{
+                        let playerID = MCPeerID(displayName: player.name)
+                        try! deviceSession.sendData(dataToSend!, toPeers: [playerID], withMode: .Unreliable)
+                    }
+                }
+            }
         }
     }
     func getTargetPlayers(){
@@ -65,6 +85,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         dispatch_async(dispatch_get_main_queue()) {
+            
         }
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
