@@ -16,6 +16,9 @@ class VoteKillMenu: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = "You voted to kill " + killed + " with " + String(votes) + "votes. They were a " + role
+        if killed == "ABSTAIN" {
+            nameLabel.text = "It's a tie!!"
+        }
         let timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(VoteKillMenu.segue), userInfo: nil, repeats: false)
     }
     
