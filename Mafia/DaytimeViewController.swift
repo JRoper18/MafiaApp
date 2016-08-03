@@ -40,8 +40,8 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         timerLabel.text! = String(timeRemaining)
         if(timeRemaining == 0){
             //Stop timer
+            print("Out of time!")
             timer.invalidate();
-            votes.append(selectedVote);
             //Kill whoever and goto nighttime.
             tallyVotes()
             
@@ -49,7 +49,10 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     func tallyVotes(){
+        hasSent = true;
+
         if !devMode{
+            
             var voteData = selectedVote.dataUsingEncoding(NSUTF8StringEncoding)
             
             if pickerView.hidden{
@@ -58,7 +61,6 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             try! deviceSession.sendData(voteData!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
             
         }
-        hasSent = true;
         
         
     }
@@ -73,18 +75,21 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 self.presentViewController(vc, animated: true, completion: nil)
             }
             else{ // A vote signal
-                print("Vote for ", dataString)
+                print("Got vote for ", dataString)
                 if !self.hasSent{
                     //We didn't reach 0 yet, but they're done, so we have to move on whether we want to or not. Get our data and send it back before its too late.
+                    self.timer.invalidate()
                     self.votes.append(self.selectedVote);
                     self.tallyVotes();
                 }
                 self.votes.append(dataString!)
                 var voteCount : [(String, Int)] = []
                 if(self.votes.count == players.count + 1){
+                    print("All votes are in! Lets gooooo");
                     self.votes.append(self.selectedVote)
                     //Great, all votes are in! Find the most common one.
                     for vote in self.votes{
+                        print("Vote for " + vote)
                         var alreadyExists = false
                         for index in 0..<voteCount.count{
                             if vote == voteCount[index].0{
@@ -118,7 +123,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                         let personToSendTo = MCPeerID(displayName: self.highestVote.0)
                         do{
                             try deviceSession.sendData(dataToSend!, toPeers: [personToSendTo], withMode: .Unreliable)
-                        } catch{
+                        } catch {
                             print("Error transfer to " + personToSendTo.displayName);
                         }
                     }
