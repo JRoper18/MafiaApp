@@ -199,15 +199,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2e1-h1-dX7" secondAttribute="trailingMargin" id="8IX-Xa-0DV"/>
-                            <constraint firstItem="jH0-U2-Jir" firstAttribute="top" secondItem="iY5-Y9-I3g" secondAttribute="bottom" constant="74" id="FXy-24-3Oq"/>
-                            <constraint firstItem="jH0-U2-Jir" firstAttribute="top" secondItem="4IR-Xk-vNz" secondAttribute="bottom" constant="67" id="IvW-Sq-QZW"/>
-                            <constraint firstItem="41O-ei-xNS" firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="KKX-LI-ytR"/>
-                            <constraint firstItem="tsP-Ia-MTW" firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="Mfh-e2-XLl"/>
+                            <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="KKX-LI-ytR"/>
+                            <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="Mfh-e2-XLl"/>
                             <constraint firstAttribute="leading" secondItem="2e1-h1-dX7" secondAttribute="leadingMargin" id="QD3-BG-cXh"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="gL2-HV-ZBX"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="h2F-c6-rY3"/>
-                            <constraint firstItem="4IR-Xk-vNz" firstAttribute="trailing" secondItem="2e1-h1-dX7" secondAttribute="trailingMargin" id="qS2-Eo-ZLG"/>
-                            <constraint firstItem="iY5-Y9-I3g" firstAttribute="leading" secondItem="2e1-h1-dX7" secondAttribute="leadingMargin" constant="48" id="s9L-as-VzT"/>
+                            <constraint firstAttribute="trailing" secondItem="2e1-h1-dX7" secondAttribute="trailingMargin" id="qS2-Eo-ZLG"/>
+                            <constraint firstAttribute="leading" secondItem="2e1-h1-dX7" secondAttribute="leadingMargin" constant="48" id="s9L-as-VzT"/>
                         </constraints>
                     </view>
                     <connections>
@@ -784,15 +782,12 @@
         <image name="antiPirate" width="229" height="197"/>
         <image name="blackShip" width="1440" height="900"/>
         <image name="blackShip2" width="512" height="512"/>
-        <image name="chest" width="1200" height="1179"/>
-        <image name="fort" width="701" height="708"/>
         <image name="healer2" width="236" height="268"/>
         <image name="imperialFlag" width="2000" height="1000"/>
         <image name="moon" width="300" height="300"/>
         <image name="pirate" width="800" height="845"/>
         <image name="pirate2" width="800" height="703"/>
         <image name="pirateFlag" width="2000" height="1253"/>
-        <image name="scaredPirate" width="132" height="135"/>
         <image name="shack" width="405" height="299"/>
         <image name="sun" width="626" height="500"/>
         <image name="sword" width="428" height="550"/>
