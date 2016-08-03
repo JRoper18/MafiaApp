@@ -12,10 +12,14 @@ import MultipeerConnectivity
 class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, MCSessionDelegate {
     
     
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
     
     var targetPlayers : [Player] = []
     var selectedPlayer : String = "";
+    var time : Int = 0
+    
+    
     override func viewDidLoad() {
         deviceSession.delegate = self;
 
@@ -26,7 +30,17 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         pickerView.delegate = self;
         pickerView.dataSource = self;
         
-        
+        let timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(NighttimeViewController.secondTime), userInfo: nil, repeats: false)
+
+    }
+    func secondTime(){
+        time += 1;
+        let timeLeft = 15-time;
+        timerLabel.text = String(timeLeft)
+        if timeLeft <= 0 {
+            let dataToSend = selectedPlayer.dataUsingEncoding(NSUTF8StringEncoding)
+            try! deviceSession.sendData(dataToSend!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
+        }
     }
     func getTargetPlayers(){
         if thisPlayer.role == .Pirate {
