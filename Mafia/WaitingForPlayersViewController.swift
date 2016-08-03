@@ -15,8 +15,11 @@ var players : [Player] = []
 
 class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
         
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
         print(deviceSession.myPeerID.displayName)
         deviceSession.delegate = self
         try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
@@ -30,7 +33,12 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
             let command = String(data: data, encoding: NSUTF8StringEncoding)
             if command == "PlayerJoin"{
                 let replyString = "PlayerJoinReply:" + (thisPlayer.roleToString())
-                try! deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable)
+                do{
+                    try deviceSession.sendData(replyString.dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: [peerID], withMode: .Unreliable)
+
+                } catch {
+                    print("Error in data sending");
+                }
                 players.append(Player(name: peerID.displayName, role: PlayerRole.Default))
                 
             }
