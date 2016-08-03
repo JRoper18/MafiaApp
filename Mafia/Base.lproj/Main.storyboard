@@ -804,7 +804,7 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cPe-SS-k0c"/>
         <segue reference="jup-V4-2k7"/>
+        <segue reference="Aku-DS-bcQ"/>
     </inferredMetricsTieBreakers>
 </document>
