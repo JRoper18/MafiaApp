@@ -58,7 +58,14 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         if timeLeft <= 0 {
             let dataToSend = selectedPlayer.dataUsingEncoding(NSUTF8StringEncoding)
             try! deviceSession.sendData(dataToSend!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
-            
+            if thisPlayer.roleToString() == "Pirate" {
+                for player in players{
+                    if player.name == selectedPlayer{
+                        let playerID = MCPeerID(displayName: player.name)
+                        try! deviceSession.sendData(dataToSend!, toPeers: [playerID], withMode: .Unreliable)
+                    }
+                }
+            }
         }
     }
     func getTargetPlayers(){
@@ -78,6 +85,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         dispatch_async(dispatch_get_main_queue()) {
+            
         }
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
