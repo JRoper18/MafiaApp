@@ -228,6 +228,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="57p-pn-leY" id="yIF-Ss-PjR"/>
                         <segue destination="Y3g-AC-ucG" kind="show" identifier="StartGameHunter" id="aXZ-UP-w7x"/>
                         <segue destination="VSu-bJ-HhL" kind="show" identifier="StartGameTownsman" id="tZQ-0W-AgD"/>
                         <segue destination="p7q-gD-OAq" kind="show" identifier="StartGameHealer" id="RtD-re-Byb"/>
@@ -478,6 +479,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-Tk-0lf">
+                                <rect key="frame" x="443" y="57" width="109" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="u1Z-rl-ZpS"/>
+                                    <constraint firstAttribute="width" constant="109" id="zC7-yG-u6z"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-Te-Can">
                                 <rect key="frame" x="0.0" y="244" width="600" height="356"/>
                                 <constraints>
@@ -509,13 +517,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-Tk-0lf">
-                                <rect key="frame" x="443" y="57" width="109" height="94"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="94" id="u1Z-rl-ZpS"/>
-                                    <constraint firstAttribute="width" constant="109" id="zC7-yG-u6z"/>
-                                </constraints>
-                            </imageView>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYO-9k-Q28">
                                 <rect key="frame" x="0.0" y="153" width="600" height="216"/>
                                 <color key="backgroundColor" red="0.0" green="0.18511694717099786" blue="0.58195744776315794" alpha="1" colorSpace="calibratedRGB"/>
