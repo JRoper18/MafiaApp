@@ -180,7 +180,7 @@
                                     <constraint firstAttribute="width" constant="158" id="o7k-jk-fLN"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Waiting For Players . . ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypu-PK-0Xx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Waiting For Players . . ." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypu-PK-0Xx">
                                 <rect key="frame" x="139" y="176" width="322" height="81"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -527,6 +527,7 @@
                         <outlet property="pickerView" destination="dYO-9k-Q28" id="bj0-vN-ZbI"/>
                         <outlet property="playerRevealLabel" destination="p6L-MI-IpR" id="Svb-3Z-6KW"/>
                         <outlet property="timerLabel" destination="di8-th-y9z" id="Bt0-lG-LyE"/>
+                        <segue destination="z2E-nG-cht" kind="show" identifier="PlayerDied" id="nE2-yi-Gkd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgQ-eI-8di" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -832,6 +833,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Aku-DS-bcQ"/>
-        <segue reference="nu5-hA-hMg"/>
+        <segue reference="R26-l7-vcF"/>
     </inferredMetricsTieBreakers>
 </document>
