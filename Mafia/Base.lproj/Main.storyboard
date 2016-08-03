@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -614,6 +614,7 @@
                         <outlet property="pickerView" destination="Y0F-vJ-fAu" id="TSs-wc-sg3"/>
                         <outlet property="timerLabel" destination="WHv-P2-XcY" id="DL1-kM-e9P"/>
                         <segue destination="AoB-UH-bni" kind="show" identifier="VoteToKill" id="P7e-q8-zgd"/>
+                        <segue destination="z2E-nG-cht" kind="show" identifier="ToDeath" id="wfG-jd-9tS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47f-c9-N3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -834,5 +835,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Aku-DS-bcQ"/>
         <segue reference="R26-l7-vcF"/>
+        <segue reference="wfG-jd-9tS"/>
     </inferredMetricsTieBreakers>
 </document>
