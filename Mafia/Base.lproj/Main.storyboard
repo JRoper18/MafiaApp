@@ -332,9 +332,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMH-2o-eY5">
-                                <rect key="frame" x="200" y="72" width="200" height="30"/>
+                                <rect key="frame" x="137" y="72" width="326" height="30"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="(Hunt the PIRATE)">
+                                    <fragment content="(Find Out Who the PIRATE Is)">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="25" name="HelveticaNeue"/>
@@ -758,7 +758,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBk-Rj-jZD">
-                                <rect key="frame" x="198" y="64" width="204" height="30"/>
+                                <rect key="frame" x="198" y="72" width="204" height="30"/>
                                 <attributedString key="attributedText">
                                     <fragment content="(Revive the DEAD)">
                                         <attributes>
