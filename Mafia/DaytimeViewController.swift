@@ -84,6 +84,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 }
                 self.votes.append(dataString!)
                 var voteCount : [(String, Int)] = []
+                print("We have " , self.votes.count , "Out of ", String(players.count + 1))
                 if(self.votes.count == players.count + 1){
                     print("All votes are in! Lets gooooo");
                     self.votes.append(self.selectedVote)
@@ -121,10 +122,16 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                     }
                     else{
                         let personToSendTo = MCPeerID(displayName: self.highestVote.0)
-                        do{
-                            try deviceSession.sendData(dataToSend!, toPeers: [personToSendTo], withMode: .Unreliable)
-                        } catch {
-                            print("Error transfer to " + personToSendTo.displayName);
+                        if deviceSession.myPeerID.displayName == personToSendTo.displayName{
+                            
+                        }
+                        else{
+                            print("Sending death message to " + personToSendTo.displayName);
+                            do{
+                                try deviceSession.sendData(dataToSend!, toPeers: [personToSendTo], withMode: .Unreliable)
+                            } catch {
+                                print("Error transfer to " + personToSendTo.displayName);
+                            }
                         }
                     }
                     print("Segueing")
