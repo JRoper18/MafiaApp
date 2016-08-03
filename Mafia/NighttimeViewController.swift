@@ -18,6 +18,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     var targetPlayers : [Player] = []
     var selectedPlayer : String = "";
     var time : Int = 0
+    var hunterNumOfChecks : Int = 0
     
     
     override func viewDidLoad() {
@@ -38,8 +39,12 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         let timeLeft = 15-time;
         timerLabel.text = String(timeLeft)
         if timeLeft <= 0 {
+            if thisPlayer.roleToString() == "Hunter" {
+                
+            }
             let dataToSend = selectedPlayer.dataUsingEncoding(NSUTF8StringEncoding)
             try! deviceSession.sendData(dataToSend!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
+            
         }
     }
     func getTargetPlayers(){
