@@ -13,14 +13,12 @@ var thisPlayer : Player = Player(name: deviceSession.myPeerID.displayName, role:
 
 var players : [Player] = [];
 
-class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITableViewDelegate, UITableViewDataSource {
+class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
     
     @IBOutlet weak var displayPlayersTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayPlayersTableView.delegate = self
-        displayPlayersTableView.dataSource = self
         print(deviceSession.myPeerID.displayName)
         deviceSession.delegate = self
         try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
@@ -143,23 +141,6 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate, UITa
     }
     
     func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
-    }
-    
-    //Table view functions (displays players on text view
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return players.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as UITableViewCell
-        
-        cell.textLabel?.text = players[indexPath.row].name
-        
-        return cell
     }
     
 }
