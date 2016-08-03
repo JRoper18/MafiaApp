@@ -11,7 +11,6 @@ import MultipeerConnectivity
 
 class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, MCSessionDelegate {
     
-    
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var playerRevealLabel: UILabel!
@@ -95,7 +94,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         selectedPlayer = targetPlayers[row].name;
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-        return targetPlayers[row].name;
+        return targetPlayers[row].name
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         return 1;

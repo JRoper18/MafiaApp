@@ -199,9 +199,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2e1-h1-dX7" secondAttribute="trailingMargin" id="8IX-Xa-0DV"/>
+                            <constraint firstItem="jH0-U2-Jir" firstAttribute="top" secondItem="iY5-Y9-I3g" secondAttribute="bottom" constant="74" id="FXy-24-3Oq"/>
+                            <constraint firstItem="jH0-U2-Jir" firstAttribute="top" secondItem="4IR-Xk-vNz" secondAttribute="bottom" constant="67" id="IvW-Sq-QZW"/>
+                            <constraint firstItem="41O-ei-xNS" firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="KKX-LI-ytR"/>
+                            <constraint firstItem="tsP-Ia-MTW" firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="Mfh-e2-XLl"/>
                             <constraint firstAttribute="leading" secondItem="2e1-h1-dX7" secondAttribute="leadingMargin" id="QD3-BG-cXh"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="gL2-HV-ZBX"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="h2F-c6-rY3"/>
+                            <constraint firstItem="4IR-Xk-vNz" firstAttribute="trailing" secondItem="2e1-h1-dX7" secondAttribute="trailingMargin" id="qS2-Eo-ZLG"/>
+                            <constraint firstItem="iY5-Y9-I3g" firstAttribute="leading" secondItem="2e1-h1-dX7" secondAttribute="leadingMargin" constant="48" id="s9L-as-VzT"/>
                         </constraints>
                     </view>
                     <connections>
@@ -439,7 +445,7 @@
                             </imageView>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYO-9k-Q28">
                                 <rect key="frame" x="0.0" y="153" width="600" height="216"/>
-                                <color key="backgroundColor" red="0.053698878220000003" green="0.0001771040275" blue="0.36842948720000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.080359758579999996" green="0.0" blue="0.54550596750000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-Te-Can">
                                 <rect key="frame" x="0.0" y="244" width="600" height="356"/>
@@ -473,7 +479,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.053698878220000003" green="0.0001771040275" blue="0.36842948720000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.080359758579610321" green="0.0" blue="0.54550596746315794" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ZPS-Te-Can" firstAttribute="centerX" secondItem="J5y-oa-Xse" secondAttribute="centerX" id="I4k-l2-1qv"/>
                             <constraint firstItem="dYO-9k-Q28" firstAttribute="centerX" secondItem="J5y-oa-Xse" secondAttribute="centerX" id="Ke5-hO-z83"/>
@@ -510,15 +516,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="zqC-qX-lh4">
-                                <rect key="frame" x="371" y="0.0" width="222" height="175"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="222" id="Pqv-Pq-4Wq"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="175" id="YKy-Pv-JNq"/>
-                                    <constraint firstAttribute="height" constant="175" id="crF-DV-1sa"/>
-                                    <constraint firstAttribute="width" constant="222" id="xGo-lh-Lw9"/>
-                                </constraints>
-                            </imageView>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0F-vJ-fAu">
                                 <rect key="frame" x="0.0" y="241" width="600" height="216"/>
                             </pickerView>
@@ -563,6 +560,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="zqC-qX-lh4">
+                                <rect key="frame" x="449" y="28" width="115" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="O79-1P-ECM"/>
+                                    <constraint firstAttribute="height" constant="95" id="Pmw-tZ-oiq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -570,14 +574,10 @@
                             <constraint firstItem="Y0F-vJ-fAu" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="EkE-LP-xJo"/>
                             <constraint firstItem="5Ar-iW-zoC" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" constant="-10" id="Uta-JW-ZQw"/>
                             <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="5Ar-iW-zoC" secondAttribute="bottom" constant="53" id="WYG-9K-pSl"/>
-                            <constraint firstItem="zqC-qX-lh4" firstAttribute="top" secondItem="1dM-5W-pkb" secondAttribute="topMargin" id="Zly-tZ-c3A"/>
                             <constraint firstItem="st7-z5-mBr" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="bSB-wV-p3p"/>
-                            <constraint firstItem="zqC-qX-lh4" firstAttribute="top" secondItem="1dM-5W-pkb" secondAttribute="topMargin" id="bXW-pA-fdX"/>
                             <constraint firstItem="ep0-Rg-hIP" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="gWX-BF-E8y"/>
                             <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="WHv-P2-XcY" secondAttribute="bottom" constant="8" id="jLD-BG-9vf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zqC-qX-lh4" secondAttribute="trailing" constant="-13" id="uGh-ra-Gc4"/>
                             <constraint firstItem="lCK-1W-eiZ" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="yIu-ZP-uO3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zqC-qX-lh4" secondAttribute="trailing" constant="-13" id="zzR-1X-tdJ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -784,12 +784,15 @@
         <image name="antiPirate" width="229" height="197"/>
         <image name="blackShip" width="1440" height="900"/>
         <image name="blackShip2" width="512" height="512"/>
+        <image name="chest" width="1200" height="1179"/>
+        <image name="fort" width="701" height="708"/>
         <image name="healer2" width="236" height="268"/>
         <image name="imperialFlag" width="2000" height="1000"/>
         <image name="moon" width="300" height="300"/>
         <image name="pirate" width="800" height="845"/>
         <image name="pirate2" width="800" height="703"/>
         <image name="pirateFlag" width="2000" height="1253"/>
+        <image name="scaredPirate" width="132" height="135"/>
         <image name="shack" width="405" height="299"/>
         <image name="sun" width="626" height="500"/>
         <image name="sword" width="428" height="550"/>
