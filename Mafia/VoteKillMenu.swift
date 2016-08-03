@@ -12,8 +12,9 @@ class VoteKillMenu: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     var votes : Int = 0;
     var killed : String = "URSELF";
+    var role : String!
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = "You voted to kill " + killed;
+        nameLabel.text = "You voted to kill " + killed + " with " + String(votes);
     }
 }

@@ -347,16 +347,17 @@
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="Rzh-AI-FEi" id="p6w-6x-F9x"/>
+                        <segue destination="9Mi-x8-GXX" kind="show" identifier="ToNighttime" id="Tdl-ma-DnT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUg-5c-PTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4112" y="305"/>
         </scene>
-        <!--View Controller-->
+        <!--Nighttime View Controller-->
         <scene sceneID="5wn-BP-pZR">
             <objects>
-                <viewController id="9Mi-x8-GXX" sceneMemberID="viewController">
+                <viewController id="9Mi-x8-GXX" customClass="NighttimeViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VhE-Fz-hdx"/>
                         <viewControllerLayoutGuide type="bottom" id="TDQ-7c-RGP"/>
@@ -374,6 +375,9 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYO-9k-Q28">
+                                <rect key="frame" x="0.0" y="153" width="600" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.053698878220000003" green="0.0001771040275" blue="0.36842948720000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -381,10 +385,13 @@
                             <constraint firstItem="khR-ZA-x1o" firstAttribute="top" secondItem="VhE-Fz-hdx" secondAttribute="bottom" constant="43" id="vJr-52-ov5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="dYO-9k-Q28" id="bj0-vN-ZbI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgQ-eI-8di" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4746" y="305"/>
+            <point key="canvasLocation" x="4822" y="305"/>
         </scene>
         <!--Daytime View Controller-->
         <scene sceneID="mlo-xN-bmv">
@@ -405,7 +412,7 @@
                                     <constraint firstAttribute="width" constant="222" id="TJd-mK-nDa"/>
                                 </constraints>
                             </imageView>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0F-vJ-fAu">
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0F-vJ-fAu">
                                 <rect key="frame" x="0.0" y="241" width="600" height="216"/>
                             </pickerView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ep0-Rg-hIP">
@@ -454,7 +461,7 @@
                             <constraint firstItem="5Ar-iW-zoC" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" constant="-10" id="gZt-ia-Jnt"/>
                             <constraint firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="ggv-CC-tiQ"/>
                             <constraint firstItem="st7-z5-mBr" firstAttribute="top" secondItem="fxq-6q-q8b" secondAttribute="bottom" constant="50" id="hWe-uC-Gg3"/>
-                            <constraint firstItem="lIN-0M-8Ph" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="l7c-Pp-Rxz"/>
+                            <constraint firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="l7c-Pp-Rxz"/>
                             <constraint firstItem="ep0-Rg-hIP" firstAttribute="leading" secondItem="CaX-Gx-DGp" secondAttribute="trailing" constant="8" id="lEb-x3-BhI"/>
                             <constraint firstItem="WHv-P2-XcY" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="mdQ-pK-N5R"/>
                             <constraint firstItem="WHv-P2-XcY" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" id="oF1-oe-R2t"/>

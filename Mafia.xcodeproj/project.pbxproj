@@ -19,6 +19,7 @@
 		DBABA49A1D4BC09E00112D1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBABA4991D4BC09E00112D1F /* Assets.xcassets */; };
 		DBABA49D1D4BC09E00112D1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBABA49B1D4BC09E00112D1F /* LaunchScreen.storyboard */; };
 		DBACE4E31D5115D900F03961 /* VoteKillMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBACE4E21D5115D900F03961 /* VoteKillMenu.swift */; };
+		DBCDD6961D51657F00AF1699 /* NighttimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCDD6951D51657F00AF1699 /* NighttimeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DBABA49C1D4BC09E00112D1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBABA49E1D4BC09E00112D1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBACE4E21D5115D900F03961 /* VoteKillMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteKillMenu.swift; sourceTree = "<group>"; };
+		DBCDD6951D51657F00AF1699 /* NighttimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NighttimeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				852D15FF1D4FC92F00638ED6 /* DaytimeViewController.swift */,
 				DB3029FC1D4EC0D00014A142 /* Player.swift */,
 				DBACE4E21D5115D900F03961 /* VoteKillMenu.swift */,
+				DBCDD6951D51657F00AF1699 /* NighttimeViewController.swift */,
 			);
 			path = Mafia;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				DBABA4951D4BC09D00112D1F /* NameViewController.swift in Sources */,
 				DB3029FB1D4EBE2E0014A142 /* WaitingForPlayersViewController.swift in Sources */,
 				DB3029FD1D4EC0D00014A142 /* Player.swift in Sources */,
+				DBCDD6961D51657F00AF1699 /* NighttimeViewController.swift in Sources */,
 				DBABA4931D4BC09D00112D1F /* AppDelegate.swift in Sources */,
 				DB7074F21D4D01BF001F11D1 /* LobbyViewController.swift in Sources */,
 				DBACE4E31D5115D900F03961 /* VoteKillMenu.swift in Sources */,
