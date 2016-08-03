@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import MultipeerConnectivity;
+import MultipeerConnectivity
 
 //Local session
-var deviceSession: MCSession!;
+var deviceSession: MCSession!
 
-var advertiser : MCAdvertiserAssistant!;
+var advertiser : MCAdvertiserAssistant!
 
 
 class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate {
@@ -24,38 +24,37 @@ class LobbyViewController: UIViewController, MCBrowserViewControllerDelegate {
     var devicePeerID = MCPeerID(displayName: UIDevice.currentDevice().name)
     
     //Finds people who are advertising.
-    var serviceBrowser : MCBrowserViewController!;
+    var serviceBrowser : MCBrowserViewController!
     
     @IBOutlet weak var deviceNameTextField: UITextField!
     override func viewDidLoad(){
-        super.viewDidLoad();
+        super.viewDidLoad()
         
     }
     func lookForGames(){
         deviceSession = MCSession(peer: devicePeerID)
         self.serviceBrowser = MCBrowserViewController(serviceType: gameServiceType, session: deviceSession)
-        self.serviceBrowser.delegate = self;
+        self.serviceBrowser.delegate = self
         //This LINE IS SUPER IMPORTANT
         //It makes the style so that segues are remembered and still work.
-        self.serviceBrowser.modalPresentationStyle = .OverFullScreen;
+        self.serviceBrowser.modalPresentationStyle = .OverFullScreen
         
-        
-        advertiser = MCAdvertiserAssistant(serviceType: gameServiceType, discoveryInfo: nil, session: deviceSession);
-        advertiser.start();
+        advertiser = MCAdvertiserAssistant(serviceType: gameServiceType, discoveryInfo: nil, session: deviceSession)
+        advertiser.start()
 
     }
     @IBAction func buttonAction(sender: AnyObject) {
         if deviceNameTextField.hasText() == true{
-            self.devicePeerID = MCPeerID(displayName: deviceNameTextField.text!);
+            self.devicePeerID = MCPeerID(displayName: deviceNameTextField.text!)
         }
-        lookForGames();
+        lookForGames()
         self.presentViewController(self.serviceBrowser, animated: true, completion: nil)
     }
     
     
     //Called when we finish the peer selection.
     func browserViewControllerDidFinish(browserViewController: MCBrowserViewController){
-        self.performSegueWithIdentifier("ToGame", sender: self);
+        self.performSegueWithIdentifier("ToGame", sender: self)
          
     }
     //Called when we hit the cancel button
