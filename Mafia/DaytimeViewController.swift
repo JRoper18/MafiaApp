@@ -66,8 +66,16 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let dataString = String(data: data, encoding: NSUTF8StringEncoding)
             if dataString == "Death"{
                 print("DEAD GUY!");
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewControllerWithIdentifier("DeathView")
+                self.presentViewController(vc, animated: true, completion: nil)
             }
             else{
+                if self.timeElapsed < 30{
+                    //We didn't reach 0 yet, but they're done, so we have to move on whether we want to or not. Get our data and send it back before its too late.
+                    self.votes.append(self.selectedVote);
+                    self.tallyVotes();
+                }
                 self.votes.append(dataString!)
                 var voteCount : [(String, Int)] = []
                 if(self.votes.count == players.count){
@@ -100,12 +108,18 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                     }
                     //Send the "YOU DIED" message to dead guy.
                     let dataToSend = "Death".dataUsingEncoding(NSUTF8StringEncoding)
-                    do{
-                        try deviceSession.sendData(dataToSend!, toPeers: [MCPeerID(displayName: self.highestVote.0)], withMode: .Unreliable)
-                    } catch{
-                        print("Error transfer");
+                    if self.highestVote.0 == "ABSTAIN"{
+                        
                     }
-                    
+                    else{
+                        let personToSendTo = MCPeerID(displayName: self.highestVote.0)
+                        do{
+                            try deviceSession.sendData(dataToSend!, toPeers: [personToSendTo], withMode: .Unreliable)
+                        } catch{
+                            print("Error transfer to " + personToSendTo.displayName);
+                        }
+                    }
+                    print("Segueing")
                     self.performSegueWithIdentifier("VoteToKill", sender: self)
                 }
             }
@@ -116,10 +130,16 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let dvc = segue.destinationViewController as! VoteKillMenu
             dvc.killed = self.highestVote.0;
             dvc.votes = self.highestVote.1
+            var foundPlayer = false;
             for player in players{
                 if player.name == self.highestVote.0{
                     dvc.role = player.roleToString()
+                    foundPlayer = true;
+                    break;
                 }
+            }
+            if !foundPlayer{ //We must've abstained
+                dvc.role = "No Role"
             }
         }
     }
