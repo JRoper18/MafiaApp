@@ -402,17 +402,11 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCp-S0-Pb3">
-                                <rect key="frame" x="285" y="155" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="OK"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="MU5-mK-o32" firstAttribute="centerX" secondItem="hYK-sZ-t5o" secondAttribute="centerX" id="3ZQ-Tq-Kjd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TYA-br-Fbc" secondAttribute="trailing" constant="-20" id="4n1-bd-e6D"/>
-                            <constraint firstItem="bCp-S0-Pb3" firstAttribute="centerX" secondItem="hYK-sZ-t5o" secondAttribute="centerX" id="Llu-eb-lBw"/>
                             <constraint firstItem="QZo-MC-Fmo" firstAttribute="centerX" secondItem="hYK-sZ-t5o" secondAttribute="centerX" id="Zst-vS-P2O"/>
                             <constraint firstItem="QZo-MC-Fmo" firstAttribute="centerX" secondItem="hYK-sZ-t5o" secondAttribute="centerX" id="aSP-WP-Ovu"/>
                             <constraint firstItem="TYA-br-Fbc" firstAttribute="top" secondItem="hYK-sZ-t5o" secondAttribute="topMargin" id="wzB-TY-cJ8"/>
@@ -849,7 +843,7 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wfG-jd-9tS"/>
+        <segue reference="nE2-yi-Gkd"/>
         <segue reference="R26-l7-vcF"/>
         <segue reference="Aku-DS-bcQ"/>
     </inferredMetricsTieBreakers>
