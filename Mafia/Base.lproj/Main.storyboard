@@ -624,6 +624,7 @@
                         <outlet property="pickerView" destination="Y0F-vJ-fAu" id="TSs-wc-sg3"/>
                         <outlet property="timerLabel" destination="WHv-P2-XcY" id="DL1-kM-e9P"/>
                         <segue destination="AoB-UH-bni" kind="show" identifier="VoteToKill" id="P7e-q8-zgd"/>
+                        <segue destination="z2E-nG-cht" kind="show" identifier="ToDeath" id="wfG-jd-9tS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47f-c9-N3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -842,7 +843,8 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kBQ-wr-3ed"/>
         <segue reference="Aku-DS-bcQ"/>
+        <segue reference="R26-l7-vcF"/>
+        <segue reference="wfG-jd-9tS"/>
     </inferredMetricsTieBreakers>
 </document>

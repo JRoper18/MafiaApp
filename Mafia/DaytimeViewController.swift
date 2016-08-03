@@ -71,9 +71,10 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let dataString = String(data: data, encoding: NSUTF8StringEncoding)
             if dataString == "Death"{
                 print("DEAD GUY!");
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewControllerWithIdentifier("DeathView")
-                self.presentViewController(vc, animated: true, completion: nil)
+                
+                self.performSegueWithIdentifier("ToDeath", sender: self)
+
+                
             }
             else{ // A vote signal
                 
@@ -83,14 +84,12 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                     print("Shit! Send everyone else my vote before its too late!")
                     self.tallyVotes();
                     
-                    
                 }
                 self.votes.append(dataString!)
                 var voteCount : [(String, Int)] = []
                 print("We have " , self.votes.count , "Out of ", String(players.count + 1))
                 if(self.votes.count == players.count + 1){
                     print("All votes are in! Lets gooooo");
-                    self.votes.append(self.selectedVote)
                     //Great, all votes are in! Find the most common one.
                     for vote in self.votes{
                         print("Vote for " + vote)
@@ -126,7 +125,8 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                     else{
                         let personToSendTo = MCPeerID(displayName: self.highestVote.0)
                         if deviceSession.myPeerID.displayName == personToSendTo.displayName{
-                            
+                            //O shit im dead
+                            self.performSegueWithIdentifier("ToDeath", sender: self)
                         }
                         else{
                             print("Sending death message to " + personToSendTo.displayName);
