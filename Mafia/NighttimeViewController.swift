@@ -20,6 +20,11 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     var time : Int = 0
     var hunterHasChecked : Bool = false
     
+    var gotHealed = false;
+    var healDone = false;
+    
+    var sentDecision = false;
+    
     override func viewDidLoad() {
         if thisPlayer.roleToString() != "Pirate" && thisPlayer.roleToString() != "Hunter" && thisPlayer.roleToString() != "Healer"{
             pickerView.hidden = true
@@ -41,7 +46,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     func secondTime(){
         time += 1
-        let timeLeft = 15 - time
+        let timeLeft = 7 - time
         timerLabel.text = String(timeLeft)
         if timeLeft == 2 && thisPlayer.roleToString() == "Hunter" && hunterHasChecked == false{
             playerRevealLabel.hidden = false
@@ -55,42 +60,46 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
             hunterHasChecked = true
         }
         if timeLeft <= 0 {
-            let dataToSend = "HERE IS ACTION".dataUsingEncoding(NSUTF8StringEncoding)
-            for player in players{
-                if thisPlayer.roleToString() == "Pirate" {
-                    
-                    if player.name == selectedPlayer{
-                        //Just send them the stuff.
-                        let playerID = MCPeerID(displayName: player.name)
-                        do{
-                            try deviceSession.sendData(dataToSend!, toPeers: [playerID], withMode: .Unreliable)
-                        } catch {
-                            print("Pirate data transfer failed");
-                        }
+            print("OUT OF TIME");
+            
+        }
+    }
+    func sendDecision(){
+        self.sentDecision = true;
+        let dataToSend = "HERE IS ACTION".dataUsingEncoding(NSUTF8StringEncoding)
+        for player in players{
+            if thisPlayer.roleToString() == "Pirate" {
+                
+                if player.name == selectedPlayer{
+                    //Just send them the stuff.
+                    let playerID = MCPeerID(displayName: player.name)
+                    do{
+                        try deviceSession.sendData(dataToSend!, toPeers: [playerID], withMode: .Unreliable)
+                    } catch {
+                        print("Pirate data transfer failed");
                     }
                 }
-                else if thisPlayer.roleToString() == "Healer"{
-                    if player.name == selectedPlayer{
-                        //Just send them the stuff.
-                        let playerID = MCPeerID(displayName: player.name)
-                        //Tell the guy that we heal him, tlel everyone that we chose our heal target.
-                        do{
-                            try deviceSession.sendData(dataToSend!, toPeers: [playerID], withMode: .Unreliable)
-                        } catch {
-                            print("Healer data transfer failed");
-                        }
-                        do{
-                            try deviceSession.sendData("DidHeal".dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
-                        } catch {
-                            print("Healer data transfer failed");
-                        }
-
+            }
+            else if thisPlayer.roleToString() == "Healer"{
+                if player.name == selectedPlayer{
+                    //Just send them the stuff.
+                    let playerID = MCPeerID(displayName: player.name)
+                    //Tell the guy that we heal him, tlel everyone that we chose our heal target.
+                    do{
+                        try deviceSession.sendData(dataToSend!, toPeers: [playerID], withMode: .Unreliable)
+                    } catch {
+                        print("Healer data transfer failed");
                     }
+                    do{
+                        try deviceSession.sendData("DidHeal".dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
+                    } catch {
+                        print("Healer data transfer failed");
+                    }
+                    
                 }
             }
         }
     }
-    
     func getTargetPlayers(){
         var isHealer = false
         for player in players{
@@ -115,6 +124,9 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         dispatch_async(dispatch_get_main_queue()) {
+            if !self.sentDecision{
+                self.sendDecision()
+            }
             let dataString = String(data: data, encoding:  NSUTF8StringEncoding)
             print(dataString);
             if(dataString == "DidHeal"){
