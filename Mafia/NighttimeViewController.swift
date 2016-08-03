@@ -20,6 +20,9 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     var time : Int = 0
     var hunterHasChecked : Bool = false
     
+    var healDone = false
+    var gotHealed = false
+    
     override func viewDidLoad() {
         if thisPlayer.roleToString() != "Pirate" && thisPlayer.roleToString() != "Hunter" && thisPlayer.roleToString() != "Healer"{
             pickerView.hidden = true
