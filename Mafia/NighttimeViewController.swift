@@ -14,6 +14,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var playerRevealLabel: UILabel!
     
     var targetPlayers : [Player] = []
     var selectedPlayer : String = "";
@@ -23,7 +24,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     override func viewDidLoad() {
         deviceSession.delegate = self;
-
+        playerRevealLabel.hidden = true
         super.viewDidLoad();
         
         getTargetPlayers();
@@ -38,10 +39,11 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         time += 1;
         let timeLeft = 15-time;
         timerLabel.text = String(timeLeft)
+        if timeLeft == 2 && thisPlayer.roleToString() == "Hunter"{
+            playerRevealLabel.hidden = false
+            
+        }
         if timeLeft <= 0 {
-            if thisPlayer.roleToString() == "Hunter" {
-                
-            }
             let dataToSend = selectedPlayer.dataUsingEncoding(NSUTF8StringEncoding)
             try! deviceSession.sendData(dataToSend!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
             

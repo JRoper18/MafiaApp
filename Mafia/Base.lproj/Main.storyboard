@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Instruction View Controller-->
@@ -197,12 +198,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jH0-U2-Jir" firstAttribute="top" secondItem="K7d-v1-RPg" secondAttribute="bottom" constant="20" id="6n7-cQ-uyK"/>
-                            <constraint firstItem="FLr-2x-tBN" firstAttribute="trailing" secondItem="2e1-h1-dX7" secondAttribute="trailingMargin" id="8IX-Xa-0DV"/>
-                            <constraint firstItem="K7d-v1-RPg" firstAttribute="leading" secondItem="2e1-h1-dX7" secondAttribute="leadingMargin" id="QD3-BG-cXh"/>
-                            <constraint firstItem="v4f-PN-JfD" firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="gL2-HV-ZBX"/>
-                            <constraint firstItem="2Mq-lG-zVr" firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="h2F-c6-rY3"/>
-                            <constraint firstItem="jH0-U2-Jir" firstAttribute="top" secondItem="FLr-2x-tBN" secondAttribute="bottom" constant="8" id="oFg-Pv-Wu8"/>
+                            <constraint firstAttribute="trailing" secondItem="2e1-h1-dX7" secondAttribute="trailingMargin" id="8IX-Xa-0DV"/>
+                            <constraint firstAttribute="leading" secondItem="2e1-h1-dX7" secondAttribute="leadingMargin" id="QD3-BG-cXh"/>
+                            <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="gL2-HV-ZBX"/>
+                            <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="h2F-c6-rY3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -440,6 +439,7 @@
                             </imageView>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYO-9k-Q28">
                                 <rect key="frame" x="0.0" y="153" width="600" height="216"/>
+                                <color key="backgroundColor" red="0.053698878220000003" green="0.0001771040275" blue="0.36842948720000002" alpha="1" colorSpace="calibratedRGB"/>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-Te-Can">
                                 <rect key="frame" x="0.0" y="244" width="600" height="356"/>
@@ -466,6 +466,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Player: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-MI-IpR">
+                                <rect key="frame" x="236" y="550" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.053698878220000003" green="0.0001771040275" blue="0.36842948720000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -484,6 +490,7 @@
                     </view>
                     <connections>
                         <outlet property="pickerView" destination="dYO-9k-Q28" id="bj0-vN-ZbI"/>
+                        <outlet property="playerRevealLabel" destination="p6L-MI-IpR" id="Svb-3Z-6KW"/>
                         <outlet property="timerLabel" destination="di8-th-y9z" id="Bt0-lG-LyE"/>
                     </connections>
                 </viewController>
@@ -777,15 +784,12 @@
         <image name="antiPirate" width="229" height="197"/>
         <image name="blackShip" width="1440" height="900"/>
         <image name="blackShip2" width="512" height="512"/>
-        <image name="chest" width="1200" height="1179"/>
-        <image name="flag" width="281" height="179"/>
         <image name="healer2" width="236" height="268"/>
         <image name="imperialFlag" width="2000" height="1000"/>
         <image name="moon" width="300" height="300"/>
         <image name="pirate" width="800" height="845"/>
         <image name="pirate2" width="800" height="703"/>
         <image name="pirateFlag" width="2000" height="1253"/>
-        <image name="scaredPirate" width="132" height="135"/>
         <image name="shack" width="405" height="299"/>
         <image name="sun" width="626" height="500"/>
         <image name="sword" width="428" height="550"/>
