@@ -72,7 +72,8 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 let vc = storyboard.instantiateViewControllerWithIdentifier("DeathView")
                 self.presentViewController(vc, animated: true, completion: nil)
             }
-            else{
+            else{ // A vote signal
+                print("Vote for ", dataString)
                 if !self.hasSent{
                     //We didn't reach 0 yet, but they're done, so we have to move on whether we want to or not. Get our data and send it back before its too late.
                     self.votes.append(self.selectedVote);
