@@ -486,10 +486,9 @@
                                     <constraint firstAttribute="width" constant="109" id="zC7-yG-u6z"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-Te-Can">
-                                <rect key="frame" x="0.0" y="244" width="600" height="356"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-Te-Can">
+                                <rect key="frame" x="0.0" y="279" width="600" height="321"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="356" id="QJM-re-wl8"/>
                                     <constraint firstAttribute="width" constant="600" id="Qim-xI-CJw"/>
                                 </constraints>
                             </imageView>
@@ -533,6 +532,7 @@
                             <constraint firstItem="khR-ZA-x1o" firstAttribute="centerX" secondItem="J5y-oa-Xse" secondAttribute="centerX" id="Ylh-5a-Eaj"/>
                             <constraint firstItem="ZPS-Te-Can" firstAttribute="leading" secondItem="J5y-oa-Xse" secondAttribute="leadingMargin" constant="-20" id="dOc-dJ-Iwy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZPS-Te-Can" secondAttribute="trailing" constant="-20" id="fi9-gM-t80"/>
+                            <constraint firstItem="TDQ-7c-RGP" firstAttribute="top" secondItem="ZPS-Te-Can" secondAttribute="bottom" id="kbN-ye-9cQ"/>
                             <constraint firstItem="di8-th-y9z" firstAttribute="top" secondItem="S0N-ss-H7O" secondAttribute="bottom" constant="8" id="n5n-VU-5fF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KN4-Tk-0lf" secondAttribute="trailing" constant="28" id="oCG-OI-77U"/>
                         </constraints>
@@ -850,6 +850,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Aku-DS-bcQ"/>
         <segue reference="R26-l7-vcF"/>
-        <segue reference="wfG-jd-9tS"/>
+        <segue reference="nE2-yi-Gkd"/>
     </inferredMetricsTieBreakers>
 </document>
