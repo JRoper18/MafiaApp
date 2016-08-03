@@ -849,8 +849,8 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wfG-jd-9tS"/>
-        <segue reference="R26-l7-vcF"/>
         <segue reference="Aku-DS-bcQ"/>
+        <segue reference="R26-l7-vcF"/>
+        <segue reference="nE2-yi-Gkd"/>
     </inferredMetricsTieBreakers>
 </document>
