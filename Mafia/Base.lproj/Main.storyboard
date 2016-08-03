@@ -198,10 +198,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jH0-U2-Jir" firstAttribute="top" secondItem="l87-nT-Wj7" secondAttribute="bottom" constant="62" id="1CZ-oF-I3A"/>
+                            <constraint firstItem="jH0-U2-Jir" firstAttribute="top" secondItem="4W7-Pi-Zih" secondAttribute="bottom" constant="62" id="57w-gU-rZk"/>
                             <constraint firstAttribute="trailing" secondItem="2e1-h1-dX7" secondAttribute="trailingMargin" id="8IX-Xa-0DV"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="KKX-LI-ytR"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="Mfh-e2-XLl"/>
                             <constraint firstAttribute="leading" secondItem="2e1-h1-dX7" secondAttribute="leadingMargin" id="QD3-BG-cXh"/>
+                            <constraint firstItem="Uep-sd-keI" firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="el6-dF-SYR"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="gL2-HV-ZBX"/>
                             <constraint firstAttribute="centerX" secondItem="2e1-h1-dX7" secondAttribute="centerX" id="h2F-c6-rY3"/>
                             <constraint firstAttribute="trailing" secondItem="2e1-h1-dX7" secondAttribute="trailingMargin" id="qS2-Eo-ZLG"/>
@@ -321,9 +324,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMH-2o-eY5">
-                                <rect key="frame" x="217" y="72" width="167" height="30"/>
+                                <rect key="frame" x="137" y="72" width="326" height="30"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Hunt the pirate">
+                                    <fragment content="(Find Out Who the PIRATE Is)">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="25" name="HelveticaNeue"/>
@@ -747,7 +750,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBk-Rj-jZD">
-                                <rect key="frame" x="198" y="64" width="204" height="30"/>
+                                <rect key="frame" x="198" y="72" width="204" height="30"/>
                                 <attributedString key="attributedText">
                                     <fragment content="(Revive the DEAD)">
                                         <attributes>
@@ -794,7 +797,7 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jup-V4-2k7"/>
-        <segue reference="Aku-DS-bcQ"/>
+        <segue reference="cPe-SS-k0c"/>
+        <segue reference="nu5-hA-hMg"/>
     </inferredMetricsTieBreakers>
 </document>
