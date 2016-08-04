@@ -64,7 +64,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmM-EA-9es">
                                 <rect key="frame" x="151" y="71" width="299" height="106"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Roles Will Be Randomly Generated, And Each Role Has A Goal/Job (see below). Tap On Peoples' Names To Select Them. When Your App Crashes, Its Indicates That You Died.</string>
+                                <string key="text">Roles Will Be Randomly Generated, And Each Role Has A Goal/Job (see below). Tap On Peoples' Names To Select Them. When Your App Crashes, It Indicates That You Died.</string>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -535,7 +535,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-Te-Can">
-                                <rect key="frame" x="0.0" y="279" width="600" height="321"/>
+                                <rect key="frame" x="0.0" y="274" width="600" height="326"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="Qim-xI-CJw"/>
                                 </constraints>
@@ -960,9 +960,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KkW-SY-jAY"/>
-        <segue reference="jup-V4-2k7"/>
-        <segue reference="cPe-SS-k0c"/>
+        <segue reference="ALv-P3-AIu"/>
+        <segue reference="nE2-yi-Gkd"/>
         <segue reference="pZ7-Vm-FBU"/>
-        <segue reference="wfG-jd-9tS"/>
+        <segue reference="cPe-SS-k0c"/>
     </inferredMetricsTieBreakers>
 </document>
