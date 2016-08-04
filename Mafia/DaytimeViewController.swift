@@ -208,6 +208,16 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
         dispatch_async(dispatch_get_main_queue()) {
             print("Got state change");
+            if state == MCSessionState.NotConnected {
+                print("peer disconnected: updating accordingly");
+                for index in 0..<players.count{
+                    if players[index].name == peerID.displayName {
+                        players.removeAtIndex(index)
+                    }
+                }
+                self.checkWinner();
+                self.pickerView.reloadAllComponents();
+            }
         }
     }
     
