@@ -446,7 +446,7 @@
                                     <constraint firstAttribute="height" constant="248" id="aVr-Ms-ySd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The Pirates Lose!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFF-LW-Z3v">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Pirates Lose!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFF-LW-Z3v">
                                 <rect key="frame" x="152" y="53" width="296" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="296" id="RhK-FS-W8T"/>
@@ -459,6 +459,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.85053453950000002" green="0.26649919439999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="pFF-LW-Z3v" firstAttribute="centerX" secondItem="1F7-QA-XBD" secondAttribute="centerX" id="b0f-CO-JmW"/>
                             <constraint firstItem="pFF-LW-Z3v" firstAttribute="top" secondItem="J5o-mO-Qe7" secondAttribute="bottom" constant="33" id="qdY-8w-Obs"/>
                             <constraint firstItem="hcY-Kn-oGu" firstAttribute="centerX" secondItem="1F7-QA-XBD" secondAttribute="centerX" id="uez-XR-yY9"/>
                         </constraints>
@@ -656,15 +657,6 @@
                                     <constraint firstAttribute="width" constant="110" id="jxd-Mj-64g"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Note: When your app crashes, you died, and are out of the game!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-Wo-e7U">
-                                <rect key="frame" x="154" y="451" width="293" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="293" id="CEm-JE-8WB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime. Vote for who you think is the pirate. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-1W-eiZ">
                                 <rect key="frame" x="178" y="47" width="245" height="58"/>
                                 <constraints>
@@ -672,6 +664,15 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Note: When your app crashes, YOU DIED, and are out of the game!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-Wo-e7U">
+                                <rect key="frame" x="162" y="455" width="277" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="gmd-f7-ZnX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
