@@ -496,20 +496,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip: When your app crashes, you died, and are out of the game!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-Wo-e7U">
-                                <rect key="frame" x="143" y="425" width="294" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="294" id="Ysa-qo-7r0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZPA-uM-LNb" firstAttribute="centerX" secondItem="l5L-Nb-aJt" secondAttribute="centerX" id="Axb-rs-eAj"/>
-                            <constraint firstItem="nfb-Wo-e7U" firstAttribute="centerX" secondItem="l5L-Nb-aJt" secondAttribute="centerX" id="WZ2-yc-pdM"/>
                             <constraint firstItem="Rzh-AI-FEi" firstAttribute="centerX" secondItem="l5L-Nb-aJt" secondAttribute="centerX" id="Ym7-Hs-zvR"/>
                         </constraints>
                     </view>
@@ -666,8 +656,17 @@
                                     <constraint firstAttribute="width" constant="110" id="jxd-Mj-64g"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Note: When your app crashes, you died, and are out of the game!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-Wo-e7U">
+                                <rect key="frame" x="154" y="451" width="293" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="CEm-JE-8WB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime. Vote for who you think is the pirate. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-1W-eiZ">
-                                <rect key="frame" x="167" y="47" width="245" height="58"/>
+                                <rect key="frame" x="178" y="47" width="245" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="245" id="GRS-dE-5Uf"/>
                                 </constraints>
@@ -683,6 +682,7 @@
                             <constraint firstItem="ep0-Rg-hIP" firstAttribute="leading" secondItem="CaX-Gx-DGp" secondAttribute="trailing" constant="15" id="IpV-yi-e2X"/>
                             <constraint firstItem="5Ar-iW-zoC" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" constant="-10" id="Uta-JW-ZQw"/>
                             <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="5Ar-iW-zoC" secondAttribute="bottom" constant="53" id="WYG-9K-pSl"/>
+                            <constraint firstItem="nfb-Wo-e7U" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="Yl2-2G-0UW"/>
                             <constraint firstItem="st7-z5-mBr" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="bSB-wV-p3p"/>
                             <constraint firstItem="ep0-Rg-hIP" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="gWX-BF-E8y"/>
                             <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="WHv-P2-XcY" secondAttribute="bottom" constant="8" id="jLD-BG-9vf"/>
@@ -958,10 +958,10 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Sa7-HN-Lv9"/>
+        <segue reference="KkW-SY-jAY"/>
         <segue reference="jup-V4-2k7"/>
         <segue reference="cPe-SS-k0c"/>
+        <segue reference="pZ7-Vm-FBU"/>
         <segue reference="wfG-jd-9tS"/>
-        <segue reference="rYt-2n-WSZ"/>
     </inferredMetricsTieBreakers>
 </document>
