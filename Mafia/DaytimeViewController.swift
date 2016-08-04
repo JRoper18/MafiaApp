@@ -119,7 +119,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 }
                 self.checkWinner();
                 self.pickerView.reloadAllComponents();
-
+                
             }
             else{ // A vote signal
                 
@@ -211,12 +211,18 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             if state == MCSessionState.NotConnected {
                 print("peer disconnected: updating accordingly");
                 for index in 0..<players.count{
-                    if players[index].name == peerID.displayName {
-                        players.removeAtIndex(index)
+                    if index < players.count{
+                        if players[index].name == peerID.displayName {
+                            players.removeAtIndex(index)
+                        }
                     }
+                    else{
+                        print("Disconnect error");
+                        
+                    }
+                    self.checkWinner();
+                    self.pickerView.reloadAllComponents();
                 }
-                self.checkWinner();
-                self.pickerView.reloadAllComponents();
             }
         }
     }
