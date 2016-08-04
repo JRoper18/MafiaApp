@@ -268,7 +268,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Establish a connection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQY-e3-y2A">
                                 <rect key="frame" x="123" y="46" width="355" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -544,12 +544,6 @@
                                     <constraint firstAttribute="width" constant="109" id="zC7-yG-u6z"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-Te-Can">
-                                <rect key="frame" x="0.0" y="274" width="600" height="326"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="Qim-xI-CJw"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di8-th-y9z">
                                 <rect key="frame" x="29" y="529" width="116" height="63"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -581,6 +575,9 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-Te-Can">
+                                <rect key="frame" x="0.0" y="274" width="600" height="326"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.080359758579610321" green="0.0" blue="0.54550596746315794" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -971,8 +968,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="KkW-SY-jAY"/>
         <segue reference="ALv-P3-AIu"/>
-        <segue reference="nE2-yi-Gkd"/>
         <segue reference="pZ7-Vm-FBU"/>
-        <segue reference="cPe-SS-k0c"/>
+        <segue reference="wfG-jd-9tS"/>
+        <segue reference="Aku-DS-bcQ"/>
     </inferredMetricsTieBreakers>
 </document>
