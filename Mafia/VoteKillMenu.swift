@@ -20,14 +20,17 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
         self.timer = NSTimer();
         super.viewWillAppear(animated)
         nameLabel.text = "You voted to kill " + killed + " with " + String(votes) + "votes. They were a " + role
-
-        checkWinner()
-
+        
+        
         if killed == "ABSTAIN" {
             nameLabel.text = "You live another day..."
         }
         timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(VoteKillMenu.segue), userInfo: nil, repeats: false)
-        }
+        
+        checkWinner()
+        
+    }
+    
     
     func segue(){
         self.performSegueWithIdentifier("ToNighttime", sender: self)
@@ -35,7 +38,9 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
     func checkWinner(){
         var mafiaWin = true
         var townWin = true
-        for player in players{
+        var allPlayers = players;
+        allPlayers.append(thisPlayer)
+        for player in allPlayers{
             if player.role != .Pirate{
                 mafiaWin = false
             }
@@ -45,12 +50,12 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
         }
         if mafiaWin{
             timer.invalidate()
-
+            print("Mafia win")
             self.performSegueWithIdentifier("MafiaWin", sender: self)
         }
         if townWin{
             timer.invalidate();
-            
+            print("Mafia win")
             self.performSegueWithIdentifier("TownWin", sender: self)
         }
     }
@@ -62,10 +67,12 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
                     players.removeAtIndex(index)
                 }
             }
+            checkWinner();
+
         }
     }
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
-
+        
     }
     
     func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
@@ -83,6 +90,6 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
         
         
     }
-
-
+    
+    
 }

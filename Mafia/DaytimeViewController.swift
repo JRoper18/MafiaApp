@@ -202,6 +202,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                     players.removeAtIndex(index)
                 }
             }
+            checkWinner();
         }
     }
     
