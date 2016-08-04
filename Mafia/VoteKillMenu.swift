@@ -63,14 +63,6 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
         dispatch_async(dispatch_get_main_queue()) {
             print("Disconnected player");
-            if state == MCSessionState.NotConnected {
-                for index in 0..<players.count{
-                    if players[index].name == peerID.displayName {
-                        players.removeAtIndex(index)
-                    }
-                }
-                self.checkWinner();
-            }
         }
     }
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
