@@ -142,8 +142,6 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         dispatch_async(dispatch_get_main_queue()) {
-            let alert = UIAlertController(title: "GOT ACTION", message: "EEEY", preferredStyle: .Alert)
-            self.presentViewController(alert, animated: true, completion: nil);
             print("Got action from " + peerID.displayName)
             if !self.sentDecision{
                 self.sendDecision()
