@@ -56,7 +56,7 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
         }
         if townWin{
             timer.invalidate();
-            print("Mafia win")
+            print("Town win")
             self.performSegueWithIdentifier("TownWin", sender: self)
         }
     }
@@ -66,10 +66,10 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
             if state == MCSessionState.NotConnected {
                 for index in 0..<players.count{
                     if players[index].name == peerID.displayName {
+                        print("Removing player from players array");
                         players.removeAtIndex(index)
                     }
                 }
-                self.checkWinner();
             }
         }
     }

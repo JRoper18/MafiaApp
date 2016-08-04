@@ -255,6 +255,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
             if state == MCSessionState.NotConnected {
                 for index in 0..<players.count{
                     if players[index].name == peerID.displayName {
+                        print("Removing old player");
                         players.removeAtIndex(index)
                     }
                 }

@@ -213,6 +213,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 for index in 0..<players.count{
                     if index < players.count{
                         if players[index].name == peerID.displayName {
+                            print("Updating disconencted player data");
                             players.removeAtIndex(index)
                         }
                     }
@@ -220,7 +221,6 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                         print("Disconnect error");
                         
                     }
-                    self.checkWinner();
                     self.pickerView.reloadAllComponents();
                 }
             }
