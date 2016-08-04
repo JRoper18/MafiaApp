@@ -426,6 +426,24 @@
             </objects>
             <point key="canvasLocation" x="4112" y="-1108"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="UEE-dL-gCQ">
+            <objects>
+                <viewController id="4xj-40-d6M" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J5o-mO-Qe7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rug-uH-Gdc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1F7-QA-XBD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6o-Xz-sX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4140" y="1012"/>
+        </scene>
         <!--Vote Kill Menu-->
         <scene sceneID="AEk-j5-U2Q">
             <objects>
@@ -461,6 +479,8 @@
                     <connections>
                         <outlet property="nameLabel" destination="Rzh-AI-FEi" id="p6w-6x-F9x"/>
                         <segue destination="9Mi-x8-GXX" kind="show" identifier="ToNighttime" id="Tdl-ma-DnT"/>
+                        <segue destination="4xj-40-d6M" kind="show" identifier="TownWin" id="Sa7-HN-Lv9"/>
+                        <segue destination="yBy-8U-wy4" kind="show" identifier="MafiaWin" id="rYt-2n-WSZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUg-5c-PTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -542,6 +562,7 @@
                         <outlet property="playerRevealLabel" destination="p6L-MI-IpR" id="Svb-3Z-6KW"/>
                         <outlet property="timerLabel" destination="di8-th-y9z" id="Bt0-lG-LyE"/>
                         <segue destination="z2E-nG-cht" kind="show" identifier="PlayerDied" id="nE2-yi-Gkd"/>
+                        <segue destination="xR0-J2-sxM" kind="show" id="ALv-P3-AIu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgQ-eI-8di" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -630,6 +651,8 @@
                         <outlet property="timerLabel" destination="WHv-P2-XcY" id="DL1-kM-e9P"/>
                         <segue destination="AoB-UH-bni" kind="show" identifier="VoteToKill" id="P7e-q8-zgd"/>
                         <segue destination="z2E-nG-cht" kind="show" identifier="ToDeath" id="wfG-jd-9tS"/>
+                        <segue destination="yBy-8U-wy4" kind="show" identifier="MafiaWin" id="pZ7-Vm-FBU"/>
+                        <segue destination="4xj-40-d6M" kind="show" identifier="TownWin" id="KkW-SY-jAY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47f-c9-N3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -825,6 +848,24 @@
             </objects>
             <point key="canvasLocation" x="2693" y="1012"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="12U-KA-Dbv">
+            <objects>
+                <viewController id="yBy-8U-wy4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B2h-sR-wzp"/>
+                        <viewControllerLayoutGuide type="bottom" id="F0r-wZ-zG9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dTg-Vh-3gu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ern-Dq-MzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3463" y="1007"/>
+        </scene>
     </scenes>
     <resources>
         <image name="No-pirates" width="1999" height="1999"/>
@@ -848,8 +889,10 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Aku-DS-bcQ"/>
         <segue reference="R26-l7-vcF"/>
-        <segue reference="nE2-yi-Gkd"/>
+        <segue reference="Aku-DS-bcQ"/>
+        <segue reference="wfG-jd-9tS"/>
+        <segue reference="KkW-SY-jAY"/>
+        <segue reference="rYt-2n-WSZ"/>
     </inferredMetricsTieBreakers>
 </document>

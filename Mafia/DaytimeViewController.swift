@@ -27,6 +27,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             players = [Player(name: "A pirate", role: .Pirate), Player(name: "A townsman", role: .Townsman)]
         }
         super.viewDidLoad()
+        checkWinner();
         deviceSession.delegate = self
         pickerView.dataSource = self
         pickerView.delegate = self
@@ -48,6 +49,27 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             
         }
     }
+    func checkWinner(){
+        var mafiaWin = true
+        var townWin = true
+        var allPlayers = players;
+        allPlayers.append(thisPlayer)
+        for player in allPlayers{
+            if player.role != .Pirate{
+                mafiaWin = false
+            }
+            else if player.role == .Pirate{
+                townWin = false;
+            }
+        }
+        if mafiaWin{
+            self.performSegueWithIdentifier("MafiaWin", sender: self)
+        }
+        if townWin{
+            self.performSegueWithIdentifier("TownWin", sender: self)
+        }
+    }
+
     func tallyVotes(){
         hasSent = true
 
@@ -71,7 +93,6 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let dataString = String(data: data, encoding: NSUTF8StringEncoding)
             if dataString == "Death"{
                 print("DEAD GUY!")
-                
                 self.performSegueWithIdentifier("ToDeath", sender: self)
 
                 

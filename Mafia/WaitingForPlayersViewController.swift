@@ -24,6 +24,24 @@ class WaitingForPlayersViewController: UIViewController, MCSessionDelegate {
         deviceSession.delegate = self
         try! deviceSession.sendData(String("PlayerJoin").dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
     }
+    func checkWinner(){
+        var mafiaWin = true
+        var townWin = true
+        for player in players{
+            if player.role != .Pirate{
+                mafiaWin = false
+            }
+            else if player.role == .Pirate{
+                townWin = false;
+            }
+        }
+        if mafiaWin{
+            self.performSegueWithIdentifier("MafiaWin", sender: self)
+        }
+        if townWin{
+            self.performSegueWithIdentifier("TownWin", sender: self)
+        }
+    }
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
         //This works by when someone is ready they send the PlayerJoin message and the other devices add them to an array of players and then respond with their name, so that 
