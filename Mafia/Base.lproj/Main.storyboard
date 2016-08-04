@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yet-yg-rRD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -437,7 +437,30 @@
                     <view key="view" contentMode="scaleToFill" id="1F7-QA-XBD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="No-pirates" translatesAutoresizingMaskIntoConstraints="NO" id="hcY-Kn-oGu">
+                                <rect key="frame" x="172" y="176" width="256" height="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="YHj-jL-opF"/>
+                                    <constraint firstAttribute="height" constant="248" id="aVr-Ms-ySd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The Mafia Lose!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFF-LW-Z3v">
+                                <rect key="frame" x="152" y="53" width="296" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="RhK-FS-W8T"/>
+                                    <constraint firstAttribute="height" constant="105" id="hLg-ps-C4R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.53725490196078429" green="0.33333333333333331" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pFF-LW-Z3v" firstAttribute="top" secondItem="J5o-mO-Qe7" secondAttribute="bottom" constant="33" id="qdY-8w-Obs"/>
+                            <constraint firstItem="hcY-Kn-oGu" firstAttribute="centerX" secondItem="1F7-QA-XBD" secondAttribute="centerX" id="uez-XR-yY9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6o-Xz-sX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -859,7 +882,31 @@
                     <view key="view" contentMode="scaleToFill" id="dTg-Vh-3gu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Mafia Win!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ss-Nd-Rat">
+                                <rect key="frame" x="152" y="53" width="296" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="2nt-aw-kur"/>
+                                    <constraint firstAttribute="height" constant="105" id="nk8-cZ-ktX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirate" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-5r-m6b">
+                                <rect key="frame" x="179" y="153" width="243" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="RR2-y7-K61"/>
+                                    <constraint firstAttribute="height" constant="293" id="a0c-yC-E9J"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66215945509999996" green="0.012396758549999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4ss-Nd-Rat" firstAttribute="top" secondItem="B2h-sR-wzp" secondAttribute="bottom" constant="33" id="7ND-ji-1C8"/>
+                            <constraint firstItem="4ss-Nd-Rat" firstAttribute="centerX" secondItem="dTg-Vh-3gu" secondAttribute="centerX" id="LM9-71-YP5"/>
+                            <constraint firstItem="qcv-5r-m6b" firstAttribute="centerX" secondItem="dTg-Vh-3gu" secondAttribute="centerX" id="Vfu-G4-N6o"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ern-Dq-MzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -889,10 +936,10 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R26-l7-vcF"/>
+        <segue reference="nu5-hA-hMg"/>
         <segue reference="Aku-DS-bcQ"/>
-        <segue reference="wfG-jd-9tS"/>
         <segue reference="KkW-SY-jAY"/>
+        <segue reference="wfG-jd-9tS"/>
         <segue reference="rYt-2n-WSZ"/>
     </inferredMetricsTieBreakers>
 </document>

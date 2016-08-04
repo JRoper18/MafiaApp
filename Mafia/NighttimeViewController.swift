@@ -20,10 +20,9 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     var time : Int = 0
     var hunterHasChecked : Bool = false
     
-    var gotHealed = false;
-    var healDone = false;
-    
-    var sentDecision = false;
+    var healDone = false
+    var gotHealed = false
+    var sentDecision = false
     
     var timer : NSTimer!;
     
