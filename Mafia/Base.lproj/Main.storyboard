@@ -542,6 +542,7 @@
                         <outlet property="playerRevealLabel" destination="p6L-MI-IpR" id="Svb-3Z-6KW"/>
                         <outlet property="timerLabel" destination="di8-th-y9z" id="Bt0-lG-LyE"/>
                         <segue destination="z2E-nG-cht" kind="show" identifier="PlayerDied" id="nE2-yi-Gkd"/>
+                        <segue destination="xR0-J2-sxM" kind="show" id="ALv-P3-AIu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgQ-eI-8di" userLabel="First Responder" sceneMemberID="firstResponder"/>
