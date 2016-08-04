@@ -21,6 +21,7 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
         super.viewWillAppear(animated)
         nameLabel.text = "You voted to kill " + killed + " with " + String(votes) + " votes. They were a " + role
         
+        deviceSession.delegate = self;
         
         if killed == "ABSTAIN" {
             nameLabel.text = "No one died!"
