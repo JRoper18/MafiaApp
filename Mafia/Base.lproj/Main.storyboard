@@ -537,6 +537,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-Te-Can">
+                                <rect key="frame" x="0.0" y="274" width="600" height="326"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-Tk-0lf">
                                 <rect key="frame" x="443" y="57" width="109" height="94"/>
                                 <constraints>
@@ -575,9 +578,6 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-Te-Can">
-                                <rect key="frame" x="0.0" y="274" width="600" height="326"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.080359758579610321" green="0.0" blue="0.54550596746315794" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -966,10 +966,10 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KkW-SY-jAY"/>
-        <segue reference="ALv-P3-AIu"/>
-        <segue reference="pZ7-Vm-FBU"/>
-        <segue reference="wfG-jd-9tS"/>
         <segue reference="Aku-DS-bcQ"/>
+        <segue reference="pZ7-Vm-FBU"/>
+        <segue reference="ALv-P3-AIu"/>
+        <segue reference="nE2-yi-Gkd"/>
+        <segue reference="KkW-SY-jAY"/>
     </inferredMetricsTieBreakers>
 </document>
