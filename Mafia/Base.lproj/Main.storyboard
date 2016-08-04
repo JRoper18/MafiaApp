@@ -936,10 +936,10 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ALv-P3-AIu"/>
-        <segue reference="rYt-2n-WSZ"/>
-        <segue reference="Sa7-HN-Lv9"/>
-        <segue reference="nE2-yi-Gkd"/>
         <segue reference="Aku-DS-bcQ"/>
+        <segue reference="ALv-P3-AIu"/>
+        <segue reference="KkW-SY-jAY"/>
+        <segue reference="pZ7-Vm-FBU"/>
+        <segue reference="wfG-jd-9tS"/>
     </inferredMetricsTieBreakers>
 </document>
