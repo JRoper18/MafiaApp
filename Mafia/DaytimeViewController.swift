@@ -218,7 +218,11 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
     }
-    
+    func session(session: MCSession, didReceiveCertificate certificate: [AnyObject]?, fromPeer peerID: MCPeerID, certificateHandler: (Bool) -> Void){
+        certificateHandler(true);
+        
+        
+    }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         return 1
     }
