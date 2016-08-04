@@ -52,7 +52,9 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func checkWinner(){
         var mafiaWin = true
         var townWin = true
-        for player in players{
+        var allPlayers = players;
+        allPlayers.append(thisPlayer)
+        for player in allPlayers{
             if player.role != .Pirate{
                 mafiaWin = false
             }
@@ -91,7 +93,6 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let dataString = String(data: data, encoding: NSUTF8StringEncoding)
             if dataString == "Death"{
                 print("DEAD GUY!")
-                
                 self.performSegueWithIdentifier("ToDeath", sender: self)
 
                 
