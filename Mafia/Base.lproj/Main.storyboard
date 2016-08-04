@@ -486,8 +486,8 @@
                                     <constraint firstAttribute="width" constant="300" id="myH-4Z-IZg"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzh-AI-FEi">
-                                <rect key="frame" x="151" y="76" width="294" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Insert a very long message here. It is very long and should take up two lines" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzh-AI-FEi">
+                                <rect key="frame" x="111" y="65" width="379" height="101"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -937,9 +937,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ALv-P3-AIu"/>
-        <segue reference="pZ7-Vm-FBU"/>
-        <segue reference="KkW-SY-jAY"/>
         <segue reference="wfG-jd-9tS"/>
+        <segue reference="Sa7-HN-Lv9"/>
+        <segue reference="rYt-2n-WSZ"/>
         <segue reference="Aku-DS-bcQ"/>
     </inferredMetricsTieBreakers>
 </document>
