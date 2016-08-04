@@ -438,14 +438,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="No-pirates" translatesAutoresizingMaskIntoConstraints="NO" id="hcY-Kn-oGu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="skull" translatesAutoresizingMaskIntoConstraints="NO" id="hcY-Kn-oGu">
                                 <rect key="frame" x="172" y="176" width="256" height="248"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="YHj-jL-opF"/>
                                     <constraint firstAttribute="height" constant="248" id="aVr-Ms-ySd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The Mafia Lose!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFF-LW-Z3v">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The Pirates Lose!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFF-LW-Z3v">
                                 <rect key="frame" x="152" y="53" width="296" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="296" id="RhK-FS-W8T"/>
@@ -456,7 +456,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.53725490196078429" green="0.33333333333333331" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.85053453950000002" green="0.26649919439999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="pFF-LW-Z3v" firstAttribute="top" secondItem="J5o-mO-Qe7" secondAttribute="bottom" constant="33" id="qdY-8w-Obs"/>
                             <constraint firstItem="hcY-Kn-oGu" firstAttribute="centerX" secondItem="1F7-QA-XBD" secondAttribute="centerX" id="uez-XR-yY9"/>
@@ -486,8 +486,8 @@
                                     <constraint firstAttribute="width" constant="300" id="myH-4Z-IZg"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Insert a very long message here. It is very long and should take up two lines" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzh-AI-FEi">
-                                <rect key="frame" x="111" y="65" width="379" height="101"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Insert a very long message here. It is very long and should take up two lines" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzh-AI-FEi">
+                                <rect key="frame" x="137" y="66" width="327" height="101"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -547,20 +547,20 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Selected Player: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-MI-IpR">
-                                <rect key="frame" x="236" y="550" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYO-9k-Q28">
                                 <rect key="frame" x="0.0" y="153" width="600" height="216"/>
                                 <color key="backgroundColor" red="0.0" green="0.18511694717099786" blue="0.58195744776315794" alpha="1" colorSpace="calibratedRGB"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Nighttime. You can use your abilities now. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khR-ZA-x1o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Nighttime. You can use your abilities now. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khR-ZA-x1o">
                                 <rect key="frame" x="194" y="57" width="212" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Selected Player: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-MI-IpR">
+                                <rect key="frame" x="245" y="130" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -883,17 +883,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Mafia Win!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ss-Nd-Rat">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Pirates Win!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ss-Nd-Rat">
                                 <rect key="frame" x="152" y="53" width="296" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="296" id="2nt-aw-kur"/>
                                     <constraint firstAttribute="height" constant="105" id="nk8-cZ-ktX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="1" green="0.85286334230000005" blue="0.0014294473309999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirate" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-5r-m6b">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="rum" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-5r-m6b">
                                 <rect key="frame" x="179" y="153" width="243" height="293"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="243" id="RR2-y7-K61"/>
@@ -901,7 +901,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.66215945509999996" green="0.012396758549999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4ss-Nd-Rat" firstAttribute="top" secondItem="B2h-sR-wzp" secondAttribute="bottom" constant="33" id="7ND-ji-1C8"/>
                             <constraint firstItem="4ss-Nd-Rat" firstAttribute="centerX" secondItem="dTg-Vh-3gu" secondAttribute="centerX" id="LM9-71-YP5"/>
@@ -929,17 +929,19 @@
         <image name="pirate" width="800" height="845"/>
         <image name="pirate2" width="800" height="703"/>
         <image name="pirateFlag" width="2000" height="1253"/>
+        <image name="rum" width="453" height="640"/>
         <image name="scaredPirate" width="132" height="135"/>
         <image name="shack" width="405" height="299"/>
+        <image name="skull" width="512" height="512"/>
         <image name="sun" width="626" height="500"/>
         <image name="sword" width="428" height="550"/>
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Aku-DS-bcQ"/>
+        <segue reference="nE2-yi-Gkd"/>
         <segue reference="ALv-P3-AIu"/>
-        <segue reference="KkW-SY-jAY"/>
-        <segue reference="pZ7-Vm-FBU"/>
-        <segue reference="wfG-jd-9tS"/>
+        <segue reference="Sa7-HN-Lv9"/>
+        <segue reference="rYt-2n-WSZ"/>
     </inferredMetricsTieBreakers>
 </document>
