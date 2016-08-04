@@ -259,11 +259,6 @@
                                     <constraint firstAttribute="height" constant="281" id="G5Z-VB-0L4"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-G7-3Jy">
-                                <rect key="frame" x="220" y="120" width="160" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfv-Me-MsI">
                                 <rect key="frame" x="244" y="190" width="112" height="30"/>
                                 <state key="normal" title="Look For Games"/>
@@ -277,9 +272,24 @@
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please, no duplicate names, we are begging you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bu-7Q-Liv">
+                                <rect key="frame" x="205" y="84" width="190" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="dAG-yb-RCM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-G7-3Jy">
+                                <rect key="frame" x="220" y="132" width="160" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="8Bu-7Q-Liv" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="4Pa-yt-ZU1"/>
                             <constraint firstItem="9Lt-sv-kc4" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="O1q-hK-cTR"/>
                             <constraint firstItem="pfv-Me-MsI" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="Uf9-3G-C5f"/>
                             <constraint firstItem="HIz-G7-3Jy" firstAttribute="centerX" secondItem="fm5-Qs-fP2" secondAttribute="centerX" id="jmT-H6-JcY"/>
