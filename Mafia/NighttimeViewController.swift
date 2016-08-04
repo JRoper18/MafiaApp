@@ -153,13 +153,14 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
             }
             else{
                 var peerRole: PlayerRole = .Default
+                self.healDone = true;
                 for player in players{
                     if peerID.displayName == player.name{
                         peerRole = player.role
                     }
                     //Make sure the medic is still alive or nah so we can tell whether or not to wait for their signal.
-                    if player.role == .Healer{
-                        self.healDone = true;
+                    if player.role == .Healer{ //Healer is alive and therefore isn't done.
+                        self.healDone = false;
                     }
                 }
                 if peerRole == .Healer{
