@@ -94,7 +94,12 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             if pickerView.hidden{
                 voteData = "ABSTAIN".dataUsingEncoding(NSUTF8StringEncoding)
             }
-            try! deviceSession.sendData(voteData!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
+            do{
+                try deviceSession.sendData(voteData!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
+ 
+            } catch {
+                print("Just another weird-ass error");
+            }
             
         }
         
