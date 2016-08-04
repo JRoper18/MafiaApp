@@ -452,7 +452,7 @@
                                     <constraint firstAttribute="height" constant="105" id="hLg-ps-C4R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -642,9 +642,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime.Vote for who you think is the pirate. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-1W-eiZ">
-                                <rect key="frame" x="199" y="15" width="202" height="58"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime. Vote for who you think is the pirate. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-1W-eiZ">
+                                <rect key="frame" x="114" y="15" width="373" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -890,7 +890,7 @@
                                     <constraint firstAttribute="height" constant="105" id="nk8-cZ-ktX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirate" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-5r-m6b">
@@ -936,10 +936,10 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nu5-hA-hMg"/>
-        <segue reference="Aku-DS-bcQ"/>
+        <segue reference="ALv-P3-AIu"/>
+        <segue reference="pZ7-Vm-FBU"/>
         <segue reference="KkW-SY-jAY"/>
         <segue reference="wfG-jd-9tS"/>
-        <segue reference="rYt-2n-WSZ"/>
+        <segue reference="Aku-DS-bcQ"/>
     </inferredMetricsTieBreakers>
 </document>
