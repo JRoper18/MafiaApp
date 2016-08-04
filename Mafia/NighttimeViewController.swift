@@ -212,7 +212,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
                 }
                 else if peerRole == .Pirate{
                     //Wait for the medic's signal so they dont kill him before he could be healed.
-                    self.waitForHeals = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(NighttimeViewController.recheckHealDone), userInfo: nil, repeats: true)
+                    self.waitForHeals = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(NighttimeViewController.waitForSignals), userInfo: nil, repeats: true)
                     
                 }
                 
@@ -221,7 +221,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         }
         
     }
-    func recheckHealDone(){
+    func waitForSignals(){
         print("Waiting on healer signal...");
         if self.healDone != true{
             
@@ -233,6 +233,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
                 self.performSegueWithIdentifier("PlayerDied", sender: self)
             }
             else{
+                print("WE GOT HEALED THX MEDIC");
                 self.performSegueWithIdentifier("ToDaytime", sender: self)
             }
         }

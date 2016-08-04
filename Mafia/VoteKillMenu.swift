@@ -19,11 +19,11 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
         self.votes = 0;
         self.timer = NSTimer();
         super.viewWillAppear(animated)
-        nameLabel.text = "You voted to kill " + killed + " with " + String(votes) + "votes. They were a " + role
+        nameLabel.text = "You voted to kill " + killed + " with " + String(votes) + " votes. They were a " + role
         
         
         if killed == "ABSTAIN" {
-            nameLabel.text = "You live another day..."
+            nameLabel.text = "No one died!"
         }
         timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(VoteKillMenu.segue), userInfo: nil, repeats: false)
         

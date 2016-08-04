@@ -15,7 +15,10 @@ class DeathScreen: UIViewController {
         super.viewDidLoad()
         print("disconnecting");
         deviceSession.disconnect()
-        print(deviceSession.connectedPeers[0].displayName)
+        exitApp();
+    }
+    func exitApp(){
+        exit(0);
     }
 
 }

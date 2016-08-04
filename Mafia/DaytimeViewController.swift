@@ -72,12 +72,12 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             }
         }
         if mafiaWin{
-            print("The mafia win")
+            print("The mafia win on daytime")
             timer.invalidate();
             self.performSegueWithIdentifier("MafiaWin", sender: self)
         }
         if townWin{
-            print("The town wins")
+            print("The town wins on daytime")
             timer.invalidate()
             self.performSegueWithIdentifier("TownWin", sender: self)
         }
@@ -187,7 +187,6 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 if player.name == self.highestVote.0{
                     dvc.role = player.roleToString()
                     foundPlayer = true
-                    break
                 }
             }
             if !foundPlayer{ //We must've abstained
@@ -196,7 +195,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
-        if state == MCSessionState.NotConnected {
+        if state == MCSessionState.NotConnected || state == MCSessionState.Connecting {
             for index in 0..<players.count{
                 if players[index].name == peerID.displayName {
                     players.removeAtIndex(index)
