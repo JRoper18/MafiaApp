@@ -117,8 +117,9 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                         players.removeAtIndex(index)
                     }
                 }
-                self.checkWinner();
                 self.pickerView.reloadAllComponents();
+                self.countVotes();
+                self.checkWinner();
                 
             }
             else{ // A vote signal
@@ -131,61 +132,65 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                     
                 }
                 self.votes.append(dataString!)
-                var voteCount : [(String, Int)] = []
-                print("We have " , self.votes.count , "Out of ", String(players.count + 1))
-                if(self.votes.count == players.count + 1){
-                    print("All votes are in! Lets gooooo")
-                    //Great, all votes are in! Find the most common one.
-                    for vote in self.votes{
-                        print("Vote for " + vote)
-                        var alreadyExists = false
-                        for index in 0..<voteCount.count{
-                            if vote == voteCount[index].0{
-                                voteCount[index].1 += 1
-                                alreadyExists = true
-                                
-                            }
-                        }
-                        //If this is the first vote for that person, add them to the voted for array.
-                        if !alreadyExists{
-                            voteCount.append((vote, 1))
-                        }
-                    }
-                    //Now that we have all the guilty people, find the guy with the most votes.
-                    self.highestVote = ("ABSTAIN", 0)
-                    for vote in voteCount{
-                        if vote.1 == self.highestVote.1{
-                            //Tie means no one dies.
-                            self.highestVote = ("ABSTAIN", vote.1)
-                        }
-                        else if vote.1 > self.highestVote.1{
-                            self.highestVote = vote
-                        }
-                    }
-                    //Send the "YOU DIED" message to dead guy.
-                    let dataToSend = "Death".dataUsingEncoding(NSUTF8StringEncoding)
-                    if self.highestVote.0 == "ABSTAIN"{
+                self.countVotes();
+                
+            }
+        }
+    }
+    func countVotes(){
+        var voteCount : [(String, Int)] = []
+        print("We have " , self.votes.count , "Out of ", String(players.count + 1))
+        if(self.votes.count == players.count + 1){
+            print("All votes are in! Lets gooooo")
+            //Great, all votes are in! Find the most common one.
+            for vote in self.votes{
+                print("Vote for " + vote)
+                var alreadyExists = false
+                for index in 0..<voteCount.count{
+                    if vote == voteCount[index].0{
+                        voteCount[index].1 += 1
+                        alreadyExists = true
                         
                     }
-                    else{
-                        let personToSendTo = MCPeerID(displayName: self.highestVote.0)
-                        if deviceSession.myPeerID.displayName == personToSendTo.displayName{
-                            //O shit im dead
-                            self.performSegueWithIdentifier("ToDeath", sender: self)
-                        }
-                        else{
-                            print("Sending death message to " + personToSendTo.displayName)
-                            do{
-                                try deviceSession.sendData(dataToSend!, toPeers: [personToSendTo], withMode: .Unreliable)
-                            } catch {
-                                print("Error transfer to " + personToSendTo.displayName)
-                            }
-                        }
-                    }
-                    print("Segueing")
-                    self.performSegueWithIdentifier("VoteToKill", sender: self)
+                }
+                //If this is the first vote for that person, add them to the voted for array.
+                if !alreadyExists{
+                    voteCount.append((vote, 1))
                 }
             }
+            //Now that we have all the guilty people, find the guy with the most votes.
+            self.highestVote = ("ABSTAIN", 0)
+            for vote in voteCount{
+                if vote.1 == self.highestVote.1{
+                    //Tie means no one dies.
+                    self.highestVote = ("ABSTAIN", vote.1)
+                }
+                else if vote.1 > self.highestVote.1{
+                    self.highestVote = vote
+                }
+            }
+            //Send the "YOU DIED" message to dead guy.
+            let dataToSend = "Death".dataUsingEncoding(NSUTF8StringEncoding)
+            if self.highestVote.0 == "ABSTAIN"{
+                
+            }
+            else{
+                let personToSendTo = MCPeerID(displayName: self.highestVote.0)
+                if deviceSession.myPeerID.displayName == personToSendTo.displayName{
+                    //O shit im dead
+                    self.performSegueWithIdentifier("ToDeath", sender: self)
+                }
+                else{
+                    print("Sending death message to " + personToSendTo.displayName)
+                    do{
+                        try deviceSession.sendData(dataToSend!, toPeers: [personToSendTo], withMode: .Unreliable)
+                    } catch {
+                        print("Error transfer to " + personToSendTo.displayName)
+                    }
+                }
+            }
+            print("Segueing")
+            self.performSegueWithIdentifier("VoteToKill", sender: self)
         }
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
