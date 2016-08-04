@@ -30,13 +30,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Roles Will Be Randomly Generated, And Each Role Has A Goal/Job (see below). Tap On Peoples' Names To Select Them." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmM-EA-9es">
-                                <rect key="frame" x="151" y="89" width="299" height="70"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="black" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo1-t4-ktJ">
                                 <rect key="frame" x="151" y="264" width="290" height="88"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,6 +57,14 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="*Healer Role: Your Job Is To Try To Find And Revive Who The Pirate Might Kill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iUb-4s-ER3">
                                 <rect key="frame" x="151" y="422" width="299" height="57"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmM-EA-9es">
+                                <rect key="frame" x="151" y="71" width="299" height="106"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Roles Will Be Randomly Generated, And Each Role Has A Goal/Job (see below). Tap On Peoples' Names To Select Them. When Your App Crashes, Its Indicates That You Died.</string>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -341,9 +342,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMH-2o-eY5">
-                                <rect key="frame" x="137" y="72" width="317" height="30"/>
+                                <rect key="frame" x="137" y="72" width="297" height="30"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="(Find out who the PIRATE is)">
+                                    <fragment content="(Find out who the pirate is)">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="25" name="HelveticaNeue"/>
@@ -480,7 +481,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="shack" translatesAutoresizingMaskIntoConstraints="NO" id="ZPA-uM-LNb">
-                                <rect key="frame" x="151" y="229" width="294" height="235"/>
+                                <rect key="frame" x="143" y="182" width="294" height="235"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="235" id="OIZ-ch-wnR"/>
                                     <constraint firstAttribute="width" constant="300" id="myH-4Z-IZg"/>
@@ -648,22 +649,31 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime. Vote for who you think is the pirate. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-1W-eiZ">
-                                <rect key="frame" x="114" y="15" width="373" height="58"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirate2" translatesAutoresizingMaskIntoConstraints="NO" id="st7-z5-mBr">
+                                <rect key="frame" x="245" y="98" width="110" height="96"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="373" id="7wO-jd-fHV"/>
+                                    <constraint firstAttribute="height" constant="96" id="Hxg-Z9-wjw"/>
+                                    <constraint firstAttribute="width" constant="110" id="jxd-Mj-64g"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Note: When your app crashes, you died, and are out of the game!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-Wo-e7U">
+                                <rect key="frame" x="154" y="451" width="293" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="CEm-JE-8WB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's Daytime. Vote for who you think is the pirate. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-1W-eiZ">
+                                <rect key="frame" x="178" y="47" width="245" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="GRS-dE-5Uf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pirate2" translatesAutoresizingMaskIntoConstraints="NO" id="st7-z5-mBr">
-                                <rect key="frame" x="223" y="65" width="154" height="134"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="154" id="2Cv-VK-W1M"/>
-                                    <constraint firstAttribute="height" constant="134" id="Gnd-3E-MIZ"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -672,6 +682,7 @@
                             <constraint firstItem="ep0-Rg-hIP" firstAttribute="leading" secondItem="CaX-Gx-DGp" secondAttribute="trailing" constant="15" id="IpV-yi-e2X"/>
                             <constraint firstItem="5Ar-iW-zoC" firstAttribute="leading" secondItem="1dM-5W-pkb" secondAttribute="leadingMargin" constant="-10" id="Uta-JW-ZQw"/>
                             <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="5Ar-iW-zoC" secondAttribute="bottom" constant="53" id="WYG-9K-pSl"/>
+                            <constraint firstItem="nfb-Wo-e7U" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="Yl2-2G-0UW"/>
                             <constraint firstItem="st7-z5-mBr" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="bSB-wV-p3p"/>
                             <constraint firstItem="ep0-Rg-hIP" firstAttribute="centerX" secondItem="1dM-5W-pkb" secondAttribute="centerX" id="gWX-BF-E8y"/>
                             <constraint firstItem="qAA-93-QS0" firstAttribute="top" secondItem="WHv-P2-XcY" secondAttribute="bottom" constant="8" id="jLD-BG-9vf"/>
@@ -787,9 +798,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUu-Pc-XKn">
-                                <rect key="frame" x="155" y="77" width="310" height="30"/>
+                                <rect key="frame" x="155" y="77" width="290" height="30"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="(Vote on who is the PIRATE)">
+                                    <fragment content="(Vote on who is the pirate)">
                                         <attributes>
                                             <color key="NSColor" red="0.28521792759999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="25" name="HelveticaNeue"/>
@@ -947,10 +958,10 @@
         <image name="water" width="800" height="571"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Aku-DS-bcQ"/>
-        <segue reference="nE2-yi-Gkd"/>
-        <segue reference="ALv-P3-AIu"/>
         <segue reference="KkW-SY-jAY"/>
+        <segue reference="jup-V4-2k7"/>
+        <segue reference="cPe-SS-k0c"/>
         <segue reference="pZ7-Vm-FBU"/>
+        <segue reference="wfG-jd-9tS"/>
     </inferredMetricsTieBreakers>
 </document>
