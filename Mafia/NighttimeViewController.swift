@@ -186,6 +186,16 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
             if(dataString == "DidHeal"){
                 self.healDone = true
             }
+            else if dataString == "Disconnect"{
+                print("peer disconnected: updating accordingly");
+                for index in 0..<players.count{
+                    if players[index].name == peerID.displayName {
+                        players.removeAtIndex(index)
+                    }
+                }
+                self.pickerView.reloadAllComponents();
+                
+            }
             else if dataString == "DidAttack"{
                 self.mafiaRemaining -= 1;
                 if self.mafiaRemaining == 0{

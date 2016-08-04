@@ -14,11 +14,14 @@ class DeathScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("disconnecting");
+        
+        try! deviceSession.sendData("Disconnect".dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
         deviceSession.disconnect()
         exitApp();
     }
     func exitApp(){
         exit(0);
     }
+    
 
 }
