@@ -498,6 +498,9 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip: When your app crashes, you died, and are out of the game!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-Wo-e7U">
                                 <rect key="frame" x="143" y="425" width="294" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="294" id="Ysa-qo-7r0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -795,9 +798,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUu-Pc-XKn">
-                                <rect key="frame" x="155" y="77" width="310" height="30"/>
+                                <rect key="frame" x="155" y="77" width="290" height="30"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="(Vote on who is the PIRATE)">
+                                    <fragment content="(Vote on who is the pirate)">
                                         <attributes>
                                             <color key="NSColor" red="0.28521792759999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="25" name="HelveticaNeue"/>
@@ -956,9 +959,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Sa7-HN-Lv9"/>
-        <segue reference="ALv-P3-AIu"/>
+        <segue reference="nu5-hA-hMg"/>
+        <segue reference="cPe-SS-k0c"/>
         <segue reference="wfG-jd-9tS"/>
         <segue reference="rYt-2n-WSZ"/>
-        <segue reference="cPe-SS-k0c"/>
     </inferredMetricsTieBreakers>
 </document>
