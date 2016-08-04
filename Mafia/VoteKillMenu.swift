@@ -65,9 +65,16 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
             print("Disconnected player");
             if state == MCSessionState.NotConnected {
                 for index in 0..<players.count{
-                    if players[index].name == peerID.displayName {
-                        print("Removing player from players array");
-                        players.removeAtIndex(index)
+                    if index < players.count{
+                        if players[index].name == peerID.displayName {
+                            print("Removing player from players array");
+                            players.removeAtIndex(index)
+                        }
+                        
+                        
+                    }
+                    else{
+                        print("WTF IS GOING ON");
                     }
                 }
             }
