@@ -27,6 +27,8 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     var timer : NSTimer!;
     
+    var mafiaRemaining : Int = 0;
+    
     override func viewDidLoad() {
         if thisPlayer.roleToString() != "Pirate" && thisPlayer.roleToString() != "Hunter" && thisPlayer.roleToString() != "Healer"{
             pickerView.hidden = true
@@ -38,6 +40,12 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         super.viewDidLoad()
         
         getTargetPlayers()
+        
+        for player in players{
+            if player.role == .Pirate{
+                mafiaRemaining += 1;
+            }
+        }
         
         if thisPlayer.role != .Townsman{
             selectedPlayer = targetPlayers[0].name
@@ -88,6 +96,9 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
                                 try deviceSession.sendData(dataToSend!, toPeers: [peer], withMode: .Unreliable)
                                 //This is an error, but SOMEHOW the prints below say that the only device IS THE ONE IM SENDING TO
                                 
+                                self.performSegueWithIdentifier("ToDaytime", sender: self)
+
+                                
                             }
                         }
                         
@@ -95,6 +106,12 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
                         print(deviceSession.connectedPeers[0].displayName);
                         //The statement above prints "pad". The one below prints "no device 'pad'". ARGH
                         print(String(error));
+                    }
+                    do{
+                        try deviceSession.sendData("DidAttack".dataUsingEncoding(NSUTF8StringEncoding)!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
+
+                    } catch {
+                        print("Error sending signal");
                     }
                 }
             }
@@ -150,6 +167,12 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
             print(dataString);
             if(dataString == "DidHeal"){
                 self.healDone = true
+            }
+            else if dataString == "DidAttack"{
+                self.mafiaRemaining -= 1;
+                if self.mafiaRemaining == 0{
+                    self.performSegueWithIdentifier("ToDaytime", sender: self)
+                }
             }
             else{
                 var peerRole: PlayerRole = .Default
