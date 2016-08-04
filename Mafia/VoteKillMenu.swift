@@ -49,6 +49,7 @@ class VoteKillMenu: UIViewController, MCSessionDelegate {
             self.performSegueWithIdentifier("MafiaWin", sender: self)
         }
         if townWin{
+            timer.invalidate();
             
             self.performSegueWithIdentifier("TownWin", sender: self)
         }
