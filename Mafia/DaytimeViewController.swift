@@ -82,10 +82,10 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             self.performSegueWithIdentifier("TownWin", sender: self)
         }
     }
-
+    
     func tallyVotes(){
         hasSent = true
-
+        
         if !devMode{
             self.timer.invalidate()
             self.votes.append(self.selectedVote)
@@ -95,7 +95,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 voteData = "ABSTAIN".dataUsingEncoding(NSUTF8StringEncoding)
             }
             try! deviceSession.sendData(voteData!, toPeers: deviceSession.connectedPeers, withMode: .Unreliable)
-
+            
         }
         
         
@@ -107,7 +107,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             if dataString == "Death"{
                 print("DEAD GUY!")
                 self.performSegueWithIdentifier("ToDeath", sender: self)
-
+                
                 
             }
             else{ // A vote signal
@@ -195,13 +195,16 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
-        if state == MCSessionState.NotConnected || state == MCSessionState.Connecting {
-            for index in 0..<players.count{
-                if players[index].name == peerID.displayName {
-                    players.removeAtIndex(index)
+        dispatch_async(dispatch_get_main_queue()) {
+            if state == MCSessionState.NotConnected {
+                for index in 0..<players.count{
+                    if players[index].name == peerID.displayName {
+                        players.removeAtIndex(index)
+                    }
                 }
+                self.checkWinner();
+                self.pickerView.reloadAllComponents();
             }
-            checkWinner();
         }
     }
     

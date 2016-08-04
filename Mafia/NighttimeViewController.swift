@@ -240,13 +240,16 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
     }
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
-        print("Connected user " + peerID.displayName + "has changed state. ")
-        if state == MCSessionState.NotConnected {
-            for index in 0..<players.count{
-                if players[index].name == peerID.displayName {
-                    players.removeAtIndex(index)
+        dispatch_async(dispatch_get_main_queue()) {
+            print("Disconnected player");
+            if state == MCSessionState.NotConnected {
+                for index in 0..<players.count{
+                    if players[index].name == peerID.displayName {
+                        players.removeAtIndex(index)
+                    }
                 }
             }
+            self.pickerView.reloadAllComponents();
         }
     }
     
