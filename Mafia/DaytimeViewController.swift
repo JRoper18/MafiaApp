@@ -22,11 +22,20 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var timer: NSTimer!
     var selectedVote : String = players[0].name
     var highestVote : (String, Int) = ("ABSTAIN", 0)
-    override func viewDidLoad() {
+    func setVars(){
+        self.timeElapsed = 0
+        self.votes = []
+        self.hasSent = false;
+        self.timer = NSTimer();
+        self.selectedVote = players[0].name
+        self.highestVote = ("ABSTAIN", 0)
+    }
+    override func viewWillAppear(animated: Bool) {
         if devMode == true{
             players = [Player(name: "A pirate", role: .Pirate), Player(name: "A townsman", role: .Townsman)]
         }
-        super.viewDidLoad()
+        setVars();
+        super.viewWillAppear(animated)
         checkWinner();
         deviceSession.delegate = self
         pickerView.dataSource = self
@@ -58,14 +67,18 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             if player.role != .Pirate{
                 mafiaWin = false
             }
-            else if player.role == .Pirate{
+            else{
                 townWin = false;
             }
         }
         if mafiaWin{
+            print("The mafia win")
+            timer.invalidate();
             self.performSegueWithIdentifier("MafiaWin", sender: self)
         }
         if townWin{
+            print("The town wins")
+            timer.invalidate()
             self.performSegueWithIdentifier("TownWin", sender: self)
         }
     }

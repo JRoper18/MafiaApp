@@ -29,15 +29,33 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     var mafiaRemaining : Int = 0;
     
-    override func viewDidLoad() {
+    var waitForHeals = NSTimer()
+    func setVars(){
+        self.targetPlayers = []
+        self.selectedPlayer = "";
+        self.time = 0
+        self.hunterHasChecked = false
+        
+        self.gotHealed = false;
+        self.healDone = false;
+        
+        self.sentDecision = false;
+        
+        self.timer = NSTimer();
+        
+        self.mafiaRemaining = 0;
+        
+        self.waitForHeals = NSTimer()
+    }
+    override func viewWillAppear(animated: Bool) {
         if thisPlayer.roleToString() != "Pirate" && thisPlayer.roleToString() != "Hunter" && thisPlayer.roleToString() != "Healer"{
             pickerView.hidden = true
         }
-        
+        setVars();
         deviceSession.delegate = self
         playerRevealLabel.text = ""
         playerRevealLabel.hidden = true
-        super.viewDidLoad()
+        super.viewWillAppear(animated)
         
         getTargetPlayers()
         
@@ -184,6 +202,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
                     }
                     //Make sure the medic is still alive or nah so we can tell whether or not to wait for their signal.
                     if player.role == .Healer{ //Healer is alive and therefore isn't done.
+                        print("Found a healer!")
                         self.healDone = false;
                     }
                 }
@@ -193,7 +212,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
                 }
                 else if peerRole == .Pirate{
                     //Wait for the medic's signal so they dont kill him before he could be healed.
-                    let timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(NighttimeViewController.recheckHealDone), userInfo: nil, repeats: true)
+                    self.waitForHeals = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(NighttimeViewController.recheckHealDone), userInfo: nil, repeats: true)
                     
                 }
                 
@@ -209,8 +228,12 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
         }
         else{
             //K, we got medic signal, NOW we can see if I got healed or nah and if pirate killed me.
+            waitForHeals.invalidate();
             if !self.gotHealed{
                 self.performSegueWithIdentifier("PlayerDied", sender: self)
+            }
+            else{
+                self.performSegueWithIdentifier("ToDaytime", sender: self)
             }
         }
         

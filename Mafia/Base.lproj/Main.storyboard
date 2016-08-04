@@ -372,10 +372,10 @@
             </objects>
             <point key="canvasLocation" x="2693" y="305"/>
         </scene>
-        <!--View Controller-->
+        <!--Death Screen-->
         <scene sceneID="3kZ-xL-wK4">
             <objects>
-                <viewController storyboardIdentifier="DeathView" id="z2E-nG-cht" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DeathView" id="z2E-nG-cht" customClass="DeathScreen" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UQN-Q6-FcD"/>
                         <viewControllerLayoutGuide type="bottom" id="3nb-0y-kyc"/>

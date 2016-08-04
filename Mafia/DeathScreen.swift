@@ -13,7 +13,9 @@ class DeathScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("disconnecting");
         deviceSession.disconnect()
+        print(deviceSession.connectedPeers[0].displayName)
     }
 
 }
