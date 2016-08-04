@@ -77,7 +77,7 @@ class NighttimeViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     func secondTime(){
         time += 1
-        let timeLeft = 7 - time
+        let timeLeft = 10 - time
         timerLabel.text = String(timeLeft)
         if timeLeft == 2 && thisPlayer.roleToString() == "Hunter" && hunterHasChecked == false{
             playerRevealLabel.hidden = false

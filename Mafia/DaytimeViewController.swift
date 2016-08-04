@@ -46,7 +46,7 @@ class DaytimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         timeElapsed += 1
         
         //30 seconds to decide
-        let timeRemaining = 5 - timeElapsed
+        let timeRemaining = 10 - timeElapsed
         timerLabel.text! = String(timeRemaining)
         if(timeRemaining == 0){
             //Stop timer
